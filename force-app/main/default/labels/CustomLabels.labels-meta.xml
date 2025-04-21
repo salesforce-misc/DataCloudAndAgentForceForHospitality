@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>EM_Chat_ChatBody_ChatbotTypingIndicatorAssistiveText_04I4W0000000nTR_3534352</fullName>
+        <categories>EmbeddedMessaging</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EM_Chat_ChatBody_ChatbotTypingIndicatorAssistiveText_04I4W0000000nTR_3534352</shortDescription>
+        <value>The Agent is responding</value>
+    </labels>
+</CustomLabels>

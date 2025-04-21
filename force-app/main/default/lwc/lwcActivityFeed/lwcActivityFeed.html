@@ -1,0 +1,437 @@
+<template>
+
+    <!--<lightning-card title="Activity Feed" icon-name="standard:feed" size="large">
+       
+        
+    </lightning-card> -->
+
+    <div class="demo-only slds-box" style="width: 100%; max-width: 390px;
+    background: white;
+    padding: 1rem 1rem 0rem 0.5rem;">
+
+    <div style="background-color: rgb(211, 211, 211); padding: 1em; border-radius: 5px; max-width: 420px;">
+       
+        <div class="customer-classification-container"></div>
+
+        <div style="background-color: white; padding: 0.5em; border: 1px solid #ccc; border-radius: 5px; margin-top: 1em; width: calc(100%);">
+            <p style="font-size: 14px; font-weight: bold; white-space: nowrap;">{message}</p>
+        </div>
+    
+    </div>
+
+
+    
+    <div style="margin-top: 1rem;"></div>
+    
+    <div style="border-bottom: 1px solid #d8dde6; padding-bottom: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center;">
+        <lightning-icon icon-name="standard:feed" size="small" alternative-text="Activity Feed" style="margin-right: 0.5rem;"></lightning-icon>
+        <h1 style="font-weight: bold; color: blue;">Activity Feed</h1>
+    </div>
+
+
+        <ul class="slds-timeline">
+
+            <!-- Expeinece Section -->
+            <li>
+                <div class={sectionClass2}> <!--slds-timeline__item_expandable slds-timeline__item_call slds-is-open-->
+                    <span class="slds-assistive-text">Experience Details</span>
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <button class="slds-button slds-button_icon"
+                                title="Toggle details for Mobile conversation on Monday"
+                                aria-controls="call-item-narrow-66" aria-expanded={ariaExpanded2}
+                                onclick={handleToggleClick2}>
+                                <svg class="slds-button__icon slds-timeline__details-action-icon" aria-hidden="true">
+                                    <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#switch">
+                                </svg>
+                                <span class="slds-assistive-text">More Details</span>
+                            </button>
+                            <div class="slds-icon_container slds-icon-standard-log-a-call slds-timeline__icon"
+                                title="Experience">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="false">
+                                    <use xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#job_position"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-grid slds-grid_align-spread slds-timeline__trigger">
+                                <div
+                                    class="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space">
+                                    <h3 class="slds-truncate" title="Experiences">
+                                        <a href="#">
+                                            <strong>Experiences</strong>
+                                        </a>
+                                    </h3>
+                                </div>
+                                <!-- <div class="slds-timeline__actions slds-timeline__actions_inline">
+                                     <p class="slds-timeline__date">{date}</p> 
+                                    
+                                </div> -->
+                            </div>
+
+                            <template if:true={ariaExpanded2}>
+                                <article
+                                    class="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small slds-p-around_medium"
+                                    id="call-item-narrow-66" hidden=" ">
+                                    <ul class="slds-list_horizontal slds-wrap">
+                                        <li class="slds-p-bottom_small">
+                                            <span class="slds-text-title slds-p-bottom_x-small">{name} </span>
+                                            <p><span class="slds-text-title slds-p-bottom_x-small">{date}</span></p>
+                                            <!-- <p><span class="slds-text-title slds-p-bottom_x-small">{startTime} - {endTime}</span></p> -->
+                                            <span class="slds-text-body_medium slds-truncate" title="Experience Booked">
+                                                <a href="javascript:void(0);" data-id={ExperienceId} onclick={navigateToRecordPage}>{name}</a>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+             <!-- Dining Section -->
+             <li>
+                <div class={sectionClass3}> <!--slds-timeline__item_expandable slds-timeline__item_call slds-is-open-->
+                    <span class="slds-assistive-text">Dinner Bookings</span>
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <button class="slds-button slds-button_icon"
+                                title="Toggle details for Mobile conversation on Monday"
+                                aria-controls="dine-item-narrow-66" aria-expanded={ariaExpanded2}
+                                onclick={handleToggleClick3}>
+                                <svg class="slds-button__icon slds-timeline__details-action-icon" aria-hidden="true">
+                                    <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#switch">
+                                </svg>
+                                <span class="slds-assistive-text">More Details</span>
+                            </button>
+                            <div class="slds-icon_container slds-icon-standard-log-a-call slds-timeline__icon"
+                                title="Experience">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                    <use xlink:href="/_slds/icons/custom-sprite/svg/symbols.svg#custom33"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-grid slds-grid_align-spread slds-timeline__trigger">
+                                <div
+                                    class="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space">
+                                    <h3 class="slds-truncate" title="Dining">
+                                        <a href="#">
+                                            <strong>Dining</strong>
+                                        </a>
+                                    </h3>
+                                </div>
+                                <!-- <div class="slds-timeline__actions slds-timeline__actions_inline">
+                                     <p class="slds-timeline__date">{date}</p> 
+                                    
+                                </div> -->
+                            </div>
+
+                             <template if:true={ariaExpanded3}> 
+    
+                                <article
+                                    class="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small slds-p-around_medium"
+                                    id="dine-item-narrow-66">
+                                    <ul class="slds-list_horizontal slds-wrap">
+                                        <li class="slds-p-bottom_small">
+                                            <span class="slds-text-title slds-p-bottom_x-small">{DinnerName} </span>
+                                            <p><span class="slds-text-title slds-p-bottom_x-small">{DinnerDate}</span></p>
+                                            <!-- <p><span class="slds-text-title slds-p-bottom_x-small">{startTime} - {endTime}</span></p> -->
+                                            <span class="slds-text-body_medium slds-truncate" title="Experience Booked">
+                                                <a href="javascript:void(0);" data-id={DinnerId} onclick={navigateToRecordPage}>{DinnerName}</a>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </article>
+                             </template>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Booking Section -->
+            <li>
+
+                <div class={sectionClass}> <!--{sectionClass}  slds-is-open-->
+                    <span class="slds-assistive-text">Bookings</span>
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <button class="slds-button slds-button_icon  "
+                                title="Toggle details for Review proposals for EBC deck with larger team and have marketing review this"
+                                aria-controls="task-item-narrow-65" aria-expanded={ariaExpanded}
+                                onclick={handleToggleClick}>
+                                <svg class="slds-button__icon slds-timeline__details-action-icon" aria-hidden="true">
+                                    <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Booking </span>
+                            </button>
+                            <div class="slds-icon_container slds-icon-standard-article slds-timeline__icon"
+                                title="task">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                    <use xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-grid slds-grid_align-spread slds-timeline__trigger">
+                                <div
+                                    class="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space">
+
+                                    <h3 class="slds-truncate"
+                                        title="Review proposals for EBC deck with larger team and have marketing review this">
+                                        <a href="#">
+                                            <strong>Booking</strong>
+                                        </a>
+                                    </h3>
+
+                                </div>
+                                <div class="slds-timeline__actions slds-timeline__actions_inline">
+                                    <p class="slds-timeline__date"></p>
+                                    <!-- <button
+                                        class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                                        aria-haspopup="true" title="More Options for this item">
+                                        <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                        </svg>
+                                        <span class="slds-assistive-text">More Options for this item</span>
+                                    </button> -->
+                                </div>
+                            </div>
+                            <!--  <p class="slds-m-horizontal_xx-small">
+                                <a href="#">You</a> created a task with
+                                <a href="#">Charlie Gomez</a>
+                            </p>-->
+                            <template if:true={ariaExpanded}>
+                                <article
+                                    class="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small slds-p-around_medium"
+                                    id="task-item-narrow-65">
+                                    <ul class="slds-list_horizontal slds-wrap">
+                                        <li class="slds-p-bottom_small">
+                                            <span class="slds-text-title slds-p-bottom_x-small">{name}</span>
+                                            <p> <span class="slds-text-title slds-p-bottom_x-small">{date}</span></p>
+                                            <span class="slds-text-body_medium slds-truncate" title="Bookings">
+                                                <a href="javascript:void(0);" data-id={ExperienceId} onclick={navigateToRecordPage}>{name}</a>
+                                            </span>
+                                        </li>
+                                        <!-- <li class="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small">
+                                        <span class="slds-text-title slds-p-bottom_x-small">Related To</span>
+                                        <span class="slds-text-body_medium slds-truncate"
+                                            title="Tesla Cloudhub + Anypoint Connectors">
+                                            <a href="#">Tesla Cloudhub + Anypoint Connectors</a>
+                                        </span>
+                                    </li> -->
+                                    </ul>
+                                     <!--<div>
+                                        <span class="slds-text-title">Description</span>
+                                        <p class="slds-p-top_x-small">Need to finalize proposals and brand details
+                                            before
+                                            the meeting</p>
+                                    </div>-->
+                                </article>
+                            </template>
+
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+            
+       
+            <!--
+            <li>
+                <div class="slds-timeline__item_expandable slds-timeline__item_email slds-is-open">
+                    <span class="slds-assistive-text">email</span>
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <button class="slds-button slds-button_icon"
+                                title="Toggle details for Re: Mobile conversation on Monday with the new global team"
+                                aria-controls="email-item-narrow-67" aria-expanded="true">
+                                <svg class="slds-button__icon slds-timeline__details-action-icon" aria-hidden="true">
+                                    <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Toggle details for Re: Mobile conversation on Monday
+                                    with the new global team</span>
+                            </button>
+                            <div class="slds-icon_container slds-icon-standard-email slds-timeline__icon" title="email">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                    <use xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#email"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-grid slds-grid_align-spread slds-timeline__trigger">
+                                <div
+                                    class="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space">
+                                    <h3 class="slds-truncate"
+                                        title="Re: Mobile conversation on Monday with the new global team">
+                                        <a href="#">
+                                            <strong>Re: Mobile conversation on Monday with the new global team</strong>
+                                        </a>
+                                    </h3>
+                                    <div class="slds-no-flex">
+                                        <span class="slds-icon_container slds-icon-utility-groups" title="Group email">
+                                            <svg class="slds-icon slds-icon_xx-small slds-icon-text-default slds-m-left_x-small"
+                                                aria-hidden="true">
+                                                <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#groups">
+                                                </use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Group email</span>
+                                        </span>
+                                        <span class="slds-icon_container slds-icon-utility-attach"
+                                            title="Has attachments">
+                                            <svg class="slds-icon slds-icon_xx-small slds-icon-text-default slds-m-left_x-small"
+                                                aria-hidden="true">
+                                                <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#attach">
+                                                </use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Has attachments</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="slds-timeline__actions slds-timeline__actions_inline">
+                                    <p class="slds-timeline__date">10:00am | 3/24/17</p>
+                                    <button
+                                        class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                                        aria-haspopup="true" title="More Options for this item">
+                                        <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                        </svg>
+                                        <span class="slds-assistive-text">More Options for this item</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="slds-m-horizontal_xx-small">
+                                <a href="#">You</a> emailed
+                                <a href="#">Lea Chan</a>
+                            </p>
+                            <article
+                                class="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small slds-p-around_medium"
+                                id="email-item-narrow-67">
+                                <ul class="slds-list_horizontal slds-wrap">
+                                    <li class="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small">
+                                        <span class="slds-text-title slds-p-bottom_x-small">From Address</span>
+                                        <span class="slds-text-body_medium slds-truncate" title="Jackie Dewar">
+                                            <a href="#">Jackie Dewar</a>
+                                        </span>
+                                    </li>
+                                    <li class="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small">
+                                        <span class="slds-text-title slds-p-bottom_x-small">To Address</span>
+                                        <span class="slds-text-body_medium slds-truncate" title="Lea Chan">
+                                            <a href="#">Lea Chan</a>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <div>
+                                    <span class="slds-text-title">Text Body</span>
+                                    <p class="slds-p-top_x-small">Hi everyone, Thanks for meeting with the team today
+                                        and going through the proposals we saw. This goes on and wraps if needed.</p>
+                                </div>
+                                <button class="slds-button slds-button_neutral slds-m-top_small">
+                                    <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                        <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#world"></use>
+                                    </svg>Public Sharing</button>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="slds-timeline__item_expandable slds-timeline__item_event slds-is-open">
+                    <span class="slds-assistive-text">event</span>
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <button class="slds-button slds-button_icon" title="Toggle details for EBC Follow up call"
+                                aria-controls="event-item-narrow-68" aria-expanded="true">
+                                <svg class="slds-button__icon slds-timeline__details-action-icon" aria-hidden="true">
+                                    <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Toggle details for EBC Follow up call</span>
+                            </button>
+                            <div class="slds-icon_container slds-icon-standard-event slds-timeline__icon" title="event">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                    <use xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#event"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-grid slds-grid_align-spread slds-timeline__trigger">
+                                <div
+                                    class="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space">
+                                    <h3 class="slds-truncate" title="EBC Follow up call">
+                                        <a href="#">
+                                            <strong>EBC Follow up call</strong>
+                                        </a>
+                                    </h3>
+                                    <div class="slds-no-flex">
+                                        <span class="slds-icon_container slds-icon-utility-world"
+                                            title="Public sharing">
+                                            <svg class="slds-icon slds-icon_xx-small slds-icon-text-default slds-m-left_x-small"
+                                                aria-hidden="true">
+                                                <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#world">
+                                                </use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Public sharing</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="slds-timeline__actions slds-timeline__actions_inline">
+                                    <p class="slds-timeline__date">10:30am | 3/24/17</p>
+                                    <button
+                                        class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small"
+                                        aria-haspopup="true" title="More Options for this item">
+                                        <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                        </svg>
+                                        <span class="slds-assistive-text">More Options for this item</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="slds-m-horizontal_xx-small">
+                                <a href="#">You</a> created an event with
+                                <a href="#">Aida Lee</a> and 5 others
+                            </p>
+                            <article
+                                class="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small slds-p-around_medium"
+                                id="event-item-narrow-68">
+                                <ul class="slds-list_horizontal slds-wrap">
+                                    <li class="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small">
+                                        <span class="slds-text-title slds-p-bottom_x-small">Location</span>
+                                        <span class="slds-text-body_medium slds-truncate"
+                                            title="Westen St. Francis, San Francisco, CA, 94622">
+                                            <a href="#">Westen St. Francis, San Francisco, CA, 94622</a>
+                                        </span>
+                                    </li>
+                                    <li class="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small">
+                                        <span class="slds-text-title slds-p-bottom_x-small">Attendees</span>
+                                        <span class="slds-text-body_medium slds-truncate"
+                                            title="Jason Dewar (Organizer) + 5 others">
+                                            <a href="#">Jason Dewar (Organizer) + 5 others</a>
+                                        </span>
+                                    </li>
+                                    <li class="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small">
+                                        <span class="slds-text-title slds-p-bottom_x-small">When</span>
+                                        <span class="slds-text-body_medium slds-truncate"
+                                            title="March 26, 10:00 AM - 11:00 AM">
+                                            <a href="#">March 26, 10:00 AM - 11:00 AM</a>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <div>
+                                    <span class="slds-text-title">Description</span>
+                                    <p class="slds-p-top_x-small">Let&#x27;s discuss the 2017 product roadmap and
+                                        address any questions</p>
+                                </div>
+                                <button class="slds-button slds-button_neutral slds-m-top_small">
+                                    <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                        <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#world"></use>
+                                    </svg>Public Sharing</button>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </li>-->
+        </ul>
+    </div>
+</template>

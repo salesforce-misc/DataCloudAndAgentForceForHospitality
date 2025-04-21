@@ -1,0 +1,16 @@
+{
+  "type" : "sfdc_cms__trustedSites",
+  "title" : "trustedSites",
+  "contentBody" : {
+    "trustedSites" : [ {
+      "isActive" : true,
+      "source" : "https://cdn.c360a.salesforce.com/beacon/c360a/49cd2aa6-e61a-4c55-a0ba-b2e26b62685e/scripts/c360a.min.js",
+      "sourceName" : "TrustedSite2"
+    }, {
+      "isActive" : true,
+      "source" : "https://dpa00000onbjcma1.my.site.com",
+      "sourceName" : "TestSF"
+    } ]
+  },
+  "urlName" : "trustedsites"
+}

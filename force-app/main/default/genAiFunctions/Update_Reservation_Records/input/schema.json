@@ -1,0 +1,42 @@
+{
+  "required" : [ "reservationId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "confirmReservation" : {
+      "title" : "confirmReservation",
+      "description" : "If customer confirm about the reservation then pass the 'ConfirmReservation' as 'Confirm'.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "floorType" : {
+      "title" : "floorType",
+      "description" : "If customer interested for Floor Preference then pass the 'FloorType' as 'Top Floor'.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "reservationId" : {
+      "title" : "reservationId",
+      "description" : "To update the Reservation always reservationId required.\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "roomType" : {
+      "title" : "roomType",
+      "description" : "If customer interested for Room Upgrade then pass the pass the 'RoomType' as 'Deluxe'.\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "upsellType" : {
+      "title" : "upsellType",
+      "description" : "If customer interested for upsell to a Ocean view room then pass the 'UpsellType' as 'Ocean/Sea View Room'.\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

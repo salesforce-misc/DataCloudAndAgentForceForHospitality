@@ -1,0 +1,31 @@
+{
+  "required" : [ "Input:Contact", "Input:Hotel_Name" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Contact" : {
+      "title" : "Contact",
+      "description" : "Customer's Information",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Contact"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Input:Hotel_Name" : {
+      "title" : "Hotel Name",
+      "description" : "Hotel Name that the Customer is interested in",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

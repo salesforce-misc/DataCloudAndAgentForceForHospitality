@@ -1,0 +1,158 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Home",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "dxpStyle" : {
+              "padding" : {
+                "bottom" : "0%",
+                "left" : "0%",
+                "right" : "0%",
+                "top" : "0%"
+              }
+            },
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "none",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"ae5a1bb7-1ccd-4760-9447-3c5584df2ee7\",\"columns\":[{\"UUID\":\"31e4efcc-35b5-434e-8986-5c0f8dfd4fcf\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "backgroundColor" : "",
+                "bannerAlignment" : "center",
+                "bannerLinkAssistiveText" : "",
+                "borderColor" : "",
+                "borderRadius" : 0,
+                "borderWidth" : 0,
+                "buttonDirection" : "horizontal",
+                "buttonGroupAlignment" : "left",
+                "buttonGroupHeight" : 50,
+                "buttonGroupSpacingHorizontal" : "space-evenly",
+                "buttonGroupSpacingVertical" : "space-evenly",
+                "buttonGroupWidth" : 100,
+                "contentPadding" : "none",
+                "contentPosition" : "center left",
+                "contentWidth" : 33,
+                "height" : 600,
+                "imageFit" : "cover",
+                "imageInfo" : "{\"imageInfoV1\":{\"url\":\"/sfsites/c/cms/delivery/media/MCCN2SFPWKIJHPLH67RNHHH7IHVM?lastModifiedDate=Tue Feb 18 11:33:39 GMT 2025\",\"altText\":\"\",\"contentKey\":\"MCCN2SFPWKIJHPLH67RNHHH7IHVM\",\"contentType\":null}}",
+                "imagePosition" : "center center",
+                "isBannerLink" : false,
+                "overlayColor" : "rgba(0, 0, 0, 0.2)",
+                "showButtons" : true,
+                "showSecondaryButton" : false,
+                "singleButtonAlignment" : "center",
+                "width" : 100
+              },
+              "children" : [ {
+                "id" : "90dc4e8a-1462-4465-ba09-62668ad91f3f",
+                "name" : "contentRegion",
+                "title" : "Content Region",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "alignment" : "left",
+                    "dxpStyle" : {
+                      "isVisible" : false
+                    },
+                    "size" : "large",
+                    "stretch" : "standard",
+                    "text" : "Shop Now",
+                    "type" : "secondary",
+                    "url" : "javascript:void(0)"
+                  },
+                  "definition" : "dxp_base:button",
+                  "id" : "50653c8f-b5b6-4720-9dad-721b2ac43392",
+                  "type" : "component"
+                } ],
+                "id" : "687c2de6-7590-492c-954e-94b09ae31d49",
+                "name" : "bannerPrimaryButton",
+                "title" : "Primary Button Region",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : {
+                    "alignment" : "center",
+                    "size" : "standard",
+                    "stretch" : "standard",
+                    "text" : "Contact Us",
+                    "type" : "secondary"
+                  },
+                  "definition" : "dxp_base:button",
+                  "id" : "d79a951e-af44-4398-9a9e-9f56ebdb6f29",
+                  "type" : "component"
+                } ],
+                "id" : "ef59378d-87ee-49fb-ac09-b8491dba741e",
+                "name" : "bannerSecondaryButton",
+                "title" : "Secondary Button Region",
+                "type" : "region"
+              }, {
+                "children" : [ {
+                  "attributes" : { },
+                  "definition" : "dxp_page_layout:placeHolder",
+                  "id" : "b40067ae-a473-497f-84bc-18ef6549a4b7",
+                  "type" : "component"
+                } ],
+                "id" : "e22f2795-ad12-4a5a-ab25-32bba5b0db70",
+                "name" : "placeholder",
+                "title" : "placeholder",
+                "type" : "region"
+              } ],
+              "customCssClasses" : "alpine-home-top-banner",
+              "definition" : "dxp_content_layout:banner",
+              "id" : "329837e4-940f-4708-bd3c-3c1b92457d21",
+              "type" : "component"
+            } ],
+            "id" : "31e4efcc-35b5-434e-8986-5c0f8dfd4fcf",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "ae5a1bb7-1ccd-4760-9447-3c5584df2ee7",
+          "scopedBrandingSetId" : "Home_Banner",
+          "type" : "component"
+        } ],
+        "id" : "99327abc-0332-4711-b9c9-5f7cb85d110c",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Home",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "8baefd00-32f9-4f73-8673-18f4127fe6b3",
+          "type" : "component"
+        } ],
+        "id" : "3bc4852b-b8a9-4775-a3e6-caba1f8fca41",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "6d7e59d0-7fa5-41e4-9757-2990235579bc",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "home"
+  },
+  "urlName" : "home"
+}

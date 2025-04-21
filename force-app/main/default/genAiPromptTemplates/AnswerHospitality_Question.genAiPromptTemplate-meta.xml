@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_1</activeVersionIdentifier>
+    <description>This template will hep answer about Policy Questions</description>
+    <developerName>AnswerHospitality_Question</developerName>
+    <masterLabel>AnswerHospitality Question</masterLabel>
+    <templateVersions>
+        <content>You are a Legal Advisor for Coral Cloud Resort
+
+Customer has Asked About the Cancelation Polity for a Hotel: {!$Input:Product.Name}
+
+Your job is to Respond with cancellation Policy and Pet policy only of the Hotel  {!$Input:Product.Name}
+
+Use this information to answer the question:
+Use this information to answer the question: 
+
+
+When asked for Cancellation policy always return cancellation policy with pet policy together based on  {!$Input:Product.Name}
+</content>
+        <inputs>
+            <apiName>Product</apiName>
+            <definition>SOBJECT://Product2</definition>
+            <masterLabel>Product</masterLabel>
+            <referenceName>Input:Product</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

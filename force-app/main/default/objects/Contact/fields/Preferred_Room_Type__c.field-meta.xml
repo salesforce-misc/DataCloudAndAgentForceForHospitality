@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Room_Type__c</fullName>
+    <label>Preferred Room Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ocean/Sea View Room</fullName>
+                <default>false</default>
+                <label>Ocean/Sea View Room</label>
+            </value>
+            <value>
+                <fullName>Garden View Room</fullName>
+                <default>false</default>
+                <label>Garden View Room</label>
+            </value>
+            <value>
+                <fullName>Mountain View Room</fullName>
+                <default>false</default>
+                <label>Mountain View Room</label>
+            </value>
+            <value>
+                <fullName>Poolside Room</fullName>
+                <default>false</default>
+                <label>Poolside Room</label>
+            </value>
+            <value>
+                <fullName>Beachfront Room</fullName>
+                <default>false</default>
+                <label>Beachfront Room</label>
+            </value>
+            <value>
+                <fullName>Accessible Room</fullName>
+                <default>false</default>
+                <label>Accessible Room</label>
+            </value>
+            <value>
+                <fullName>Eco-Friendly Room</fullName>
+                <default>false</default>
+                <label>Eco-Friendly Room</label>
+            </value>
+            <value>
+                <fullName>Pet-Friendly Room</fullName>
+                <default>false</default>
+                <label>Pet-Friendly Room</label>
+            </value>
+            <value>
+                <fullName>Quiet Room</fullName>
+                <default>false</default>
+                <label>Quiet Room</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

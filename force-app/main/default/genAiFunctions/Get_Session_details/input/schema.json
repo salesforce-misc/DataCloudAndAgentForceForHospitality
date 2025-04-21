@@ -1,0 +1,21 @@
+{
+  "required" : [ "experienceName" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contactId" : {
+      "title" : "contactId",
+      "description" : "Pass the Contact Id",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "experienceName" : {
+      "title" : "experienceName",
+      "description" : "Pass the Selected Experience Name",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

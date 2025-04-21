@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_3</activeVersionIdentifier>
+    <description>To get the Activities Offered from the product that customer is interested in</description>
+    <developerName>Product_Expereince</developerName>
+    <masterLabel>Product Experience</masterLabel>
+    <templateVersions>
+        <content>Customer wants to know what Experience are offered in the Hotel, Customer is Interested in {!$Input:Product.Name}
+Show customer the Activity that are offered in {!$Input:Product.Name}
+use {!$Input:Product.Activities__c} to get the Activity and show in Bullet Points and Bold Font
+Remember to tailor your response to the specific question, focusing on the relevant details.
+
+Your tone should be friendly and informative, as if you were speaking directly to the customer.
+
+Don&apos;t Include ** in the response, Replace Activity with Experience
+
+</content>
+        <inputs>
+            <apiName>Product</apiName>
+            <definition>SOBJECT://Product2</definition>
+            <masterLabel>Product</masterLabel>
+            <referenceName>Input:Product</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_3</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

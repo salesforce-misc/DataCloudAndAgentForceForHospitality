@@ -1,0 +1,36 @@
+.outer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.column {
+    display: flex;
+   
+}
+
+.first-column {
+    flex: 1; /* Takes up the full available space */
+}
+
+.second-column {
+   
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 40%;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+.box p{
+    
+    
+    font-size: medium;
+    font-weight: bold;
+
+}

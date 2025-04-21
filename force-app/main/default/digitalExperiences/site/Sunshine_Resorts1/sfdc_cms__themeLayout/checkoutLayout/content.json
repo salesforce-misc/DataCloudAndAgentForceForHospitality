@@ -1,0 +1,93 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Checkout Layout",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : { },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "alignment" : "left",
+                "imageInfo" : "",
+                "imageInfoMobile" : "",
+                "logoWidth" : 250
+              },
+              "definition" : "dxp_content_layout:siteLogo",
+              "id" : "1c3799dd-8856-49d8-a316-b3e15fb3f7ce",
+              "type" : "component"
+            } ],
+            "id" : "fa4c0279-cc38-4dc2-8e7e-10ee8e35e7cd",
+            "name" : "storeLogo",
+            "title" : "Store Logo",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : {
+                "iconStyle" : "userIcon",
+                "includeCompanyName" : false,
+                "logOutLabel" : "Log Out",
+                "loginLinkText" : "Log In",
+                "loginLinkTextDecoration" : "{\"underline\":true}",
+                "loginLinkTextOrientation" : "leftOfIcon",
+                "menuStyle" : "iconAndName",
+                "userNameTextOrientation" : "leftOfIcon",
+                "userProfileMenuNavigationMenuEditor" : "Default_User_Profile_Menu7"
+              },
+              "definition" : "commerce_builder:userProfileMenu",
+              "id" : "6fb15835-0132-41c5-b4f8-5042a73f415b",
+              "type" : "component"
+            } ],
+            "id" : "2186192c-ad08-4cac-8a42-63d9916b5848",
+            "name" : "myAccount",
+            "title" : "myAccount",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : {
+                "checkoutButtonSize" : "small",
+                "checkoutButtonText" : "Checkout",
+                "continueShoppingButtonSize" : "small",
+                "continueShoppingButtonText" : "Continue Shopping",
+                "countType" : "TotalProductCount",
+                "headerText" : "My Cart",
+                "showContinueShoppingButton" : true,
+                "showCount" : false,
+                "showMiniCart" : false,
+                "showMiniCartProperties" : false,
+                "showViewCartButton" : true,
+                "viewCartButtonSize" : "small",
+                "viewCartButtonText" : "View Cart"
+              },
+              "definition" : "commerce_builder:cartBadge",
+              "id" : "ebedbde8-983a-4109-b78c-3cfa981280b2",
+              "type" : "component"
+            } ],
+            "id" : "d595a49b-0cf4-420f-a490-e30ddc791b34",
+            "name" : "cart",
+            "title" : "Cart",
+            "type" : "region"
+          } ],
+          "definition" : "commerce_unified_checkout:layoutHeader",
+          "id" : "4666a3ac-ed11-4efd-ab40-bc166595ae8c",
+          "type" : "component"
+        } ],
+        "id" : "8fdbd2ac-24f5-413c-9665-16160e379f1d",
+        "name" : "header",
+        "title" : "Header",
+        "type" : "region"
+      }, {
+        "id" : "a38a8296-327f-4c24-ac3a-378154f52412",
+        "name" : "footer",
+        "title" : "Footer",
+        "type" : "region"
+      } ],
+      "definition" : "commerce:layoutSite",
+      "id" : "e444ac08-9909-4b78-8699-42dfa0854a5c",
+      "type" : "component"
+    }
+  },
+  "urlName" : "checkout-layout"
+}

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_4</activeVersionIdentifier>
+    <description>Get the activities for children that the hotel offers</description>
+    <developerName>Activities_for_children</developerName>
+    <masterLabel>Activities for children</masterLabel>
+    <templateVersions>
+        <content>You are a Hotel Manager, Customer is Looking if they hotel the are interested in has Activities for their Kids,
+
+Here are the details for all the Hotels {!$Flow:Get_Products_for_Prompt_Builder.Prompt}
+
+Customer has {!$Input:Contact.Number_of_Children__c} Kids where {!$Input:Contact.Under_Age_Children__c} Child is Under Age
+
+If Customer has even a single Underage Child, fetch the Kids Activities that are offered from the Hotel they are interested in, Customer is interested in {!$Input:Hotel_Name} 
+
+List down the activities Offered in bullets points by 
+If Customer has Under Age Child Say &apos;Of course, we realize that you have children under the age of 12 and we offer the following&apos;. List kid friendly activities
+If Customer do not have Under age child  List kid friendly activities
+
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Hotel_Name</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Hotel Name</masterLabel>
+            <referenceName>Input:Hotel_Name</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Products_for_Prompt_Builder</definition>
+            <referenceName>Flow:Get_Products_for_Prompt_Builder</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a Hotel Manager, Customer is Looking if they hotel the are interested in has Activities for their Kids,
+
+Here are the details for all the Hotels {!$Flow:Get_Products_for_Prompt_Builder.Prompt}
+
+Customer has {!$Input:Contact.Number_of_Children__c} Kids where {!$Input:Contact.Under_Age_Children__c} Child is Under Age
+
+If Customer has even a single Underage Child, fetch the Kids Activities that are offered from the Hotel they are interested in, Customer is interested in {!$Input:Hotel_Name} 
+
+List down the activities Offered in bullets points by 
+If Customer has Under Age Children Say &apos;Of course, we realize that you have children under the age of 12 and we offer the following&apos;. List kid friendly activities
+If Customer do not have Under age child  List kid friendly activities
+
+
+</content>
+        <inputs>
+            <apiName>Hotel_Name</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Hotel Name</masterLabel>
+            <referenceName>Input:Hotel_Name</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Products_for_Prompt_Builder</definition>
+            <referenceName>Flow:Get_Products_for_Prompt_Builder</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a Hotel Manager, Customer is Looking if they hotel the are interested in has Activities for their Kids,
+
+Here are the details for all the Hotels {!$Flow:Get_Products_for_Prompt_Builder.Prompt}
+
+Customer has {!$Input:Contact.Number_of_Children__c} Kids where {!$Input:Contact.Under_Age_Children__c} Child is Under Age
+
+If Customer has even a single Underage Child, fetch the Kids Activities that are offered from the Hotel they are interested in, Customer is interested in {!$Input:Hotel_Name} 
+If Customer has No Under Age Children and number of children is greater than 0 Then fetch the TeenAge Activities  that are offered from the Hotel they are interested in,  Customer is interested in {!$Input:Hotel_Name} 
+
+List down the activities Offered in bullets points by 
+If Customer has Under Age Children Say &apos;Of course, we realize that you have children under the age of 12 and we offer the following&apos;. List kid friendly activities
+If Customer do not have Under age child and number of children is greater than 0  then List TeenAge activities
+
+
+
+</content>
+        <inputs>
+            <apiName>Hotel_Name</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Hotel Name</masterLabel>
+            <referenceName>Input:Hotel_Name</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Products_for_Prompt_Builder</definition>
+            <referenceName>Flow:Get_Products_for_Prompt_Builder</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_3</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a Hotel Manager, Customer is Looking if they hotel the are interested in has Activities for their Kids,
+
+Here are the details for all the Hotels {!$Flow:Get_Products_for_Prompt_Builder.Prompt}
+
+Customer has {!$Input:Contact.Number_of_Children__c} Kids where {!$Input:Contact.Under_Age_Children__c} Child is Under Age
+
+If Customer has even a single Underage Child, fetch the Kids Activities that are offered from the Hotel they are interested in, Customer is interested in {!$Input:Hotel_Name} 
+If Customer has No Under Age Children and number of children is greater than 0 Then fetch the TeenAge Activities  that are offered from the Hotel they are interested in,  Customer is interested in {!$Input:Hotel_Name}
+If Customer has {!$Input:Contact.Number_of_Children__c} is greater than {!$Input:Contact.Under_Age_Children__c} then fetch  Kids Activities and TeenAge Activities  that are offered from the Hotel they are interested in, Customer is interested in {!$Input:Hotel_Name}
+
+List down the activities Offered in bullets points by 
+If Customer has Under Age Children Say &apos;Of course, we realize that you have children under the age of 12 and we offer the following&apos;. List kid friendly activities
+If Customer do not have Under age child and number of children is greater than 0  then List TeenAge activities
+
+
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Hotel_Name</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Hotel Name</masterLabel>
+            <referenceName>Input:Hotel_Name</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Products_for_Prompt_Builder</definition>
+            <referenceName>Flow:Get_Products_for_Prompt_Builder</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_4</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

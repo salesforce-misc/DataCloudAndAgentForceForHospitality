@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Room_Category__c</fullName>
+    <label>Preferred Room Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Deluxe</fullName>
+                <default>false</default>
+                <label>Deluxe</label>
+            </value>
+            <value>
+                <fullName>Superior</fullName>
+                <default>false</default>
+                <label>Superior</label>
+            </value>
+            <value>
+                <fullName>Suite</fullName>
+                <default>false</default>
+                <label>Suite</label>
+            </value>
+            <value>
+                <fullName>Executive Suite</fullName>
+                <default>false</default>
+                <label>Executive Suite</label>
+            </value>
+            <value>
+                <fullName>Family Suite</fullName>
+                <default>false</default>
+                <label>Family Suite</label>
+            </value>
+            <value>
+                <fullName>Presidential Suite</fullName>
+                <default>false</default>
+                <label>Presidential Suite</label>
+            </value>
+            <value>
+                <fullName>Villas</fullName>
+                <default>false</default>
+                <label>Villas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

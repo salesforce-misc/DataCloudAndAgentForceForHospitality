@@ -1,0 +1,21 @@
+{
+  "required" : [ "contactId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contactId" : {
+      "title" : "contactId",
+      "description" : "Populate this input variable with a contactId.\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "reservationId" : {
+      "title" : "reservationId",
+      "description" : "Populate this input variable with a reservationId.\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

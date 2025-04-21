@@ -1,0 +1,17 @@
+.header{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 1.5rem 0.5rem;
+    border-radius: 7px;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    background: rgb(3, 129, 62);
+
+}
+.slds-box{
+    border: none;
+}
+.slds-p-around_medium{
+    padding-bottom: 0;
+}

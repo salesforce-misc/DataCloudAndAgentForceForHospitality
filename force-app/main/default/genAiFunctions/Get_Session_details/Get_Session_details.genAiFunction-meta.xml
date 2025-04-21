@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Summarize the Experience Session Record details.</description>
+    <invocationTarget>GetSessionDetails</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Get Session details</masterLabel>
+    <progressIndicatorMessage>Display the Session While Customer Interested any of Experience</progressIndicatorMessage>
+</GenAiFunction>

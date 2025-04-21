@@ -1,0 +1,48 @@
+<!--
+  @description       : 
+  @author            : amankailash.patil@infosys.com
+  @group             : 
+  @last modified on  : 03-27-2025
+  @last modified by  : Aman Patil
+-->
+
+
+<template>
+    <lightning-card title="Your Year-to-Date Progress">
+        <!-- Outer Container -->
+        <div class="outer-container">
+            <!-- First Column: Takes entire height -->
+            <div class="column first-column">
+                <article class="slds-card">
+                    <div class="slds-card__body slds-card__body_inner slds-m-around_none slds-p-around_none">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_1-of-3 slds-p-around_xxx-small">
+                                <div class="chart" lwc:dom="manual" style="position: relative;
+                                    margin: auto;
+                                    margin-left:0;
+                                    width: 20vw;" lwc:ref="chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+        <!-- Second Column: Contains two rows -->
+        <div class="column second-column">
+            <div class="box">
+                <p>{pointBalance}</p>
+                <p>Base Point </p>
+            </div>
+            
+                <div class="box">
+                <p>{pointToNextTire}</p>
+                <p>Points to Next Tier</p>
+            </div>
+          
+            
+        </div>
+     
+    </lightning-card>
+</template>

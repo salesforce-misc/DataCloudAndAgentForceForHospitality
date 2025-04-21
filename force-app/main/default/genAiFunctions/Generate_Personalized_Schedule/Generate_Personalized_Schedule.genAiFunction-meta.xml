@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Get the available Activities or Recommendation in the area based on customer Interest, Experience and Sessions and always display the details in bullet point.</description>
+    <invocationTarget>Generate_Personalized_Schedule</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <masterLabel>Generate Personalized Schedule</masterLabel>
+</GenAiFunction>

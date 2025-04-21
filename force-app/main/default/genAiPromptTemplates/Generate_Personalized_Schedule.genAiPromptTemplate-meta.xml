@@ -1,0 +1,2411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_45</activeVersionIdentifier>
+    <developerName>Generate_Personalized_Schedule</developerName>
+    <masterLabel>Generate Personalized Schedule</masterLabel>
+    <templateVersions>
+        <content>Your name is {!$User.Username}You work in the guest success team at {!$Organization.Name}.
+Introduce yourself, then present the list of resort activities happening today that match the guest&apos;s interests.
+For clarity, use a bullet list.
+For each Experience, include name, time, price, time and level on a single line. Do not include the date.
+{!$Apex:PersonalizedExperiences.Prompt}
+Then add a suggested Session based on availability.
+For each Session, include Session Name, Experience Name, Date, Slots
+{!$Apex:PersonalizedExperiencesSession.Prompt}
+
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT35Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Your name is {!$User.Username}You work in the guest success team at {!$Organization.Name}.
+Introduce yourself, then present the list of resort activities happening today that match the guest&apos;s interests.
+For clarity, use a bullet list.
+For each Experience, include name, time, price, time and level on a single line. Do not include the date.
+{!$Apex:PersonalizedExperiences.Prompt}
+Then add a suggested Session based on availability and pass the pass all the returns Experience__c to &apos;PersonalizedExperienceSession&apos; class
+For each Session, include Session Name, Experience Name, Date, Slots
+{!$Apex:PersonalizedExperiencesSession.Prompt}
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT35Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Your name is {!$User.Username}You work in the guest success team at {!$Organization.Name}.
+Introduce yourself, then present the list of resort activities happening today that match the guest&apos;s interests.
+For clarity, use a bullet list.
+For each Experience, include name, time, price, time and level on a single line. Do not include the date.
+{!$Apex:PersonalizedExperiences.Prompt}
+Then add a suggested Session based on availability
+For each Session, include Session Name, Experience Name, Date, Slots
+{!$Apex:PersonalizedExperiencesSession.Prompt}
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT35Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_3</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Your name is {!$User.Username}You work in the guest success team at {!$Organization.Name}.
+Introduce yourself, then present the list of resort activities happening today that match the guest&apos;s interests.
+For clarity, use a bullet list.
+For all Experiences, include name, time, price, time and level on a single line. Do not include the date.
+{!$Apex:PersonalizedExperiences.Prompt}
+Then add a suggested Session based on availability
+For all Sessions, include Session Name, Experience Name, Date, Slots
+{!$Apex:PersonalizedExperiencesSession.Prompt}
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_4</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Your name is {!$User.Name} You work in the guest success team at {!$Organization.Name}.
+Introduce yourself, then present the list of resort activities happening today that match the guest&apos;s interests.
+For clarity, use a bullet list.
+For all Experiences, include name, time, price, time and level on a single line. Do not include the date.
+{!$Apex:PersonalizedExperiences.Prompt}
+Then add a suggested Session based on availability
+For all Sessions, include Session Name, Experience Name, Date, Slots
+{!$Apex:PersonalizedExperiencesSession.Prompt}
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_5</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Your name is {!$User.Name} You work in the guest success team at {!$Organization.Name}.
+Introduce yourself, then present the list of resort activities happening today that match the guest&apos;s interests.
+For clarity, show the result in the form of list view.
+For all Experiences, include name, time, price, time and level on a single line. Do not include the date.
+{!$Apex:PersonalizedExperiences.Prompt}
+Then add a suggested Session based on availability
+For all Sessions, include Session Name, Experience Name, Date, Slots
+{!$Apex:PersonalizedExperiencesSession.Prompt}
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_6</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Your name is {!$User.Name} You work in the guest success team at {!$Organization.Name}.
+For clarity, show the result in the form of Summarized Record list view.
+For all Experiences, include name, time, price, time and level on a single line. Do not include the date and show only most viewed Experiences.
+{!$Apex:PersonalizedExperiences.Prompt}
+Then add a suggested Session based on availability and show only most viewed Session.
+For all Sessions, include Session Name, Experience Name, Date, Slots
+{!$Apex:PersonalizedExperiencesSession.Prompt}
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_7</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Your name is {!$User.Name} You work in the guest success team at {!$Organization.Name}.
+For clarity, show the result in the form of Summarized Record list view.
+For all Experiences, include name, time, price, time and level on a single line. Do not include the date and show only most viewed Experiences.
+{!$Apex:PersonalizedExperiences.Prompt}
+Then recommend a suggested Session based on availability and show top three closest matching Sessions.
+For all Sessions, include Session Name, Experience Name, Date, Slots
+{!$Apex:PersonalizedExperiencesSession.Prompt}
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_8</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Instruction:
+
+Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c}
+
+Generate some recommendation based on past interests(like Past Reservations and Experiences {!$RelatedList:Contact.Reservations__r.Records} {!$RelatedList:Contact.Bookings__r.Records}) when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Type and picture of experience in {!$Apex:PersonalizedExperiences.Prompt}
+
+
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Contact.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>Reservations__r</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Contact.Reservations__r.Records</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Contact.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>Bookings__r</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Contact.Bookings__r.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_9</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past interests(like Past Reservations and Experiences) when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration and Type {!$Apex:PersonalizedExperiences.Prompt} and the details should be display in the below format with bullet points and only display four and five Experience based on past interests.
+Serial Number. Experience Name: Price | Duration | Activity Level
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions based on selected Experience.
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in  YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_11</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past interests(like Past Reservations and Experiences) when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration and Type {!$Apex:PersonalizedExperiences.Prompt} and the details should be display in the below format with bullet points.
+Serial Number. Experience Name: Price | Duration | Activity Level
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points.
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in  YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_10</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past interests(like Pass Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt}) when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration and Type {!$Apex:PersonalizedExperiences.Prompt} and the details should be display in the below format with bullet points and only display four and five Experience based on past interests.
+Serial Number. Experience Name: Price | Duration | Activity Level
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions based on selected Experience.
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in  YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_12</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past interests(like Pass Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt}) when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration and Type {!$Apex:PersonalizedExperiences.Prompt} and the details should be display in the below format with bullet points and only display four and five Experiences. Here are some recommendations based on your previous interests:
+Serial Number. Experience Name: Price | Duration | Activity Level
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions. Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in  YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_13</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past interests(like Pass Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt}) when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration and Type {!$Apex:PersonalizedExperiences.Prompt} and the details should be display in the below format with bullet points and only display four and five Experiences. Here are some recommendations based on your previous interests:
+Serial Number. Experience Name: Price | Duration | Activity Level
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions. Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in  YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_14</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past interests(like Pass Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt}) when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration and Type {!$Apex:PersonalizedExperiences.Prompt} and the details should be display in the below format with bullet points and also display the picture of Experience if available on the record and only display four and five to most Experiences. Here are some recommendations based on your previous interests:
+Serial Number. Experience Name: Price | Duration | Activity Level
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions. Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in  YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_15</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past interests(like Pass Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt}) when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration and Type {!$Apex:PersonalizedExperiences.Prompt} and the details should be display in the below format with bullet points and only display four and five to most Experiences.
+Here are some recommendations based on your previous interests:
+Serial Number. Experience Name: Price | Duration | Activity Level
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions.
+Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in  YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_16</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt} when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration and Type {!$Apex:PersonalizedExperiences.Prompt} and the details should be display in the below format with bullet points and only display four and five to most Experiences.
+Here are some recommendations based on your previous interests:
+Serial Number. Experience Name: Price | Duration | Activity Level
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions.
+Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in  YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_17</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt} when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration and Type {!$Apex:PersonalizedExperiences.Prompt} and the details should be display in the below format with bullet points and only display four and five to most Experiences.
+Here are some recommendations based on your previous interests:
+Serial Number. (Experience Record Name) (Experience Record Price) | (Experience Record Duration) | (Experience Record Level)
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions.
+Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in  YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_18</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt} when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration and Type {!$Apex:PersonalizedExperiences.Prompt} and the details should be display in the below format with bullet points and only display four and five to most Experiences.
+Here are some recommendations based on your previous interests:
+Serial Number. (Experience Record Name): (Experience Record Price) | (Experience Record Duration) | (Experience Record Level)
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions.
+Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in  YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_19</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past interests(like Pass Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt}) when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration and Type {!$Apex:PersonalizedExperiences.Prompt} and the details should be display in the below format with bullet points and only display four and five Experiences based on previous interests. Here are some recommendations based on your previous interests:
+Serial Number. Experience Name: Price | Duration | Activity Level
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions based on selected Experience. Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_20</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt} when customer ask for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration and Type {!$Apex:PersonalizedExperiences.Prompt} and the details should be display in the below format with bullet points and only display four and five to most Experiences. 
+Here are some recommendations based on your previous interests:
+Serial Number. (Experience Record Name): (Experience Record Price) | (Experience Record Duration) | (Experience Record Level) 
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions. 
+Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_21</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt} and customer interest when customer asking for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration, Picture and Type {!$Apex:PersonalizedExperiences.Prompt} and the record details should be display in the below format with bullet points and only display four and five to most Experiences.
+Here are some recommendations based on your previous interests:
+Serial Number. (Experience Record Name): (Experience Record Price) | (Experience Record Duration) | (Experience Record Level)
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions.
+Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in  YYYY-MM-DD format only show Date field single value.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_22</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt} and customer interest when customer asking for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration, Picture and Type {!$Apex:PersonalizedExperiences.Prompt} and the record details should be display in the below format with bullet points and only display four and five to most Experiences.
+Here are some recommendations based on your previous interests:
+Serial Number. (Experience Record Name): (Experience Record Price) | (Experience Record Duration) | (Experience Record Level)
+
+Generate some recommended session based on past interests when customer ask for the Available Session and display the Upcoming Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in the below format with bullet points and only display two or three Sessions.
+Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?
+.Session ID: Session Record Number | Date: Session Date (YYYY-MM-DD) | Time: StartTime– EndTime
+Instruction: Do not show the experience name only display Session Record Number(eg.S-00004219) and Session Date always be in  YYYY-MM-DD format only show Date field single value and session date should not be past date.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_23</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt} and customer interest when customer asking for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration, Picture and Type {!$Apex:PersonalizedExperiences.Prompt} and the record details should be display in the below format with bullet points and only display four and five to most Experiences.
+Say - &apos;Here are some recommendations based on your previous interests:&apos;
+List of Experiences show in the below format 
+Serial Number. (Experience Name): (Experience Record Price) | (Experience Record Duration) | (Experience Record Level)
+
+Generate some recommended session based on past interests when customer ask for the Available Session {!$Apex:PersonalizedExperiencesSession.Prompt} and display the Upcoming Recommended Session Details with Name, Session Record Number, Date, StartTime, EndTime, Available Slots and details should be display in the below format with bullet points and only display all Sessions.
+Say - &apos;Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?&apos;
+List of Sessions show in the below format 
+.&apos;Session ID:&apos; (Session Name) | &apos;Date:&apos; (Session Record Date) | &apos;Time:&apos; (Session Record StartTime) – (Session Record EndTime)
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_24</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past Bookings {!$Apex:PersonalizedExperiencesBooking.Prompt} and customer interest when customer asking for the Activities and display the Recommended Experience Details with Name, Level, Price, Duration, Picture and Type {!$Apex:PersonalizedExperiences.Prompt} and the record details should be display in the below format with bullet points and only display four and five to most Experiences.
+Say - &apos;Here are some recommendations based on your previous interests:&apos;
+List of Experiences show in the below format 
+Serial Number. (Experience Name): (Experience Record Price) | (Experience Record Duration) | (Experience Record Level)
+
+Generate some recommended session based on past interests when customer ask for the Available Session {!$Apex:PersonalizedExperiencesSession.Prompt} and display the Upcoming Recommended Session Details with Name, Date, StartTime, EndTime, Available Slots and details should be display in the below format with bullet points and only display two or three Sessions.
+Say - &apos;Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?&apos;
+List of Sessions Record show in the below format 
+Name: 
+Date: 
+Start Time:
+End Time
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_25</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past Bookings Experiences {!$Apex:PersonalizedExperiencesBooking.Prompt} and customer interest when customer asking for the Activities or Experiences and display the Recommended Experience Details with Name, Price, Duration and Level {!$Apex:PersonalizedExperiences.Prompt} and the record details should be display in the below format with bullet points and only display four and five to most Experiences.
+Say - &apos;Here are some recommendations based on your previous interests:&apos;
+
+Generate some recommended session based on past Bookings Sessions {!$Apex:PersonalizedExperiencesBooking.Prompt} and customer interest when customer asking for the Available Session and display the Upcoming Recommended Session Details with Number, Date, Start Time and End Time {!$Apex:PersonalizedExperiencesSession.Prompt} and the record details should be display in the below format with bullet points and only display two or three Sessions.
+Say - &apos;Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?&apos;
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_26</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt}
+
+Both the details of Experiences and Session should be display in different list.
+
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+• Each Sessions includes the following details:
+• Name: The Session Record Number of the Session .
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_29</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past Bookings Experiences {!$Apex:PersonalizedExperiencesBooking.Prompt} and customer interest when customer asking for the Activities or Experiences and display the Recommended Experience Details with Name, Price, Duration and Level {!$Apex:PersonalizedExperiences.Prompt} and the record details should be display in the below format with bullet points and only display four and five to most Experiences.
+Say - &apos;Here are some recommendations based on your previous interests:&apos;
+
+Generate some recommended session based on past Bookings Sessions {!$Apex:PersonalizedExperiencesBooking.Prompt} and customer interest when customer asking for the Available Session and display the Upcoming Recommended Session Details with Number, Date, Start Time and End Time {!$Apex:PersonalizedExperiencesSession.Prompt} and the record details should be display in the below format with bullet points and only display two or three Sessions.
+Say - &apos;Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?&apos;
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_27</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Details about the customer interests areas {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+Generate some recommendation based on past Bookings Experiences {!$Apex:PersonalizedExperiencesBooking.Prompt} and customer interest when customer asking for the Activities or Experiences and display the Details with Name, Price, Duration and Level {!$Apex:PersonalizedExperiences.Prompt} and details should be display in bullet points and only display four and five Experiences.
+Say - &apos;Here are some recommendations based on your previous interests:&apos;
+
+Generate some recommended session based on past Bookings Sessions {!$Apex:PersonalizedExperiencesBooking.Prompt} and customer interest when customer asking for the Available Session and display the Details with Number, Date, Start Time and End Time {!$Apex:PersonalizedExperiencesSession.Prompt} and details should be display in bullet points and only display two or three Sessions.
+Say - &apos;Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?&apos;
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_28</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt}
+
+Both the details of Experiences and Session should be display in different list.
+
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+• Each Sessions includes the following details:
+• Name: The Name of the Session ID.
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_30</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt}
+
+If customer ask for Activities then say &apos;Here are some recommendations based on your previous interests:&apos; and display the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+If customer ask for Sessions then say &apos;Here are the available sessions based on your stay at the hotel, which date would you prefer and how many people are in your party?&apos; and display the Sessions details in the below format:
+• Each Sessions includes the following details:
+• Name: The Name of the Session ID.
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_31</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt}
+
+If customer ask for Activities then display the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+If customer ask for Sessions then display the Sessions details in the below format:
+• Each Sessions includes the following details:
+• Name: The Name of the Session ID.
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_32</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt}
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+If customer asking for the available Sessions then display the Sessions details in the below format:
+• Each Sessions includes the following details:
+• Name: The Name of the Session ID.
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_33</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt} and pass the Selected Experience Name as Parameter of apex class.
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+If customer asking for the available Sessions then display the Sessions details in the below format:
+• Each Sessions includes the following details:
+• Name: The Name of the Session ID.
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Draft</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_34</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt} and pass the Selected Experience Name as Parameter of apex class.
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+If customer asking for the available Sessions then display the Sessions details in the below format:
+• Each Sessions includes the following details:
+• Name: The Name of the Session ID.
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_35</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt}.
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+If customer asking for the available Sessions then display the Sessions details in the below format:
+• Each Sessions includes the following details:
+• Name: The Name of the Session ID.
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_36</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt}.
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+If customer asking for the available Sessions then display the Sessions details in the below format:
+• Each Sessions includes the following details:
+• Session Id: Session ID.
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_37</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt}.
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+If customer asking for the available Sessions then display the Sessions details in the below format:
+• Each Sessions includes the following details:
+• Name: The Name of the Session.
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_38</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt}.
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+If customer asking for the available Sessions then display the Sessions details in the below format:
+• Each Sessions includes the following details:
+• Name: The Number of the Session.
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_39</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt}.
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+If customer asking for the available Sessions then display the Sessions details in the below format:
+• Each Sessions includes the following details:
+• Name: The Record Number of the Session.
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_40</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Experience Sessions: {!$Apex:PersonalizedExperiencesSession.Prompt}.
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration of Experience.
+• Level: The Level of Experience.
+
+If customer asking for the available Sessions then display the Sessions details in the below format:
+• Each Sessions includes the following details:
+• Name: The Name of the Session ID.
+• Date: The Date of Session.
+• Start Time: The Start Time of Session.
+• End Time: The End Time of Session.
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesSession</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesSession</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_41</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and session based on past bookings with customer interests areas. Your task is to Provide the list of Experiences and Sessions.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name(Name__c) of the Experience.
+• Price: The Price(Price_c__c) of Experience.
+• Duration: The Duration Hours(Duration_Hours_c__c) of Experience.
+• Level: The Level(Activity_Level_c__c) of Experience.
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_42</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and past bookings with customer interests areas. Your task is to Provide the list of Experiences.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience((Name__c).
+• Price: The Price of Experience(Price_c__c).
+• Duration: The Duration Hours of Experience(Duration_Hours_c__c).
+• Level: The Level of Experience(Activity_Level_c__c).
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_43</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and past bookings with customer interests areas. Your task is to Provide the list of Experiences.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration Hours of Experience.
+• Level: The Level of Experience.
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_44</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer asking for the activities then based on past bookings experiences and session give the suggested experience and sessions.
+
+Instruction:
+You are a smart assistant for searching experiences and past bookings with customer interests areas. Your task is to Provide the list of Experiences.
+Customer Interest Areas: {!$Input:Contact.Interest1__c} {!$Input:Contact.Interest2__c}{!$Input:Contact.Interest3__c} 
+List of Experiences: {!$Apex:PersonalizedExperiences.Prompt}
+List of Past Bookings: {!$Apex:PersonalizedExperiencesBooking.Prompt}
+
+If customer asking for Activities then display only the Experiences details in the below format:
+• Each Experience includes the following details:
+• Name: The name of the Experience.
+• Price: The Price of Experience.
+• Duration: The Duration Hours of Experience.
+• Level: The Level of Experience.
+
+</content>
+        <inputs>
+            <apiName>Contact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiences</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://PersonalizedExperiencesBooking</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:Contact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedExperiencesBooking</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_45</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

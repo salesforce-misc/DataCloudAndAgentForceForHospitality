@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Create a Booking__c record when provided the numberOfGuests, ID of the contact and Name of  the Selected Session__c</description>
+    <invocationTarget>Create_Booking</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Create Booking For Session</masterLabel>
+    <progressIndicatorMessage>Creating the Booking Record</progressIndicatorMessage>
+</GenAiFunction>

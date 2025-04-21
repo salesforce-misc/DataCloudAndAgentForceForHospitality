@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>All_Products</name>
+        <elementSubtype>AddPromptInstructions</elementSubtype>
+        <label>All Products</label>
+        <locationX>842</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>$Output.Prompt</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>(
+Product Name: {!Get_All_Product.ssot__Name__c},
+Product Description:{!Get_All_Product.ssot__Description__c},
+Amenities:{!Get_All_Product.Amenities__c},
+Location: {!Get_All_Product.Location__c},
+Pet Policy:{!Get_All_Product.Pet_Policy__c},
+Kids Activities :{!Get_All_Product.Kids_Activities__c},
+Teen Activities :{!Get_All_Product.TeenAge_Activity__c}
+)
+</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_All_Product</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Products_For_Pets</name>
+        <elementSubtype>AddPromptInstructions</elementSubtype>
+        <label>Products For Pets</label>
+        <locationX>490</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>$Output.Prompt</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>(
+Product Name: {!Product_loop_For_Pets.ssot__Name__c},
+Product Description:{!Product_loop_For_Pets.ssot__Description__c},
+Amenities:{!Product_loop_For_Pets.Amenities__c},
+Location: {!Product_loop_For_Pets.Location__c},
+Pet Policy:{!Product_loop_For_Pets.Pet_Policy__c},
+Kids Activities :{!Product_loop_For_Pets.Kids_Activities__c},
+Teen Activities :{!Product_loop_For_Pets.TeenAge_Activity__c}
+)
+</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Product_loop_For_Pets</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Products_To_Get</name>
+        <elementSubtype>AddPromptInstructions</elementSubtype>
+        <label>Products</label>
+        <locationX>138</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>$Output.Prompt</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>(
+Product Name: {!Product_loop.ssot__Name__c},
+Product Description:{!Product_loop.ssot__Description__c},
+Amenities:{!Product_loop.Amenities__c},
+Location: {!Product_loop.Location__c},
+Pet Policy:{!Product_loop.Pet_Policy__c},
+Kids Activities :{!Product_loop.Kids_Activities__c},
+Teen Activities :{!Product_loop.TeenAge_Activity__c}
+)
+</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Product_loop</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Decision_To_Get_the_Product_Details</name>
+        <label>Decision To Get the Product Details</label>
+        <locationX>402</locationX>
+        <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>Get_All_Hotels</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Family_Friendly_Hotel</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Question</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>family-friendly</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Question</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>familyfriendly</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Question</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>family friendly</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Hotels</targetReference>
+            </connector>
+            <label>Family Friendly Hotel</label>
+        </rules>
+        <rules>
+            <name>Pets_Friendly_Hotel</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Question</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>pets</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Question</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>pet</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Hotels_For_Pets</targetReference>
+            </connector>
+            <label>Pets Friendly Hotel</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Get Products for Prompt Builder {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Get Products for Prompt Builder</label>
+    <loops>
+        <name>Get_All_Product</name>
+        <label>Get All Product</label>
+        <locationX>754</locationX>
+        <locationY>350</locationY>
+        <collectionReference>Get_All_Hotels</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>All_Products</targetReference>
+        </nextValueConnector>
+    </loops>
+    <loops>
+        <name>Product_loop</name>
+        <label>Product loop</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <collectionReference>Get_Hotels</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Products_To_Get</targetReference>
+        </nextValueConnector>
+    </loops>
+    <loops>
+        <name>Product_loop_For_Pets</name>
+        <label>Product loop For Pets</label>
+        <locationX>402</locationX>
+        <locationY>350</locationY>
+        <collectionReference>Get_Hotels_For_Pets</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Products_For_Pets</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>PromptFlow</processType>
+    <recordLookups>
+        <name>Get_All_Hotels</name>
+        <label>Get All Hotels</label>
+        <locationX>754</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_All_Product</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsActive__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ssot__ProductFamily__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Sunshine Resorts Family</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>ssot__Product__dlm</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Hotels</name>
+        <label>Get Hotels</label>
+        <locationX>50</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Product_loop</targetReference>
+        </connector>
+        <filterLogic>1 AND 5 AND (2 OR 3 OR 4)</filterLogic>
+        <filters>
+            <field>IsActive__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ssot__Description__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>family-friendly</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ssot__Description__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>familyfriendly</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ssot__Description__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>family friendly</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ssot__ProductFamily__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Sunshine Resorts Family</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>ssot__Product__dlm</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Hotels_For_Pets</name>
+        <label>Get Hotels For Pets</label>
+        <locationX>402</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Product_loop_For_Pets</targetReference>
+        </connector>
+        <filterLogic>1 AND 2 AND 6 AND (3 OR 4 OR 5)</filterLogic>
+        <filters>
+            <field>IsActive__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Pet_Policy__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Pets not allowed.</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ssot__Description__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>familyfriendly</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ssot__Description__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>family friendly</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ssot__Description__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>family-friendly</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ssot__ProductFamily__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Sunshine Resorts Family</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>ssot__Product__dlm</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>276</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Decision_To_Get_the_Product_Details</targetReference>
+        </connector>
+        <triggerType>Capability</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>Question</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

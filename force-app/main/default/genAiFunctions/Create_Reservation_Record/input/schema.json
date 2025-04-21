@@ -1,0 +1,35 @@
+{
+  "required" : [ "CheckIn", "CheckOut", "HotelName", "contactId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "CheckIn" : {
+      "title" : "CheckIn",
+      "description" : "Check In Date that Customer is interested in as per the timeframe he provided in his question, Populate this input variable with a check in date that customer will provide with M/d/yyyy format.",
+      "lightning:type" : "lightning__dateType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "CheckOut" : {
+      "title" : "CheckOut",
+      "description" : "Check Out Date that Customer is interested in as per the timeframe he provided in his question, Populate this input variable with a check in date that customer will provide with M/d/yyyy format.",
+      "lightning:type" : "lightning__dateType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "HotelName" : {
+      "title" : "HotelName",
+      "description" : "hotel name that customer would be staying in",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "contactId" : {
+      "title" : "contactId",
+      "description" : "Get the Contact Id of Customer by running the action get customer detail",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

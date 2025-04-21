@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Name__c</fullName>
+    <label>Property Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Paradise Sands Resort</fullName>
+                <default>true</default>
+                <label>Paradise Sands Resort</label>
+            </value>
+            <value>
+                <fullName>Sea Breeze Villas</fullName>
+                <default>false</default>
+                <label>Sea Breeze Villas</label>
+            </value>
+            <value>
+                <fullName>Sunset Cove Retreat</fullName>
+                <default>false</default>
+                <label>Sunset Cove Retreat</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

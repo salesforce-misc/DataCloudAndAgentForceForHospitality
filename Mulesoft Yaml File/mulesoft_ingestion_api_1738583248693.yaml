@@ -1,0 +1,13 @@
+openapi: 3.0.3
+components:
+  schemas:
+    Order:
+      type: object
+      properties:
+        cost:
+          type: number
+        hotel_name:
+          type: string
+        created_date:
+          type: string
+          format: date-time

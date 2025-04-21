@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Answers questions about company policies. For example: “What is your cancellation policy?” or “What is your Pet policy?”.</description>
+    <invocationTarget>Answer_General_Hospitality_Question</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <masterLabel>Answer General Hospitality Question</masterLabel>
+</GenAiFunction>
