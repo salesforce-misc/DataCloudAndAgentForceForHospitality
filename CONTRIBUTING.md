@@ -10,7 +10,7 @@ The intent and goal of open sourcing this project is because it may contain usef
 
 # Getting started
 
-Please join the community on {Here list Slack channels, Email lists, Glitter, Discord, etc... links}. Also please make sure to take a look at the project [roadmap](ROADMAP.md) to see where are headed.
+Please read the README to get started.(https://github.com/salesforce-misc/DataCloudAndAgentForceForHospitality/blob/main/README.md)
 
 # Issues, requests & ideas
 
