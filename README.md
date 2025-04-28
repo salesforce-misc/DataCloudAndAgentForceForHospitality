@@ -630,7 +630,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 ### 3. Salesforce Configuration Steps
    | Step  | Action and Details  |  Images |
    | ----- | ----- | ----- |
-   | Create a Connected App | Create a New Connected App in Salesforce for securely integrating MuleSoft with Salesforce Data Cloud via APIs using OAuth2.0</br> Follow the steps below to create the Connected App.</br>&emsp;- Go to Setup, Search for App Manager and select App Manager</br>&emsp;- Configure the Connected App as shown in the image</br>&emsp;- Ensure you grant Profile level access to newly created Connected App to System Administrator profile | ![184](https://git.soma.salesforce.com/gdevadoss/DataCloudHospitalityDemo/assets/59551/4c0a843d-0187-4f43-85d1-5ab04c62c30d) 
+   | Create a Connected App | Create a New Connected App in Salesforce for securely integrating MuleSoft with Salesforce Data Cloud via APIs using OAuth2.0</br> Follow the steps below to create the Connected App.</br>&emsp;- Go to Setup, Search for App Manager and select App Manager</br>&emsp;- Configure the Connected App as shown in the image</br>&emsp;- Ensure you grant Profile level access to newly created Connected App to System Administrator profile |![image](https://github.com/user-attachments/assets/bfe17d05-b392-4a7a-814a-e6d72c31cafe)
    |  | </br>- After creating the Connected App, click on Manage</br>- Configure the App to match the configuration shown in the image |![image](https://github.com/user-attachments/assets/457538af-90d6-4bdb-84ad-ecd8df306d87)|
    |  | </br>- Go to Setup and search for OAuth and OpenID Connect Settings and enable the Allow OAuth Username-Password Flows | ![image](https://github.com/user-attachments/assets/eff46289-456b-4441-b16f-08c0f4184798)|
 
