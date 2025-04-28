@@ -630,22 +630,17 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 ### 3. Salesforce Configuration Steps
    | Step  | Action and Details  |  Images |
    | ----- | ----- | ----- |
-   | Create a Connected App | Create a New Connected App in Salesforce for securely integrating MuleSoft with Salesforce Data Cloud via APIs using OAuth2.0</br> Follow the steps below to create the Connected App.</br>&emsp;- Go to Setup, Search for App Manager and select App Manager</br>&emsp;- Configure the Connected App as shown in the image</br>&emsp;- Ensure you grant Profile level access to newly created Connected App to System Administrator profile | ![184](https://git.soma.salesforce.com/gdevadoss/DataCloudHospitalityDemo/assets/59551/4c0a843d-0187-4f43-85d1-5ab04c62c30d) |
+   | Create a Connected App | Create a New Connected App in Salesforce for securely integrating MuleSoft with Salesforce Data Cloud via APIs using OAuth2.0</br> Follow the steps below to create the Connected App.</br>&emsp;- Go to Setup, Search for App Manager and select App Manager</br>&emsp;- Configure the Connected App as shown in the image</br>&emsp;- Ensure you grant Profile level access to newly created Connected App to System Administrator profile | ![184](https://git.soma.salesforce.com/gdevadoss/DataCloudHospitalityDemo/assets/59551/4c0a843d-0187-4f43-85d1-5ab04c62c30d) 
    |  | </br>- After creating the Connected App, click on Manage</br>- Configure the App to match the configuration shown in the image |![image](https://github.com/user-attachments/assets/457538af-90d6-4bdb-84ad-ecd8df306d87)|
-
    |  | </br>- Go to Setup and search for OAuth and OpenID Connect Settings and enable the Allow OAuth Username-Password Flows | ![image](https://github.com/user-attachments/assets/eff46289-456b-4441-b16f-08c0f4184798)|
-
 
 ### 4. Mulesoft Configuration Steps
    | Step  | Action and Details  |  Images |
    | ----- | ----- | ----- |
    |Update the Mule flow that inserts data from Mule to Salesforce Data Cloud via Ingestion API| |![image](https://github.com/user-attachments/assets/dd21d524-ff9a-4ea4-9fca-2a45d2f72f60)|
-
    |  |**HTTP Request Connector step** </br>- API URL: https://test.api.amadeus.com/v1/security/oauth2/token</br>- Method: POST</br>- Body</br>&emsp;\%dw 2.0</br>&emsp;output application/x-www-form-urlencoded</br>&emsp;\---</br>&emsp;\{</br>&emsp;&emsp;grant_type: "client_credentials",</br>&emsp;&emsp;client_id: "xxxxxxxxxxxxxxxxx",</br>&emsp;&emsp;client_secret: "xxxxxxxxxxxxxxxxx"</br>\} | ![image](https://github.com/user-attachments/assets/532252ea-d43a-4a3a-91af-82307507be72)|
    |  | **Store Access Token step** </br>- Configure as shown in the image | ![image](https://github.com/user-attachments/assets/cf476480-bad3-4779-950b-6b7da3a56601)|
-
    |  | **Request To Get The Hotel Price step** </br>- API URL: https://test.api.amadeus.com/v3/shopping/hotel-offers</br>- Method: GET</br>- Pass the Header and Query Parameters (get the Hotel Id from Amadeus API and store in the query parameters to get prices for these Hotels)</br>Hotel Id list: MCLONGHM,RTPAR001,BRLAXRRB,ALLON591,ICTYOICB,HLDXB100,ARMADALC,ARMADCAR |![image](https://github.com/user-attachments/assets/a26ab791-357c-4161-9d0f-2fa844411af4)![image](https://github.com/user-attachments/assets/d028675c-fa79-411e-a493-a66c0e11b372)![image](https://github.com/user-attachments/assets/96119f20-60a2-454b-a047-752563ee0c5c)|
-
    |  |  **Transform Message step** </br>- Prepare the JSON (format given below) that is going the used in Salesforce Connector to ingest data via ingestion API</br>&emsp;\%dw 2.0</br>&emsp;output application/json</br>&emsp;var hotelName = ["Palm Oasis Resort","Coral Bay Retreat","Lagoon Paradise Resort","Emerald Bay Resort","Azure Cove Villas","Golden Palms Retreat","Sea Breeze Villas","Paradise Sands Resort"]</br>&emsp;\---</br>&emsp;\{</br>&emsp;&emsp;data: payload.data map(item, index) -> \{</br>&emsp;&emsp;&emsp;hotel_name: hotelName[index],</br>&emsp;&emsp;&emsp;cost: floor(item.offers[0].price.total as Number),</br>&emsp;&emsp;&emsp;created_date: now() as DateTime</br>&emsp;&emsp;\}</br>&emsp;\} | |
    |  | **Streaming - Insert Objects step** </br>- Setup the Salesforce Streaming Insert Object connector (to connect Mule to Salesforce), by providing appropriate Username, Password, Client Id and Client Secret </br>- Configure the connector by providing Source API Name: Mulesoft_Ingestion_API and Object: Order | ![image](https://github.com/user-attachments/assets/9f945715-439f-4e50-b04d-3cb2fa71d390)![image](https://github.com/user-attachments/assets/d1cd2fa1-4c5a-40f3-b8d5-20149a66b67d)|
 
