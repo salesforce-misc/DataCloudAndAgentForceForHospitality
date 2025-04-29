@@ -35,6 +35,7 @@ export default class ProductListComponent extends LightningElement {
     //@track modalpopup = false;
     sessionId;
     @track isShowPetModal = false;
+    @track promptResponse;
 
     connectedCallback() {
         console.log('## Page URL List = '+window.location.href);
@@ -72,6 +73,8 @@ export default class ProductListComponent extends LightningElement {
                           
                         if(message.data.payload.Input_Type__c=='family-friendly'){
                             console.log('message 00 3445->'+JSON.stringify(message.data.payload.Input_Type__c));
+                            console.log('## PromptResponse For Family Friendly = '+JSON.stringify(message.data.payload.PromptResponse__c));
+                            lwcThisContext.promptResponse = message.data.payload.PromptResponse__c;
                             //lwcThisContext.modalpopup = true;
                             lwcThisContext.isShowPetModal = false;
                             setTimeout(function(){
@@ -98,6 +101,8 @@ export default class ProductListComponent extends LightningElement {
                                // lwcThisContext.modalpopup = false;
                               // lwcThisContext.isShowPetModal = false;
                               console.log('message do you allow pets->'+JSON.stringify(message.data.payload.Input_Type__c));
+                              console.log('## PromptResponse For Pet Friendly = '+JSON.stringify(message.data.payload.PromptResponse__c));
+                              lwcThisContext.promptResponse = message.data.payload.PromptResponse__c;
                               //lwcThisContext.modalpopup = false;
                               lwcThisContext.isShowModal = false;
                               setTimeout(function(){

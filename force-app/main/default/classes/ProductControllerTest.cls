@@ -12,11 +12,12 @@ private class ProductControllerTest {
         Test.createSoqlStub(ssot__Product__dlm.sObjectType, stub);
         System.debug('## SoqlStubProvider Created: ' + stub);
         Assert.isTrue(Test.isSoqlStubDefined(ssot__Product__dlm.sObjectType),'SOQL Stub should be defined for ssot__Product__dlm');
-
+		
         
         Test.startTest();
+        String response = 'Based on the customer\'s query, here are the top three hotel recommendations:\n\n1. Hotel Name: Azure Cove Villas.\n   Check In Date: 2025-05-03\n   Check Out Date: 2025-05-04\n\n2. Hotel Name: Emerald Bay Resort\n   Check In Date: 2025-05-03\n   Check Out Date: 2025-05-04\n\n3. Hotel Name: Paradise Sands Resort\n   Check In Date: 2025-05-03\n   Check Out Date: 2025-05-04';
         List<ProductController.ProductListWrapper> productList = new List<ProductController.ProductListWrapper>();
-        List<ProductController.ProductListWrapper> productListDetails = ProductController.getProductList();
+        List<ProductController.ProductListWrapper> productListDetails = ProductController.getProductList(response);
         // Mock data for ProductListWrapper
         if (Test.isRunningTest()) {
             ProductController.ProductListWrapper wrapper1 = new ProductController.ProductListWrapper();
@@ -36,7 +37,7 @@ private class ProductControllerTest {
             wrapper2.isProdUrl = 'https://test.com';
             productList.add(wrapper2);
         } else {
-            productList = ProductController.getProductList();
+            productList = ProductController.getProductList(response);
         }
         Test.stopTest();
         // Validate the response
@@ -56,10 +57,13 @@ private class ProductControllerTest {
         Test.createSoqlStub(ssot__Product__dlm.sObjectType, stub);
         System.debug('## SoqlStubProvider Created: ' + stub);
         Assert.isTrue(Test.isSoqlStubDefined(ssot__Product__dlm.sObjectType),'SOQL Stub should be defined for ssot__Product__dlm');
-        
+        Set<String> hotelNames = new Set<String>();
+        hotelNames.add('Azure Cove Villas');
         Test.startTest();
+        String response = 'Based on the customer\'s query, here are the top three hotel recommendations:\n\n1. Hotel Name: Azure Cove Villas.\n   Check In Date: 2025-05-03\n   Check Out Date: 2025-05-04\n\n2. Hotel Name: Emerald Bay Resort\n   Check In Date: 2025-05-03\n   Check Out Date: 2025-05-04\n\n3. Hotel Name: Paradise Sands Resort\n   Check In Date: 2025-05-03\n   Check Out Date: 2025-05-04';
         List<ProductController.ProductListWrapper> productList = new List<ProductController.ProductListWrapper>();
-        List<ProductController.ProductListWrapper> productListDetails = ProductController.getPetFriendlyProductList();
+        List<ProductController.ProductListWrapper> productListDetails = ProductController.getPetFriendlyProductList(response);
+        List<ssot__Product__dlm> productListDetails1 = ProductController.getProductListFromPromptKeys(hotelNames);
         // Mock data for ProductListWrapper
         if (Test.isRunningTest()) {
             ProductController.ProductListWrapper wrapper1 = new ProductController.ProductListWrapper();
@@ -79,7 +83,7 @@ private class ProductControllerTest {
             wrapper2.isProdUrl = 'https://test.com';
             productList.add(wrapper2);
         } else {
-            productList = ProductController.getPetFriendlyProductList();
+            productList = ProductController.getPetFriendlyProductList(response);
         }
         Test.stopTest();
         // Validate the response

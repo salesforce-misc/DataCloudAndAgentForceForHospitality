@@ -32,6 +32,7 @@ export default class DisplayFriendlyHotel extends LightningElement {
     //@api openfamilyfrindlymodal;
      //userId = USER_ID;
      userEmail;
+    @api promptResponse;
 
 
     connectedCallback(){
@@ -39,7 +40,7 @@ export default class DisplayFriendlyHotel extends LightningElement {
         console.log('allproduct list ->');
     }
 
-    @wire(getProductList)
+    @wire(getProductList, {promptResponse: '$promptResponse'})
     wiredProducts({ error, data }) {
         if (data) {
             console.log('allproduct list ->'+JSON.stringify(data));

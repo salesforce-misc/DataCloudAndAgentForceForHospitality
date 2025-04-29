@@ -2,10 +2,10 @@
    <!-- modal start -->  
 <!--<div id={modalpopup}>-->
   <template if:true={isShowModal}>
-    <c-display-Friendly-Hotel></c-display-Friendly-Hotel>
+    <c-display-Friendly-Hotel prompt-response={promptResponse}></c-display-Friendly-Hotel>
   </template>
   <template if:true={isShowPetModal}>
-    <c-child-Modal></c-child-Modal>
+    <c-child-Modal prompt-response={promptResponse}></c-child-Modal>
   </template>
  <!-- modal end -->
 <!--</div>-->  

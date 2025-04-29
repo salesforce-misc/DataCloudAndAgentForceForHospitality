@@ -7,9 +7,71 @@ public with sharing class ProductController {
         public Boolean showProductListComp;
     }
     
+    @AuraEnabled
+    public static List<ssot__Product__dlm> getProductListFromPrompt(String promptResponse) {
+        List<ssot__Product__dlm> prodlist = New List<ssot__Product__dlm>();
+		if(promptResponse != NULL){
+            System.debug('## Coming inside if when promptResponse NOT NULL');
+            Set<String> hotelNames = new Set<String>();
+            if(promptResponse.contains('Hotel Name')){
+                Pattern pattern = System.Pattern.compile('Hotel Name:\\s*(.+)');
+                Matcher matcher = pattern.matcher(promptResponse);
+                
+                while (matcher.find()) {
+                    String hotel = matcher.group(1).trim();
+                    hotel = hotel.replaceAll('[\\p{Punct}]+$','');
+                    hotelNames.add(hotel);
+                    //hotelNames.add(matcher.group(1).trim());
+                }
+                System.debug('## hotelNames = ' + hotelNames);
+                List<String> likeClauses = new List<String>();
+                for (String hotel : hotelNames) {
+                    likeClauses.add('ssot__Name__c LIKE \'%' + String.escapeSingleQuotes(hotel) + '%\'');
+                }
+                System.debug('## likeClauses = ' + likeClauses);
+                String query = 'SELECT ssot__Id__c,ssot__Name__c, ssot__Description__c FROM ssot__Product__dlm WHERE (' + String.join(likeClauses, ' OR ') + ') AND IsActive__c= \'true\'';
+                System.debug('## Dynamic SOQL = ' + query);
+                prodlist = Database.query(query);    
+                System.debug('## prodlist: =' + prodlist);
+                if(prodlist.isEmpty()){
+                    prodlist = getProductListFromPromptKeys(hotelNames);
+                }
+            }            
+        }
+        return prodlist;
+    }   
+    
+    public static List<ssot__Product__dlm> getProductListFromPromptKeys(Set<String> hotelNames) {
+        List<ssot__Product__dlm> prodlist = new List<ssot__Product__dlm>();
+        String baseQuery = 'SELECT ssot__Id__c, ssot__Name__c, ssot__Description__c FROM ssot__Product__dlm WHERE ';
+        System.debug('## baseQuery =  ' + baseQuery);
+        if(hotelNames != NULL){
+			Set<String> firstWords = new Set<String>();
+            for (String hotel : hotelNames) {
+                String[] parts = hotel.split('\\s+');
+                if (parts.size() > 0 && parts[0].length() > 2) {
+                    firstWords.add(parts[0].trim());
+                }
+            }
+        
+            List<String> keywordClauses = new List<String>();
+            for (String word : firstWords) {
+                keywordClauses.add('ssot__Name__c LIKE \'%' + String.escapeSingleQuotes(word) + '%\'');
+            }
+        
+            if (!keywordClauses.isEmpty()) {
+                String fallbackQuery = baseQuery + '(' + String.join(keywordClauses, ' OR ') + ') AND IsActive__c = \'true\'';
+                System.debug('Fallback query: ' + fallbackQuery);
+                prodlist = Database.query(fallbackQuery);
+            }			            
+        }
+        return prodlist;
+    }
+    
     // AuraEnabled method to get a list of products based on a description filter
     @AuraEnabled(cacheable=true)
-    public static List<ProductListWrapper> getProductList() {
+    public static List<ProductListWrapper> getProductList(String promptResponse) {
+        System.debug('## promptResponse For getProductList = '+promptResponse);
         List<ProductListWrapper> prodWrapperList = new List<ProductListWrapper>();
         List<ssot__Product__dlm> prodlist = New List<ssot__Product__dlm>();
         Boolean showPetFriendlyHotel=false;
@@ -25,8 +87,9 @@ public with sharing class ProductController {
         query += ' WHERE (ssot__Description__c LIKE \'%' + searchKey1 + '%\' OR ssot__Description__c  LIKE \'%' + searchKey2 + '%\' OR ssot__Description__c  LIKE \'%' + searchKey3 + '%\') AND IsActive__c=:activeProduct';
         
         System.debug('dynamic query -->'+ query); 
-        prodlist = Database.query(query);
-        
+        //prodlist = Database.query(query);
+        //prodlist = getProductListFromPrompt('Find a beach front family friendly hotel for next weekend?');
+        prodlist = getProductListFromPrompt(promptResponse);
         System.debug('All Product List: ' + prodlist);
         //Integer hotelPrice=550;
         if(!prodlist.isEmpty() || prodlist!=null){
@@ -50,7 +113,8 @@ public with sharing class ProductController {
     }
     
     @AuraEnabled
-    public static List<ProductListWrapper> getPetFriendlyProductList() {
+    public static List<ProductListWrapper> getPetFriendlyProductList(String promptResponse) {
+        System.debug('## promptResponse for getPetFriendlyProductList = '+promptResponse);
         List<ProductListWrapper> prodWrapperList = new List<ProductListWrapper>();
         List<ssot__Product__dlm> prodlist = New List<ssot__Product__dlm>();
         Boolean showPetFriendlyHotel=false;
@@ -66,8 +130,9 @@ public with sharing class ProductController {
         query += ' WHERE (ssot__Description__c LIKE \'%' + searchKey1 + '%\' OR ssot__Description__c  LIKE \'%' + searchKey2 + '%\' OR ssot__Description__c  LIKE \'%' + searchKey3 + '%\') AND Pet_Policy__c !=:petFriendlySKey AND IsActive__c=:activeProduct';
         
         System.debug('dynamic query pet-->'+ query); 
-        prodlist = Database.query(query);
-        
+        //prodlist = Database.query(query);
+        //prodlist = getProductListFromPrompt('Do you allow pets?');
+        prodlist = getProductListFromPrompt(promptResponse);
         System.debug('dynamic query pet--> ' + prodlist);
         // Integer hotelPrice=550;
         if(!prodlist.isEmpty() || prodlist!=null){
@@ -261,7 +326,8 @@ public with sharing class ProductController {
             delete phtl;
             //delete customSettingRecord;
         }
-    }
+    }   
+       
     
     public class ProductListWrapper{
         @AuraEnabled

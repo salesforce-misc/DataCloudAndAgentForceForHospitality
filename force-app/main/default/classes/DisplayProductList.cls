@@ -4,34 +4,24 @@ public class DisplayProductList {
         System.debug('## experiences requests = '+requests);
         Request input = requests[0];
         String user_Question = input.Question;
-        
+        System.debug('## user_Question = '+user_Question);
+        String promptResponse = input.PromptResponse;
+        System.debug('## promptResponse = '+promptResponse);
         if(user_Question.containsIgnoreCase('pets')){
             System.debug('user_Question contains pet = '+user_Question);
             Enable_Pet_Friendly_Comp__e  petEvt = New Enable_Pet_Friendly_Comp__e();
             petEvt.isVisible__c=True;
             petEvt.Input_Type__c='pet-allowed-hotel';
-            EventBus.publish(petEvt);
-            
-           /* Enable_Hotel_Search_Comp__e  pe2 = New Enable_Hotel_Search_Comp__e();
-            pe2.isVisible__c=false;
-            pe2.isDisableHotelPopup__c=true;
-            EventBus.publish(pe);*/
-            /*Enable_Hotel_Search_Comp__e  pe = New Enable_Hotel_Search_Comp__e();
-            pe.isVisible__c=True;
-            pe.Input_Type__c='pet-allowed-hotel';
-            EventBus.publish(pe);*/
+            petEvt.PromptResponse__c=promptResponse;
+            EventBus.publish(petEvt);           
         }
         else{
             system.debug('not pet related search delete custom setting values');
             Enable_Hotel_Search_Comp__e  pe = New Enable_Hotel_Search_Comp__e();
             pe.isVisible__c=True;
             pe.Input_Type__c='family-friendly';
-            EventBus.publish(pe);
-            
-           /* Enable_Pet_Friendly_Comp__e  petEvt = New Enable_Pet_Friendly_Comp__e();
-            petEvt.isVisible__c=True;
-            petEvt.Input_Type__c='family-friendly';
-            EventBus.publish(pe);*/
+            pe.PromptResponse__c=promptResponse;
+            EventBus.publish(pe);            
         }
         
         System.debug('##publIsh platform event After ##');
@@ -48,6 +38,9 @@ public class DisplayProductList {
     public class Request {
         @InvocableVariable(required=true)
         public String Question;
+        
+        @InvocableVariable(required=true)
+        public String PromptResponse;
     }
     public class Response {
         @InvocableVariable

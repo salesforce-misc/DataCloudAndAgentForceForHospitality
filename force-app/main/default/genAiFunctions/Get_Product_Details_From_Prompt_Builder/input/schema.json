@@ -1,0 +1,14 @@
+{
+  "required" : [ "Question" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Question" : {
+      "title" : "Question",
+      "description" : "User's Question/ Query when they will be searching for a hotel with specific amenities",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

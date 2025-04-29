@@ -31,12 +31,13 @@ export default class ChildModal extends LightningElement {
 
     // userId = USER_ID;
      userEmail;
+     @api promptResponse;
 
 
     connectedCallback(){
         console.log('inside beach front family friendly resort pet');
         console.log('allproduct list pets->');
-        getPetFriendlyProductList()
+        getPetFriendlyProductList({promptResponse: this.promptResponse})
                 .then((data)=> {
                     console.log('allproduct list pet->'+JSON.stringify(data));
                     let prodLink;

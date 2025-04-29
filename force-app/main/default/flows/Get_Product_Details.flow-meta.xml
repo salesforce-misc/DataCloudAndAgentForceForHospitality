@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <name>Get_Prompt_Response</name>
+        <label>Get Prompt Response</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <actionName>Product_Expereince</actionName>
+        <actionType>generatePromptResponse</actionType>
+        <connector>
+            <targetReference>Assign_Product</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>Input:Product</name>
+            <value>
+                <elementReference>Get_Product</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Product_Expereince</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
         <name>Get_the_Real_Time_Product_Id</name>
         <label>Get the Real Time Product Id</label>
         <locationX>176</locationX>
@@ -20,19 +41,26 @@
         <nameSegment>RealTimeActivityProcessor</nameSegment>
         <offset>0</offset>
         <storeOutputAutomatically>true</storeOutputAutomatically>
-        <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Assign_Product</name>
         <label>Assign_Product</label>
         <locationX>176</locationX>
-        <locationY>350</locationY>
+        <locationY>458</locationY>
         <assignmentItems>
             <assignToReference>Product</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Get_Product</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Response</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Prompt_Response.promptResponse</elementReference>
             </value>
         </assignmentItems>
     </assignments>
@@ -66,7 +94,7 @@
         <locationY>242</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Assign_Product</targetReference>
+            <targetReference>Get_Prompt_Response</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -102,5 +130,12 @@
         <isInput>false</isInput>
         <isOutput>true</isOutput>
         <objectType>Product2</objectType>
+    </variables>
+    <variables>
+        <name>Response</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
     </variables>
 </Flow>

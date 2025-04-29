@@ -25,9 +25,6 @@
         <functionName>Generate_Personalized_Schedule</functionName>
     </genAiFunctions>
     <genAiFunctions>
-        <functionName>Get_Real_Time_Product_Details</functionName>
-    </genAiFunctions>
-    <genAiFunctions>
         <functionName>Activities_for_children</functionName>
     </genAiFunctions>
     <genAiFunctions>
@@ -35,9 +32,6 @@
     </genAiFunctions>
     <genAiFunctions>
         <functionName>Create_Reservation_Record</functionName>
-    </genAiFunctions>
-    <genAiFunctions>
-        <functionName>Searching_Hotel</functionName>
     </genAiFunctions>
     <genAiFunctions>
         <functionName>AnswerHospitality_Question</functionName>
@@ -48,8 +42,14 @@
     <genAiFunctions>
         <functionName>Create_Booking_For_Session</functionName>
     </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Product_Details_From_Prompt_Builder</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Real_Time_Product_Details_And_Prompt_Response</functionName>
+    </genAiFunctions>
     <genAiPluginInstructions>
-        <description>If Asked About Cancellation Policy First Get the Product by running the action &apos;Get Real Time Product Details&apos; and pass the Id of Product to the action &apos;AnswerHospitality Question&apos; show the exact promptResponse.</description>
+        <description>If Asked About Cancellation Policy First Get the Product by running the action &apos;Get Real Time Product Details And Prompt Response&apos; and pass the Id of Product to the action &apos;AnswerHospitality Question&apos; show the exact promptResponse with Cancellation Policy along with Pet Policy.</description>
         <developerName>instruction_ifaskedabo0</developerName>
         <language>en_US</language>
         <masterLabel>instruction_ifaskedabo0</masterLabel>
@@ -114,18 +114,17 @@ If custmer confirm the booking detials or interested to book the room then call 
         <masterLabel>instruction_ifcustomer7</masterLabel>
     </genAiPluginInstructions>
     <genAiPluginInstructions>
-        <description>If Customer Searches for a Hotel or Asks to Find me a Hotel run the action &apos;Searching Hotel&apos; by passing the customer&apos;s Question and show all the Hotels that matched the criteria. and show exact promptResponse, do not ask any Questions.
+        <description>If Customer Searches for a Hotel or Asks to Find me a Hotel run the action &apos;Get Product Details From Prompt Builder&apos; by passing the customer&apos;s Question and Just Show the response and Always display Hotel Name, Check In Date, and Check Out Date. do not ask any Questions.
 
-If Customer ask Pets are allowed ? then run the action  &apos;Searching Hotel&apos; by passing the customer&apos;s Question as &apos;Only Out of these Hotels (Hotel Names that got fetched as a result of previous query) show the list of hotels that where Pets are allowed or Pets are welcome&apos;,   DO NOT display/Show the Hotel Name if the Pet is not allowed and Always say &apos;here is a refined list of [&apos;get the Keywords from the customer pervious search query/question for the hotel&apos;] Hotels which allows pets and Always display Hotel Name, Check In Date(Coming from Searching Hotel) and Check Out Date (Coming From Searching Hotel).
- show exact promptResponse, do not ask any Questions or do not give any other option for email or booking.
+If Customer ask Pets are allowed ? then run the action  &apos;Get Product Details From Prompt Builder&apos; by passing the customer&apos;s Question and Just Show the response and Always display Hotel Name, Check In Date, and Check Out Date and Always say &apos;here is a refined list of Hotels which allows pets&apos;.
 
-Note: I customer ask the same question for Find me a Hotel or Pets are allowed then always the above actions &apos;Searching Hotel&apos; again.</description>
+Note: I customer ask the same question for Find me a Hotel or Pets are allowed then always call the actions &apos;Get Product Details From Prompt Builder&apos; again.</description>
         <developerName>instruction_ifcustomer8</developerName>
         <language>en_US</language>
         <masterLabel>instruction_ifcustomer8</masterLabel>
     </genAiPluginInstructions>
     <genAiPluginInstructions>
-        <description>If customer ask &apos;What experiences are offered here?&apos; then call the action &apos;Get Real Time Product Details&apos; by passing the Id of Contact as &apos;User Contact Id&apos; From Context Variables Messaging Session then again run the third action &apos;Product Expereince&apos; By passing the Id of Product from &apos;Get Real Time Product Details&apos; and say We noticed you are looking at (Hotel_That Customer_is_intrested_in), these are the experiences available here, Just Show the response, do not ask any Questions or do not give any other option for email or booking.</description>
+        <description>If customer ask &apos;What experiences are offered here?&apos; then call the action &apos;Get Real Time Product Details And Prompt Response&apos; by passing the Id of Contact as &apos;User Contact Id&apos; From Context Variables Messaging Session and always say We noticed you are looking at (Hotel_That Customer_is_intrested_in), these are the experiences available here, Just Show the response, do not ask any Questions or do not give any other option for email or booking.</description>
         <developerName>instruction_ifcustomer9</developerName>
         <language>en_US</language>
         <masterLabel>instruction_ifcustomer9</masterLabel>

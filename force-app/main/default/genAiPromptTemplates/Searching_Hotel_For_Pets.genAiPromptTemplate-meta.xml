@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>++JDCWM9le8zHBWMn9lONTyrC/fThl9RlvmbmAOLVDc=_2</activeVersionIdentifier>
+    <description>Gives us the Hotel Customer searches for pets.</description>
+    <developerName>Searching_Hotel_For_Pets</developerName>
+    <masterLabel>Searching Hotel For Pets</masterLabel>
+    <templateVersions>
+        <content>Objective:
+When a customer searches for a hotel, extract keywords from their query and return matching hotel based on Description. Focus on identifying Hotels that are suitable based on Customer&apos;s Query.
+Prompt Body:
+You are an intelligent assistant specializing in hotel recommendations. Your task is to recommend hotels based on customer queries that is {!$Input:Question} by matching their keywords with hotel details.
+
+
+Customer&apos;s Question:{!$Input:Question}
+
+• Use the following Salesforce object description fields, isActive field to find the best matches:
+
+• Matching Criteria:
+1. Extract relevant keywords from the customer query {!$Input:Question} (e.g., “Pets Welcome,” &quot;Allow Pet&quot;).
+2. Match the extracted keywords with the Description fields of the Hotels.
+3.Only if the Hotel or Product always isActive.
+
+Prompt Rules:
+1. Extract and prioritize keywords such as “Pets Welcome,” &quot;Allow Pet&quot;.
+2.Focus on Hotel Name based on {!$Input:Question} that explicitly mention pets-allow/welcome features and Product Family always &quot;Sunshine Resorts Family&quot; and Pet Policy Matches like &quot;Pets Allow&quot; or &quot;Pets Welcome &quot; and Product always Active (at least display two result).
+
+This instruction ensures that the Prompt Builder extracts meaningful keywords and provides relevant hotel name recommendations tailored to the customer’s query.
+
+Result : Always Display the result in the given below format and say &quot;here is a refined list of Hotels which allows pets, here are some options:&quot;. Only show Hotel Name, Check In Date and Check Out Date based on customer query, no other details require to display.
+Hotel Name: Product Name.
+Check In Date: Coming from {!$Apex:NextWeekendDateCalculation.Prompt} in YYYY-MM-DD Format
+Check Out Date: Coming from {!$Apex:NextWeekendDateCalculation.Prompt} in YYYY-MM-DD Format
+
+</content>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://NextWeekendDateCalculation</definition>
+            <referenceName>Apex:NextWeekendDateCalculation</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>404XA7Iqe2jK1bSZdYyN+ID2rj5UcXdbkEW0PKwaCrk=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Objective:
+When a customer searches for a hotel, extract keywords from their query and return matching hotel based on Description. Focus on identifying Hotels that are suitable based on Customer&apos;s Query.
+Prompt Body:
+You are an intelligent assistant specializing in hotel recommendations. Your task is to recommend hotels based on customer queries that is {!$Input:Question} by matching their keywords with hotel details.
+
+hotel Details : 
+Customer&apos;s Question:{!$Input:Question}
+
+• Use the following Salesforce object description fields, isActive field to find the best matches:
+
+• Matching Criteria:
+1. Extract relevant keywords from the customer query {!$Input:Question} (e.g., “Pets Welcome,” &quot;Allow Pet&quot;).
+2. Match the extracted keywords with the Description fields of the Hotels.
+3.Only if the Hotel or Product always isActive.
+
+Prompt Rules:
+1. Extract and prioritize keywords such as “Pets Welcome,” &quot;Allow Pet&quot;.
+2.Focus on Hotel Name based on {!$Input:Question} that explicitly mention pets-allow/welcome features and Product Family always &quot;Sunshine Resorts Family&quot; and Pet Policy Matches like &quot;Pets Allow&quot; or &quot;Pets Welcome &quot; and Product always Active (at least display two result).
+
+This instruction ensures that the Prompt Builder extracts meaningful keywords and provides relevant hotel name recommendations tailored to the customer’s query.
+
+Result : Always Display the result in the given below format and say &quot;here is a refined list of Hotels which allows pets, here are some options:&quot;. Only show Hotel Name, Check In Date and Check Out Date based on customer query, no other details require to display.
+Hotel Name: Product Name.
+Check In Date: Coming from {!$Apex:NextWeekendDateCalculation.Prompt} in YYYY-MM-DD Format
+Check Out Date: Coming from {!$Apex:NextWeekendDateCalculation.Prompt} in YYYY-MM-DD Format
+
+</content>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://NextWeekendDateCalculation</definition>
+            <referenceName>Apex:NextWeekendDateCalculation</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>++JDCWM9le8zHBWMn9lONTyrC/fThl9RlvmbmAOLVDc=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
