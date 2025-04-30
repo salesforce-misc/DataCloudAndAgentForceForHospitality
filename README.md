@@ -224,15 +224,15 @@ the org, follow the steps below to create data streams.
 | Create Data Cloud Field Enrichment of ‘Guest Lifetime Value’ |- Go to Object Manager</br>- Search for Contact.</br>- Click on Contact</br>- Click on Data cloud Copy Field.</br>-Click on New.</br>- Select data space as ‘default’ > Select Data Cloud Object as ‘Guest_Lifetime_Value__cio’ </br>- Click on Next </br>- Select Field As ‘GLV’</br>- Give Label as ‘Guest Lifetime Value’</br>- Click on ‘Next </br> - Select Field GLV </br>- Give Label as ‘Guest Lifetime Value’</br> - Click on Next </br> - On contact Select Lifetime_Value__c </br>- Save and Start Sync.|![image](https://github.com/user-attachments/assets/1d3304f0-63b9-4a90-8609-5332a59fcaac)![image](https://github.com/user-attachments/assets/be92a2c8-0f9b-44b7-a1f2-430da343c23a)|
 | Create Data Cloud Field Enrichment of ‘Guest Statisfection Score’ |-> Go to Object Manager.</br>- Search for Contact.</br>- Click on Contact</br>- Click on Data cloud Copy Field.</br>-  Click on New.</br>- Select data space as ‘default’</br>- Select Data Cloud Object as ‘Guest_Satisfaction_Score__cio’</br>- Click on Next</br>- Select Field As ‘GSS’</br>- Give Label as ‘Guest Satisfaction Score’</br>- Click on ‘Next</br>- On contact Select Guest_Satisfaction_Score__c </br>- Save and Start Sync.|![image](https://github.com/user-attachments/assets/e264bcec-b6be-4854-80d9-9d5f649d6a8a)![image](https://github.com/user-attachments/assets/45ae2e88-ca7b-437c-a77c-adbd638cd4b4)|
 | Create Data Cloud Field Enrichment of ‘Guest Stay Matrics’ |- Go to Object Manager.</br>- Search for Contact.</br>- Click on Contact</br>-  Click on Data cloud Copy Field.</br>- Click on New.</br>- Select data space as ‘default’</br>- Select Data Cloud Object as ‘Guest_Stay_Metrics__cio’</br>- Click on Next </br>- Select Fields Total_Stays, Total_Room_Nights, Total_Spend, and Avg_Nights_per_Stay</br>- Give Label as ‘Guest Stay Metrics’</br>-Click Next</br>- Map Fields with below Contact Fields </br>
-| | Data Cloud: Guest stay Matrics | Contact Object|
-| |Total_Stays|Total Stays|
-| |Total_Stays__c|Total_Stays__c|
-| |Total_Room_Nights|Total Room Nights|
-| |Total_Room_Nights__c |Total_Room_Nights__c |
-| |Total_Spend |Total Spend|
-| |Total_Spend__c |Total_Spend__c|
-| |Avg_Nights_per_Stay |Avg_Nights_per_Stay |
-| |Avg_Nights_per_Stay__c|Avg_Nights_per_Stay__c |
+| |Data Cloud: Guest stay Matrics&emsp;&emsp;Contact Object
+| |Total_Stays-->Total Stays|
+| |Total_Stays__c-->Total_Stays__c|
+| |Total_Room_Nights-->Total Room Nights|
+| |Total_Room_Nights__c-->Total_Room_Nights__c |
+| |Total_Spend-->Total Spend|
+| |Total_Spend__c-->Total_Spend__c|
+| |Avg_Nights_per_Stay-->Avg_Nights_per_Stay |
+| |Avg_Nights_per_Stay__c-->Avg_Nights_per_Stay__c |
 | | </br>- Save and Start Sync|![image](https://github.com/user-attachments/assets/ccde6861-ce6c-4054-9373-a8e0528e1b57)![image](https://github.com/user-attachments/assets/a3e1804c-7a37-4347-8364-599c3014ac37)|
 </details>
 
