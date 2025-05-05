@@ -6,22 +6,6 @@ Did you watch the demo? The following are a set of instructions to setup the end
 
 The Sunshine Trail app showcases **Data Cloud**, **Agents** and **Prompts**.
 
-Table of Contents</br>
-=======================
-[1. Installation Guide](#1-pre-deployment-instructions)
-
-[2. Salesforce Package Installation](#2-salesforce-package-installation)
-
-[3. Data-Cloud Configuration](#3-data-cloud-configuration)
-
-[4. Commerce Cloud Configuration](#4-commerce-cloud-configuration)
-
-[5. Connect and Create Sample data](#5-connect-and-create-sample-data)
-
-[6. Finish Configuration](#6-finish-configuration)
-
-[7. Mulesoft Configuration for Amadeus Prices](#7-mulesoft-configuration-for-amadeus-prices)
-
 <details><summary>
 
   ## 1. Pre-Deployment Instructions
