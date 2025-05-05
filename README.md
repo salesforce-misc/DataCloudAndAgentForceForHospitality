@@ -134,41 +134,41 @@ The Data Kit is installed as a part of the Package installation. Follow the step
   | ----- | ----- | ----- |
   | Create Party Identification Collection & Party Identification Collection IOT DLO Creation  | - Click on Data Lake Objects Tab </br>- Click on New</br>- Click on “Create from Data Kits”, Click on Next  and select “Sunshine Trails Base App” package </br>- Select Party Identification Collection.</br>- Click on Next </br> - Click on Save </br> - Repeat the above steps again but this time select </br> - Party Identification Collection IOT DLO instead of Party Identification Collection </br>- Click on Next </br> - Click on Save.|
 
-  ### 7. Create Data Transforms from Data Kit (5 minutes)
+  ### 2. Create Data Transforms from Data Kit (5 minutes)
   Proceed with this step only if you have setup a connection to snowflake
   | Step | Action and Details | Images |
   | ----- | ----- | ----- |
   | Create IOT & POS Data Transform $${\color{blue} Snowflake \space Optional}$$ | -Click on Data Transforms Tab </br>- Click on New</br>- Click on Create from Data Kits, Click on Next</br>- Select Extract Party Identifiers from IOT</br>- Click on Next . Click on Save, Copy the Name , Remove the Name then Paste the same Name Again</br>- Click on Save</br>- Click on Data Transform Tab </br>- Click on New. Click on ‘Create from a Data Kits’ Option </br>- Select  Extract Party Identifiers from POS </br>- Click on Next . Click on Save, Copy the Name , Remove the Name then Paste the same Name Again </br>- Click on Save|![image](https://github.com/user-attachments/assets/79d6f605-c8e5-4c3d-ac6a-f34f39cc29e2)![image](https://github.com/user-attachments/assets/1c84c981-9a03-4b05-9a3a-cf2137d45425)![image](https://github.com/user-attachments/assets/e1e24730-f55a-42de-9a4f-5ab5af27b04b)![image](https://github.com/user-attachments/assets/c3231d58-e1fd-4653-9981-02f152451f61)
  
-  ### 8. Cross Verify CRM Data (5 minutes)
+  ### 3. Cross Verify CRM Data (5 minutes)
   Proceed with this step only if you have the Real-Time SKU enabled in your org
   | Step | Action and Details | Images |
   | ----- | ----- | ----- |
   | **NOTE**|- Before proceeding further, please ensure that the CRM data is available in the DMO. You can verify this by following these steps:</br>- Navigate to Data Explore </br>- Set Data Space to Default.</br>- Select the Data Model Object (DMO).</br>- From the dropdown, choose Account Contact.</br>- You should see Salesforce_Home listed under the Data Source column.</br> If you don't see the data then wait until the data is refreshed before proceeding to the next step.</br>|![image](https://github.com/user-attachments/assets/396732a3-89cb-455d-9a0c-b6c015b272cb)|
 
-  ### 9. Create Identity Resolution Ruleset from Data Kit (5 minutes)
+  ### 4. Create Identity Resolution Ruleset from Data Kit (5 minutes)
   | Step | Action and Details | Images |
   | ----- | ----- | ----- |
   | Create Identity Resolutions| -Go to Data Cloud app</br> - Click on the Identity Resolutions tab </br> - Click New</br> - Select Installed from Data Kit</b>- Choose Sunshine Trails DK</br>- Click on Next</br>- Choose ‘Guest Profile’. Click on Next </br> Click on Save.|![image](https://github.com/user-attachments/assets/1f1ef5a5-1f4e-4d33-af13-07978757facd)![image](https://github.com/user-attachments/assets/20027c3d-4d87-4028-89dd-7f73e2a59224)![image](https://github.com/user-attachments/assets/2d5370ae-57e4-444d-969c-b19dc13ada6b)|
 
-### 10. Create Calculated Insights (5 minutes)
+### 5. Create Calculated Insights (5 minutes)
 | Step | Action and Details | Images |
   | ----- | ----- | ----- |
   |  Create Calculated Insights|- Go to Data Cloud ap </br>- Click on Calculated Insights tab</br>- Click New</br>- Select "Create from a Data Kit" and click  Next</br>- Select ‘Guest Stay Metrics’</br>- Click on Next </br>- Click on ‘Check Syntex’</br>- Click on ‘Activate’</br>- Click Activate</br>- Select Schedule as ‘Every 1 hour’ Select Start Date and Time As default.</br>- Click on ‘Enable’</br>- Repeat the steps for the following metrics: ‘Guest Lifetime Value’, ‘Guest Classification’, ‘Guest Satisfaction Score’ |![image](https://github.com/user-attachments/assets/9f178c36-06c1-405e-b19c-679ef5830c22)![image](https://github.com/user-attachments/assets/e544bf35-223e-4d5b-ad46-34cb6653608c)![image](https://github.com/user-attachments/assets/093600f9-c7a3-4181-88c9-66545191d5b5)|
 
-### 11. Create Data Graph (5 minutes)
+### 6. Create Data Graph (5 minutes)
 | Step | Action and Details | Images |
   | ----- | ----- | ----- |
   |  Create Data Graph |- Click on Data Graph Tab</br>- Click on New</br>- Select Create from Data Kits</br>- Select Sunshine Trails DK </br>- Select **Hospitality Realtime Profile**. </br>- Select primary Data model object as “Unified Individual real”.</br>- Click on Individual and go to the right side where the error is showing and uncheck the check box.</br>- Now click on Save & Build. |![image](https://github.com/user-attachments/assets/f626912f-01b4-43eb-8efc-47d7a24bc615)![image](https://github.com/user-attachments/assets/5184c52c-e00b-4b00-83fe-fd0a9d47ad14)![image](https://github.com/user-attachments/assets/675c7904-9483-4079-86d1-3e15f9b00915)![image](https://github.com/user-attachments/assets/808709b3-49fd-4a9e-acd0-518dae4ae389)![image](https://github.com/user-attachments/assets/738b3c7e-143f-4492-8fe4-7b49d625c541)![image](https://github.com/user-attachments/assets/3648af20-e879-457d-b952-1f73c55792b6)![image](https://github.com/user-attachments/assets/e288cc79-caa7-4163-bcef-563d1e0cf111)|
 
-### 12. Create Data Cloud Related List Enrichment (10 minutes)
+### 7. Create Data Cloud Related List Enrichment (10 minutes)
 | Step | Action and Details | Images |
   | ----- | ----- | ----- |
   | Create Booking Related List |- Click on Setup</br>- Object Manager</br>- Search for Contact</br>- Click on Contact</br>- Click on Data Cloud Related List Enrichment.</br>- Click on New</br>- Select default data space</br>- Select Data Cloud object as ‘Booking__dlm’</br>- Click Next </br>- Give Child Relationship Name as ‘IndividualBookings’</br>- Give Related List Label as ‘Individual Bookings’ Click Save. |![image](https://github.com/user-attachments/assets/f50d3875-c2b8-451b-bcef-85141aea954d)![image](https://github.com/user-attachments/assets/f8fa4e97-bc19-4e87-a2b3-44a539b597c1)|
   | Create Reservation Related List |- Click on Setup</br>- Object Manager</br>- Search for Contact</br>- Click on Contact</br>- Click on Data Cloud Related List Enrichment.</br>- Click on New</br>- Select default data space & Select Data Cloud object as ‘Reservation__dlm’ </br>- Click Next </br> - Give Child Relationship Name as‘IndividualReservations’</br>- Give Related List Label as ‘Individual Reservations’ Click Save. |![image](https://github.com/user-attachments/assets/366fa15e-2317-44ab-af5c-8025453c554f)![image](https://github.com/user-attachments/assets/f64fad04-3391-4a3c-9534-04caf5e92955)|
   | Create Data Cloud Related List Enrichment for Third Party Survey</br> $${\color{blue} S3 \space Optional}$$|- Click on Setup </br>- Click on Object Manager </br>- Search for Contact </br>- Click on Contact </br>- Click on Data Cloud Related List Enrichment.</br>- Click on New </br>- Select default data space -> Select Data Cloud object as ‘Third Party Survey’  </br>- Click Next </br>- Give Child Relationship Name as 'Third_Party_Survey’ </br>- Give Related List Label as ‘Third Party Survey’ Click Save |![image](https://github.com/user-attachments/assets/fb6d0aeb-2a00-4b75-93cc-703d158d5303)|
 
-### 13. Create Data Cloud Copy Field Enrichment (15 minutes)
+### 8. Create Data Cloud Copy Field Enrichment (15 minutes)
 | Step | Action and Details | Images |
   | ----- | ----- | ----- |
   | Create Data Cloud Copy Field Enrichment for ‘Customer Classification’ |- Go to Object Manager.</br>- Search for Contact.</br>Click on Contact</br>- Click on Data cloud Copy Field.</br>- Click on New.</br></br>- Select data space as ‘default’</br>- Select Data Cloud Object as Guest Classification‘ whose API name will be this Guest_Classification__cio’ Click on Next </br></br>- Select data space as ‘default’ </br>- Select field as ‘Customer Class’. Click Next </br> - Give Label as ‘Guest Classification’ </br> - Click ‘Next </br><br>- On contact -> Data Cloud Copy Field Enrichments -> Guest Classification </br>- In Customer_Class under contact “click to Edit” </br>- Select Customer Class </br>- Save and Start Sync.|![image](https://github.com/user-attachments/assets/c2e097ad-754b-4128-b769-bcb7a6d0d5f0)![image](https://github.com/user-attachments/assets/691eef48-d37b-4714-9ff3-0ff695477282)![image](https://github.com/user-attachments/assets/422cb503-0080-417a-a3d1-1f8596c5018d)|
