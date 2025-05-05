@@ -2,6 +2,8 @@
 =======================
 Welcome to Sunshine Trail Resorts, a sample hospitality application. Sunshine Trail Resorts is a fictional resort that uses Agentforce, the power of Data Cloud, and the Salesforce Platform to deliver highly personalized guest experiences. Explore ways to bring agents into business workflows, including new smart automation capabilities, Search Property, content generation.
 
+Did you watch the demo? The following are a set of instructions to setup the end to end demo in your own environment. While the end to end demo supports multiple clouds, you have full flexibility to use only the portions relevant to what you want to try out in your own org, additionally once the packages are installed you have the ability to fully customize it based on your needs. 
+
 The Sunshine Trail app showcases **Data Cloud**, **Agents** and **Prompts**.
 
 Table of Contents</br>
