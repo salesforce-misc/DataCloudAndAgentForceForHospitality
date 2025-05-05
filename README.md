@@ -8,10 +8,10 @@ The Sunshine Trail app showcases **Data Cloud**, **Agents** and **Prompts**.
 
 <details><summary>
 
-  ## 1. Pre-Deployment Instructions (4 step process)
+  ## 1. Pre-Deployment Instructions 
 </summary>
 
- 
+ 4 step process
 ### 1. Salesforce Org Setup Requirements for Sunshine Resorts App
 
    **Option 1:** To support the Sunshine Resorts app, you can either create a new Salesforce Org or use an existing one, provided it includes the following features and licenses: 
