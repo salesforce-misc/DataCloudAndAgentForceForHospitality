@@ -43,7 +43,7 @@ Table of Contents</br>
   | Requirement | Details |
   | ----- | ----- |
   | Licenses Required | - Data Cloud</br>- Sales Cloud</br>- Service Cloud</br>- Loyalty Cloud</br>- Experience</br>- Commerce Cloud</br>- Marketing Cloud</br>- MuleSoft (Optional)
-  | Features Required | - Service Agent</br>- Einstein Agent</br>- Copilot</br>- Prompt Builder</br>- Agent Force</br>- Real-time</br>- Code Builder (Optional) 
+  | Features Required | - Service Agent</br>- Einstein Agent</br>- Copilot</br>- Prompt Builder</br>- Agent Force</br>- Real-time(Additional SKU)</br>- Code Builder (Optional) 
   
   Our package is designed to support all these clouds, but you have full flexibility to use only the portions relevant to your business. If you are not using a particular cloud (e.g., Loyalty 
   Cloud), you can simply skip its configuration—the package will still install successfully, but that feature will not be available until you configure it yourself. Additionally, you can customize 
