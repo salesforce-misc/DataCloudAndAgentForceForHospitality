@@ -98,7 +98,7 @@ The Sunshine Trail app showcases **Data Cloud**, **Agents** and **Prompts**.
 
 7 step process
 
-### 1. Setup Data Streams (30- 45 minutes)
+### 1. Setup Data Streams 
 The Data Kit is installed as a part of the Package installation. Follow the steps below to create data streams.
 
 ### Setup Salesforce Data Streams (15 minutes)
