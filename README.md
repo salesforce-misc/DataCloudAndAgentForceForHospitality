@@ -100,7 +100,8 @@ The Sunshine Trail app showcases **Data Cloud**, **Agents** and **Prompts**.
 
 ### 1. Setup Data Streams (30- 45 minutes)
 The Data Kit is installed as a part of the Package installation. Follow the steps below to create data streams.
-Setup Salesforce Data Streams (15 minutes)
+
+### Setup Salesforce Data Streams (15 minutes)
  | Step | Action and Details | Images |
   | ----- | ----- | ----- |
   |  Verify Salesforce CRM is Active or Not | In Data Cloud, select the Setup icon and then Data Cloud Setup.</br> - Select Salesforce CRM.</br>- If connection status is “Inactive”</br>- then click on drop down to “Active” </br>- Click on “Active”| ![image](https://github.com/user-attachments/assets/f101dc8c-6af3-41c7-8884-42609b1e0d4e)![image](https://github.com/user-attachments/assets/e222dd20-db0e-4cf5-9b55-0815692c2a87)|
