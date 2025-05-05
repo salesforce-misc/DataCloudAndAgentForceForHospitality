@@ -38,7 +38,7 @@ Table of Contents</br>
 
 ### 1. Salesforce Org Setup Requirements for Sunshine Resorts App
 
-   **Option1:** To support the Sunshine Resorts app, you can either create a new Salesforce Org or use an existing one, provided it includes the following features and licenses: 
+   **Option 1:** To support the Sunshine Resorts app, you can either create a new Salesforce Org or use an existing one, provided it includes the following features and licenses: 
 
   | Requirement | Details |
   | ----- | ----- |
