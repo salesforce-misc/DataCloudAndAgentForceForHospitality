@@ -8,18 +8,10 @@ The Sunshine Trail app showcases **Data Cloud**, **Agents** and **Prompts**.
 
 <details><summary>
 
-  ## 1. Pre-Deployment Instructions
+  ## 1. Pre-Deployment Instructions (4 step process)
 </summary>
 
-  ### Table of Contents
-  [1.	Salesforce Org Setup Requirements for Sunshine Resorts App](#1-salesforce-org-setup-requirements-for-sunshine-resorts-app)
-  
-  [2.	Install Pre-Deployment Package](#2-install-pre-deployment-package)
-  
-  [3.	Enable Features on the Org](#3-enable-features-on-the-org)
-  
-  [4.	Setup the Salesforce Org](#4-setup-the-salesforce-org)
-
+ 
 ### 1. Salesforce Org Setup Requirements for Sunshine Resorts App
 
    **Option 1:** To support the Sunshine Resorts app, you can either create a new Salesforce Org or use an existing one, provided it includes the following features and licenses: 
@@ -45,14 +37,14 @@ The Sunshine Trail app showcases **Data Cloud**, **Agents** and **Prompts**.
 - Return to Setup and follow the on-screen instructions to complete the configuration.<br/>
 🔗 More details: [Salesforce Foundations](https://www.salesforce.com/crm/foundations)
 
-### 2. Install Pre-Deployment Package
+### 2. Install Pre-Deployment Package (10 minutes)
 
   | Step | Action and Details | Images |
   | ----- | ----- | ----- |
   | Install package | - Click on this Package Installation [Link ](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002V5WS)</br>- Sign-in to the Org with your credentials.</br>- Choose Install for Admins Only option</br>- Choose “Rename conflicting components in package” and click the Install button.</br>- Wait until installation is completed, you will receive a confirmation on logged in user’s email |![image](https://github.com/user-attachments/assets/316f4e48-b9b2-4169-b362-fc3ecd9cd1b3) ![image](https://github.com/user-attachments/assets/0da1a771-abcc-4caa-b248-1b768905de60)|
   | Verify Package installation | - Click Setup</br>- Search for package</br>- Click on 'Installed PAckage' </br>- Search for 'Sunshine Trails Pre-Deployment Package' is installed  |![image](https://github.com/user-attachments/assets/8b76cd89-abec-4586-91cc-6b4b430dc68c)|
 
-### 3. Enable Features on the Org
+### 3. Enable Features on the Org (40 minutes)
 
   | Step | Action and Details | Images |
   | ----- | ----- | ----- |
@@ -71,7 +63,7 @@ The Sunshine Trail app showcases **Data Cloud**, **Agents** and **Prompts**.
   | Create a Record on Custom Metadata | - Go to Setup \-\> Search for Metadata type \-\> Click on ‘Install Package Settings Enabled’ \-\>   Click on **Manage Install Package Settings Enabled** \-\>Click on ‘New’ \-\> Give Label as  **Package Settings Enabled** and **Check Checkbox of Installation Settings Enabled Field.** Click Save|![image](https://github.com/user-attachments/assets/bc667a84-daf9-4e35-b003-45c8de4be360) ![image](https://github.com/user-attachments/assets/7edbecd9-ceb2-4566-bd14-54664ebfd084)|
 
 
-### 4. Setup the Salesforce Org
+### 4. Setup the Salesforce Org (30 minutes)
 
   | Step | Action and Details | Images |
   | ----- | ----- | ----- |
