@@ -469,16 +469,10 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
   ## 7. Mulesoft Configuration for Amadeus Prices
   </summary>
 
+  4 step process
+
   **IMP NOTE:** You may skip the MuleSoft section if it is not applicable to your use case. However, if you plan to use MuleSoft, please ensure you register with [Amadeus](https://developers.amadeus.com/self-service/category/hotels) to obtain your Client ID and Client Secret.</br>
-  ### Table of Contents**
-    
-  [1.	Data Cloud Configuration Steps](#1-data-cloud-configuration-steps)
 
-  [2.	Mulesoft configuration](#2-Mulesoft-configuration)
-
-  [3.	Salesforce Configuration Steps](#3-salesforce-configuration-steps)
-  
-  [4.	Mulesoft Configuration Steps](#4-mulesoft-configuration-steps)
 
 
 **Please check if the Ingestion API setup, Data Stream configuration and Data Mappings are already present in the org. If present, start with 3. Mulesoft Configuration**
