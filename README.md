@@ -401,128 +401,128 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 [23. General Notes.](#23-general-notes)
 
 
-### 1. Configure AWS File Notification $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 1. Configure AWS File Notification (30 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Configure AWS File Notification | - Navigate to **Setup** and search for **App Manager** </br>- Click in the down arrow for the **"AWS Unstructured"** app and select view. </br>- Next to Consumer key and secret, click **"Manage Consumer Details"** and copy the values. </br>- Share the values with the AWS team responsible to create the file notification function.</br>- For more details about how to setup file notification visit: (https://developer.salesforce.com/docs/data/data-cloud-int/guide/c360-a-awss3-udlo.html) | ![image](https://github.com/user-attachments/assets/2a2f4793-774b-4933-ba20-b3de2bdc9c95)|
 
-### 2. Refresh Amazon S3 Data Streams $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 2. Refresh Amazon S3 Data Streams (5 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |  Refresh Amazon S3 Data Streams | - Navigate to **Data Cloud** app and the **Data Streams** tab </br>- Query for **Third Party Survey** data stream </br>- Using drop down control on the right against the data stream  initiate refresh for the **Third Party Survey** data stream and  subsequently choose the **Refresh Only New Files** option: </br>- Once the data stream is refreshed validate that the **Total  Records** counts for **Third Party Survey** stream, it should be 42  |![image](https://github.com/user-attachments/assets/2f61cac2-a6c3-4615-b479-a8e697d28a28)|
 
-### 3. Refresh Snowflake Data Streams $${\color{blue} Snowflake \space Optional: \space Please \space note \space that \space some \space functionality \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 3. Refresh Snowflake Data Streams (5 minutes) $${\color{blue} Snowflake \space Optional: \space Please \space note \space that \space some \space functionality \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |  Refresh Snowflake Data Streams | - Navigate to Data Cloud app and the Data Streams tab </br>- Query for IOT\_Transaction data stream</br>- Using drop down control on the right against the data stream select Edit</br>- Select “Enable acceleration”</br>- In frequency select “Every 15 minutes”</br>- Select “Refresh initial file immediately” </br>- Repeat above steps for POS_Transaction data stream </br>- Once the data stream is refreshed, the Total Records counts for each Data Stream is not 0. | ![image](https://github.com/user-attachments/assets/127248ed-2cf5-409d-b56d-56bf250f47f9) |
 
-### 4. Refresh Data Graph
+### 4. Refresh Data Graph (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |   Refresh Data Graph | - Navigate to Data Cloud app and the Data Graph tab </br>- Click on the dropdown of the data graph (Hospitality Realtime Profile)</br>- Click Update Status</br>- Once the job completes successfully, this status will be set as Active. |![image](https://github.com/user-attachments/assets/2d73126b-b8a0-4ab6-bb29-e650ac55ddfc)|
 
-### 5. Run Calculated Insights 
+### 5. Run Calculated Insights (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |  Run Calculated Insights | - Navigate to Data Cloud app and the Calculated Insights tab</br>- Query for Guest Stay Metrics calculated insight</br>- Using the drop down control on the right, click "Publish Now" to refresh the Guest Stay Metrics calculated insight.</br>- When the Calculated Insight is refreshed successfully, the Last Run Status will show as Success.</br>- Repeat steps b & c for the below Calculated Insights. Ensure all Insights are refreshed successfully.</br>- Guest Lifetime Value</br>- Guest Satisfaction Score</br>- Guest Classification  |![image](https://github.com/user-attachments/assets/882ffa71-213a-4db7-8b9e-24fddf2c4cc6)
 
-### 6. Activate Messaging Setting
+### 6. Activate Messaging Setting (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Activate Messaging Setting | - Navigate to Setup go to messaging setting</br>-  Click on ESA Channel \-\> Click on ‘Activate’</br>- Click on Checkbox then click on Accept  | ![image](https://github.com/user-attachments/assets/76464f8a-76eb-4226-9805-010e439d7a4d)![image](https://github.com/user-attachments/assets/68e08609-1b76-442d-8396-29465b8ce0e7)|
 
 
-### 7. Update Einstein Search Retriever (perform only if Amazon S3 Connection has been created )  $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 7. Update Einstein Search Retriever (perform only if Amazon S3 Connection has been created ) (10 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Update Einstein Search Retriever |- Click on **Setup**, in the Quick Find Box, enter Prompt Builder, and then select **Prompt Builder**</br>- Search for the Prompt Template named **AnswerHospitality Question** and click on the hyperlink</br>- Hover the cursor on text the next to 'Use this information to answer the question: ', click on Resource, click on Einstein Search, click on 'Hotel\_FAQ\_v3' and click on 'Hotel\_FAQ\_v3' Retriever</br>- On the right side click on default Hotel\_FAQ\_v3\_Retriever, in a Search text add value as "Input:Product.Name"</br>- Hover over cursor on next text on 'Use this information to answer the question:', click on Resource,  click on Einstein Search and click on Hotel\_Safety\_FAQ\_V2</br>- On the right side click on default Hotel\_Safety\_FAQ\_v2\_Retriever in a Search text add value as "Input:Product.Name"</br>- Click on Save As New Version click **Activate** |![image](https://github.com/user-attachments/assets/ec5aa058-6cd4-4d10-8716-1e1b08eb45b0)![image](https://github.com/user-attachments/assets/83b706ad-02d1-47b5-8cf4-747723b15e28)![image](https://github.com/user-attachments/assets/a8205402-43f8-47e6-8fd9-38ac0cb1d7ea)![image](https://github.com/user-attachments/assets/90cdf932-5657-4ce3-b8f9-bf39477105d2)
 
-### 8. Configure Digital Experience
+### 8. Configure Digital Experience (20 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Configure Digital Experience. |- Click on **Setup**, in the Quick Find Box, enter Digital Experiences, and then select **All Sites**</br> -  Click on builder against the Site ***‘Sunshine Resort’*** </br> - Click on the ‘Banner’. Under Image Settings, click ‘Clear Image’</br> - Click on ‘Select Image from CMS’ \-\> Click on ‘Banner’ image and click save </br>- Click on **Page Structure Icon** on Left Side of Page </br>- Scroll Down and Click on ‘Embedded Messaging ‘and update as per screenshot below</br>- Select **Site End Point** as - ESW_ESA_Web_Deployment_1733127495782 </br> - Select **enhanced Service URL** from dropdown - it should be same as Site URL , refer Screenshot.</br>- Click on **'Page Structure'** Scroll Down and Click on **'Multilevel Navigation Menu'**. In the right-hand panel under Default Menu select **'Default Navigation'** </br>- Click on **'Page Structure'** Scroll Down to Footer Section under Column 1 , click on Link List then On the Right Hand Side on Default Menu Select **'Default Our Company Menu'**. </br>- Click on Link List inside Column 2 On the Right Hand Side on Default Menu Select **'Default get Help Menu'**.</br>- Click on Link List inside Column 3 On the Right Hand Side on Default Menu Select **Default my Account Menu** .</br>- Click on Social Link List inside Column 4 On the Right Hand Side on Default Menu Select **Default Social Media Menu** </br></br>- Click on Setup</br>- In the Quick Find box, type Digital Experiences, then select All Sites.</br> - Click on Builder next to the site named ‘Sunshine Resort’. </br> - At the top, use the search bar to find the Category Page, and open it.</br> - On the Category Page, select the Result Grid component.</br>- On the right-hand panel, change both the Column Spacing and Row Spacing to Large.|![image](https://github.com/user-attachments/assets/c1e3eb2f-582e-42a9-adec-900905461837)![image](https://github.com/user-attachments/assets/12f6cb59-f148-4177-a6a2-f467c73136ae)![image](https://github.com/user-attachments/assets/8d328cef-f41b-43ce-8f94-b3b3c4820504)![image](https://github.com/user-attachments/assets/76d620f6-9c53-4962-814d-f1a7ef65cc05)![image](https://github.com/user-attachments/assets/51cc9e10-7b80-4674-94c6-9485f4af7d43)![image](https://github.com/user-attachments/assets/338aae59-2506-4957-91eb-6fa634719d4a)![image](https://github.com/user-attachments/assets/d3c52649-3854-4dca-804a-39ecf54fdc23)![image](https://github.com/user-attachments/assets/ac6697a3-65ad-41ea-bf9c-fafdd9017044)![image](https://github.com/user-attachments/assets/594cbf7e-b352-4434-87fd-4e66befbc95b)![image](https://github.com/user-attachments/assets/6c8b07c3-6ebc-4530-a0ea-971b9a2f3e78)![image](https://github.com/user-attachments/assets/a2004ee0-a14d-4e91-bd89-2e23c9a43975)
 
-### 9. Enable Login Access
+### 9. Enable Login Access (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Enable Login Access. | - Go to Setup, in the Quick Find Box, enter Digital Experiences, and then select All Sites</br>- Against the site ‘Sunshine Resort’, click on Workspaces</br>- Under My Workspaces, click on Administration</br>- Click on Login & Registration menu item</br>- Under Login Page Setup, change Login Page Type to Experience Builder Page</br>- For URL, choose Login</br>- Under Password Pages, change Forgot Password to Experience Builder Page</br>- Choose Forgot Password</br>- Under Registration Page Configuration enable "Allow customers and partners to self-register"</br>- Choose Registration Page Type as Experience Builder Page</br>- Choose Register</br>- Assign users to a profile and account, choose Sunshine Resort Profile</br>- Assign Permission Set Group as "Hospitality Industries Permission Set Group"</br>- Click Save |![image](https://github.com/user-attachments/assets/0281266f-e8e0-41e0-9900-3845559fc7d4)![image](https://github.com/user-attachments/assets/78acc5d8-8702-41f1-8797-9e0bdab23f13)![image](https://github.com/user-attachments/assets/16f42201-4ba0-4723-91a8-53e644f9c763)![image](https://github.com/user-attachments/assets/ff987bad-504c-4dc4-b5f5-08a86a944e99)
 
 
-### 10. Change the layout of the Login page
+### 10. Change the layout of the Login page (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Change the layout of the Login page. |- Go to Setup, in the Quick Find Box, enter Digital Experiences, and then select All Sites </br>- Against the site ‘Sunshine Resort’, click on Builder</br>- From the Pages dropdown, search for Login, and then select Login </br>-Remove the site logo and add a Text Box component. Enter the text as "Sunshine Resorts", make it bold and center</br>- Publish the changes  |![image](https://github.com/user-attachments/assets/22065622-3dbf-4386-914a-892522dce27b)|
 
-### 11. Share Product Object to External User
+### 11. Share Product Object to External User (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Provide Product2 Sharing  |- Go to Setup, in the Quick Find Box, search for Sharing Setting </br> - Click on Sharing Setting (under Security) </br> - Click Edit </br> - For Product Object, under Default External Access, select "Public Read Only"</br> - Click Save  | ![image](https://github.com/user-attachments/assets/3e89dac1-a89f-4eea-9adb-8900149e86ae)|
 
 
 
-### 12. Enable Org Theme Option on Sunshine Resort App
+### 12. Enable Org Theme Option on Sunshine Resort App (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |  Enable Org Theme Option on Sunshine Resort App  |- Go to Setup </br>- Search for App Manager</br>- Click on App Manager </br>- Click on Edit Related to "Sunshine Trails Hospitality"</br>- Check the checkbox under "Org Theme Options"</br>- Click Save|![image](https://github.com/user-attachments/assets/d4d94c5b-76f9-473c-950d-102efe235eac)![image](https://github.com/user-attachments/assets/dc84c0a3-99b5-449c-91f5-a55a725c37a8)|
 
-### 13. Change the layout of the Register page
+### 13. Change the layout of the Register page (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Change the layout of the Register page |- Go to Setup, search for Digital Experiences, and select All Sites</br>- Against the site 'Sunshine Resorts', click on Builder</br>- From the Pages dropdown, search for Register, and select Register</br>- Remove the site logo and add a Text Box component. Enter the text as "Sunshine Resorts", make it bold and center (perform this step only if the “Sunshine Resorts” text box doesn't exist)</br>- Publish the changes  |![image](https://github.com/user-attachments/assets/7fc0d3dc-fc71-48d8-8c32-b71de229a25b)|
 
 
-### 14. Change the email Address
+### 14. Change the email Address (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Change the email Address. |- Go to Setup \-\> Open All Sites</br>- Click on Workspaces (the configured Sites) \-\> Click Administrator</br>- Click on Emails</br>- Change Sender email to system admin email</br>- Click on save | ![image](https://github.com/user-attachments/assets/78b52af9-4b3d-49d6-8481-75c1bcd35337)|
 
 
 
-### 15. Add Agent User into Agentforce Service Agent and Activate
+### 15. Add Agent User into Agentforce Service Agent and Activate (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Add Agent User into Agentforce Service Agent & Activate |- Click on setup, search for Agent</br>- Click on Agentforce Agents (under Einstein --> Einstein Generative AI --> Agentforce Studio)</br>- In the Agent list, click on 'Agentforce Service Agent'</br>- In the Details tab, click on the pencil icon against **"Agent User"**, select 'Agent User' </br>- Check the check box **'Keep a record of conversations with Enhanced Event Logs to review agent behavior.'** </br>- Click on Save then click on Open Builder </br>- Click Activate  |![image](https://github.com/user-attachments/assets/3c7d1952-1d13-4c2b-97d0-be8464fcab02)![image](https://github.com/user-attachments/assets/6d35fd77-c99f-46c4-b333-2ff00f6d7d8b)![image](https://github.com/user-attachments/assets/0e5cce82-f774-42f3-92aa-f4465c508e48)|
 
 
-### 16. Create Trusted URLS
+### 16. Create Trusted URLS (10 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Create Trusted URLS |- Navigate to Setup, in Quick Find search Trusted URLs and click on Trusted URLs (under Security)</br>- Click on New. Key-in 'TrustedSite2' as the API Name</br>- Use https://DOMAINNAME.my.site.co for URL</br>- Replace DOMAINNAME with actual org Domain Name.</br></br> **To find the Domain name please follow the following steps:** </br>- Navigate to Setup, in Quick find search Domain → Please add https://DOMAIN from the below path (please select domain which is related to the experience cloud Sites Domain)</br>- Click on Save</br></br> **Add Trusted URL to Agent Sites** </br>- Click on Setup</br>-  Click on Sites \-\> Check the check box if Domain is not enabled, Click on **'Register My Salesforce Site domain'** button </br>- Click on ‘ESW\_ESA\_Web\_Deployment\_1733127495782’</br>- Click on Add Domain</br>- Add DOMAINNAME with actual org Domain Name.</br></br> **To find the Domain name please follow the following steps:** </br>- Search for Domain in Quick find → Please copy the name which ends with **.my.site.com** (e.g epicorgfarm79.my.site.com) </br>- Navigate to Setup, in Quick Find search All Sites </br>- Click on All Sites (under Digital Experiences) </br>- Click on Builder against Sunshine Resort </br>- Click on Settings and then 'Security & Privacy' </br>- Click on Add Trusted Sites button - Add Name as 'TrustedSite1' and add url as domain name, which you have copied on prev steps (e.g https://e.g epicorgfarm79.my.site.com) </br>- Click Publish |![image](https://github.com/user-attachments/assets/053258df-5dd6-42ae-9755-777a2d976042)![image](https://github.com/user-attachments/assets/df140214-535e-490c-8b34-eb168a652b9f)![image](https://github.com/user-attachments/assets/4c082226-c770-4a69-bea7-207ea1ce3ae0)![image](https://github.com/user-attachments/assets/3d8dd547-4281-4a00-b912-22da14e97ed6)![image](https://github.com/user-attachments/assets/e2dce1e1-b867-4bea-9ba8-fa29b4715ca6)|
 
-### 17. Create CORS
+### 17. Create CORS (10 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Create CORS |- In the Quick Find\>Type CORS</br>- Click on New\> Paste **https://DOMAINNAME.my.site.com** In Origin URL Pattern </br>- Replace DOMAINNAME with actual org Domain Name.</br>\> Click Save</br></br>-Click on New . </br>- Paste **https://*.develop.vf.force.com** to 'origin URL Pattern'</br>- Click Save</br></br>- Click on New</br>- Paste **https://*.live-preview.salesforce-experience.com.** to ‘origin URL Pattern’ </br>- Click Save</br></br>- Click on New</br>- Paste **https://*.my.site.com** to ‘origin URL Pattern’</br></br> **To find the Domain name please follow the following steps:** </br></br> \> Search for Domain in Quick find → Please copy the name which ends with .my.site.com (e.g epicorgfarm79.my.site.com) |![image](https://github.com/user-attachments/assets/219ed050-b9a3-4c98-8ef2-bddcf496d536)![image](https://github.com/user-attachments/assets/58e13f1c-df82-4da7-ad69-5afc06072b3d)|
 
-### 18. Publish ESA
+### 18. Publish ESA (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Publish ESA | - Click on Setup </br>- In Quick Find, search Embedded Service Deployments and click on 'Embedded Service Deployments' (under Feature Settings --> Service --> Embedded Service) </br>- Click on ESA Web Deployment </br>- Click on 'Publish' button </br>- Wait for confirmation Message |![image](https://github.com/user-attachments/assets/95efd64a-9709-445a-a62e-414b6e482b84)
 
 
-### 19. Assign Contact Record Page as Org Default
+### 19. Assign Contact Record Page as Org Default (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Assign Contact Record Page as Org Default. |- Click on Setup</br>- Click on Object Manager</br>- Click on Contact</br>-  Click on Lightning Record Page</br>-  Click on Contact Record Page (API Name should be 'Contact_Record_Page')</br>- Click on Edit \-\> Click on Activation \-\> Click on 'Assign Org Default' (Desktop and phone) \-\> Click on Save  |![image](https://github.com/user-attachments/assets/57b4b1e1-7ff7-4dea-a34c-d5fc057ac248)![image](https://github.com/user-attachments/assets/09c1297f-1f72-4b90-8b12-1af7c0571733)![image](https://github.com/user-attachments/assets/949c0429-9c77-402d-afe3-6e11340a77f9)
 
 
-### 20. Create a New Version of Omni-Channel Flow
+### 20. Create a New Version of Omni-Channel Flow (10 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Create a New Version of Omni-Channel Flow  |- Click on Setup</br>- Search for flow on Quick Button</br>- Click on Flow</br>- Click on the Flow</br>- Click on **Route To ESA** </br>- Deactivate the flow and click on the **Route To ESA** at the end</br>- Remove the Service channel and select some other option and then select “Live Message” again</br>- In Route To Select "Agentforce Service Agent"</br>- In Agentforce Service Agent Select "Agentforce Service Agent"</br>- Go to the Fallback Queue ID 🡪 Remove the Messaging Queue and add it back (same queue)</br>- Save as new version and activate the flow by clicking on the **Activate** button.  |![image](https://github.com/user-attachments/assets/4a56fa29-0fc7-42c8-9dae-c1ecf574418c)![image](https://github.com/user-attachments/assets/c380d226-9e77-4d4e-bb38-db3b68dcdf60)![image](https://github.com/user-attachments/assets/12ef770d-d575-455d-a179-390778618eca)![image](https://github.com/user-attachments/assets/e11361fd-f53b-4f7b-8713-7c222b379535)|
 
 
-### 21. Access email Deliverability to all email
+### 21. Access email Deliverability to all email (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |  Access email Deliverability to all email | Click on Setup </br>- Search for ‘Deliverability’</br>- Change Access Email from ‘System email Only’ to ‘All email’.</br>- Click Save |![image](https://github.com/user-attachments/assets/77507363-6915-40ff-8443-ed89186f811c)
 
-### 22. Prepare User $${\color{blue} Optional: \space These \space steps \space are optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
+### 22. Prepare User (10 minutes) $${\color{blue} Optional: \space These \space steps \space are optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Prepare Test User |**Note: These steps apply to both existing and new contacts. Below is an example using Marje** </br></br>To test Community functionality , please use : **Marje Croley** contact to login as experience user </br> - Navigate to Setup </br>- In the Quick Find box, search for Digital Experiences </br>- Click the ‘Allow users standard external profiles for self-registration, user creation and login checkbox </br>- Click Okay and click Save </br> </br> **Enable Community User** </br> </br>- Click the App Launcher</br>- Select the Sunshine Trails Hospitality app</br>- Navigate to the Contact of **Marje Croley**</br>- Click the 'Enable as Customer' button (Goto classic page, if the button is not visible)</br>- Update the User License to Customer Community Profile</br>- Update the Profile to Sunshine Resort Profile</br>- Update the Email field to your personal email  </br>- Click Save </br></br> **Optional: Update Marje’s email address in her contact record if you want to receive notifications. Otherwise, this step is not necessary.** </br></br>- Click the App Launcher </br>- Select the Sunshine Trails Hospitality app </br>- Navigate to the Contact of **Marje Croley** </br>- Click the Edit button </br>- Update the Email field to your personal email </br>- Click Save  | ![image](https://github.com/user-attachments/assets/d82a699e-631d-4136-9d7f-ede27652e2d2)![image](https://github.com/user-attachments/assets/c009a09e-ed99-4ded-aa53-469c94a05a98)![image](https://github.com/user-attachments/assets/4767196d-0181-42e0-a074-5eebe8403dc8)![image](https://github.com/user-attachments/assets/be237889-9073-4a27-ab35-0e2d8da396a6)![image](https://github.com/user-attachments/assets/bde45527-5ac1-4506-a645-07f5be2c0eae)|
 
-### 23. General Notes 
+### 23. General Notes (30 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | General Notes for new community User | To test Community functionality , please use : **Marje Croley contact** to login as experience user </br> **Note:** If user self register from experience site sign up page, admin needs to add below permission set to that new community user </br>- **Buyer** </br>- **Customer Community Plus Permissions**|![image (44)](https://github.com/user-attachments/assets/81cdd8a1-ce5a-469d-9004-48722f4caa02)|
