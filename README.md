@@ -256,7 +256,7 @@ $${\color{red} 6.\space Add CMS Product Images}$$
   ## 5. Connect and Create Sample Data
 </summary>
 
-
+4 step process
 
 ### 1. Create Sample Data (5 minutes) $${\color{blue} Optional: \space These \space steps \space are \space optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
 | Step | Action and Details  |  Images |
@@ -325,53 +325,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
   ## 6. Finish Configuration
 </summary>
 
-## Table of Contents
 
-[1. Configure AWS File Notification	](#1-configure-aws-file-notification)
-
-[2. Refresh Amazon S3 Data Streams	](#2-refresh-amazon-s3-data-streams)
-
-[3. Refresh Snowflake Data Streams	](#3-refresh-snowflake-data-streams)
-
-[4. Run Identity Resolution Ruleset	](#4-run-identity-resolution-ruleset)
-
-[5. Run Calculated Insights	](#5-run-calculated-insights)
-
-[6. Activate Messaging Setting	](#6-activate-messaging-setting)
-
-[7. Update Einstein Search Retriever	](#7-update-einstein-search-retriever)
-
-[8. Configure Digital Experience.	](#8-configure-digital-experience)
-
-[9. Enable Login Access.	](#9-enable-login-access)
-
-[10. Change the layout of the Login page.	](#10-change-the-layout-of-the-login-page)
-
-[11. Share Product Object to External User.	](#11-share-product-object-to-external-user)
-
-[12. Enable Org Theme Option on Sunshine Resort App.	](#12-enable-org-theme-option-on-sunshine-resort-app)
-
-[13. Change the layout of the Register page.	](#13-change-the-layout-of-the-register-page)
-
-[14. Change the email Address.	](#14-change-the-email-address)
-
-[15. Add Agent User into Agentforce Service Agent and Activate	](#15-add-agent-user-into-agentforce-service-agent-and-activate)
-
-[16. Create Trusted URLS	](#16-create-trusted-urls)
-
-[17. Create CORS	](#17-create-cors)
-
-[18. Publish ESA	](#18-publish-esa)
-
-[19. Assign Contact Record Page as Org Default.](#19-assign-contact-record-page-as-org-default)
-
-[20. Create a New Version of Omni-Channel Flow.](#20-create-a-new-version-of-omni-channel-flow)
-
-[21. Access email Deliverability to all email.](#21-access-email-deliverability-to-all-email)
-
-[22. Prepare User.](#22-Prepare-User)
-
-[23. General Notes.](#23-general-notes)
 
 
 ### 1. Configure AWS File Notification (30 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
