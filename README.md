@@ -196,24 +196,7 @@ The Data Kit is installed as a part of the Package installation. Follow the step
   ## 4. Commerce Cloud Configuration
 </summary>
 
-## Table of Contents
-
-[1. Verify Organization Wide Address Exists or not](#1-Verify-Organization-Wide-Address)
-
-[2. Install Agent and Experience Site Package	](#2-Install-Agent-and-Experience-Site-Package)
-
-[3. Create Commerce Data	](#3-Create-Commerce-Data)
-
-[4. Search Update	](#4-Search-Update)
-
-[5. Upload CMS Images into the Store](#5-Upload-CMS-Images-into-the-Store)
-
-[6. Add CMS Product Image	](#6-Add-CMS-Product-Images)
-
-[7. Enable Self Resgistration	](#7-Enable-Self-Resgistration)
-
-[8. Share CMS with Site workspace	](#8-Share-CMS-with-Site-workspace)
-
+8 step process
 
 ### 1. Verify Organization Wide Address (5 minutes)
   | Step  | Action and Details  |  Images |
