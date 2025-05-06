@@ -556,7 +556,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 
 **Please check if the Ingestion API setup, Data Stream configuration and Data Mappings are already present in the org. If present, start with 3. Mulesoft Configuration**
 
-### 1. Data Cloud Configuration Steps $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 1. Data Cloud Configuration Steps (20 minutes) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 
    ##### 1.1.	Create an Ingestion API in Data Cloud (Skip if already performed)
    | Step  | Action and Details  |  Images |
@@ -583,20 +583,20 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
    | Data Mapping |- Configure Source to Target mapping such that the mapping matches the image |![image](https://github.com/user-attachments/assets/1cab5175-4b1d-4f93-9c23-e1e30e60e093)
 
 
-### 2. Mulesoft configuration $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 2. Mulesoft configuration (20 minutes) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 **Note: Skip if you are using the provided configuration XML file directly.**</br>
 </br>XML File: https://git.soma.salesforce.com/gdevadoss/DataCloudHospitalityDemo/tree/master/Mulesoft%20configuration </br></br>- Open the **Streaming Insert Object** connector and click on **"Test Connection."** </br>- Enter the required credentials: **Client ID, Client Secret, Username,** and **Password**.
  These can be obtained from the **Connected App in Salesforce**. </br>- Ensure that the Connected App is created beforehand to retrieve these credentials. </br>- Store the credentials in the **Salesforce Connector App**.</br>
 
 
-### 3. Salesforce Configuration Steps $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 3. Salesforce Configuration Steps (10 minutes) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
    | Step  | Action and Details  |  Images |
    | ----- | ----- | ----- |
    | Create a Connected App | Create a New Connected App in Salesforce for securely integrating MuleSoft with Salesforce Data Cloud via APIs using OAuth2.0</br> Follow the steps below to create the Connected App.</br>&emsp;- Go to Setup, Search for App Manager and select App Manager</br>&emsp;- Configure the Connected App as shown in the image</br>&emsp;- Ensure you grant Profile level access to newly created Connected App to System Administrator profile |![image](https://github.com/user-attachments/assets/bfe17d05-b392-4a7a-814a-e6d72c31cafe)
    |  | </br>- After creating the Connected App, click on Manage</br>- Configure the App to match the configuration shown in the image |![image](https://github.com/user-attachments/assets/457538af-90d6-4bdb-84ad-ecd8df306d87)|
    |  | </br>- Go to Setup and search for OAuth and OpenID Connect Settings and enable the Allow OAuth Username-Password Flows | ![image](https://github.com/user-attachments/assets/eff46289-456b-4441-b16f-08c0f4184798)|
 
-### 4. Mulesoft Configuration Steps $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 4. Mulesoft Configuration Steps (20 minutes) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
    | Step  | Action and Details  |  Images |
    | ----- | ----- | ----- |
    |Update the Mule flow that inserts data from Mule to Salesforce Data Cloud via Ingestion API| |![image](https://github.com/user-attachments/assets/dd21d524-ff9a-4ea4-9fca-2a45d2f72f60)|
