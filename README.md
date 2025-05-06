@@ -84,6 +84,7 @@ The Sunshine Trail app showcases **Data Cloud**, **Agents** and **Prompts**.
 </summary>
 1 step process
 ### 1. Install Sunshine Base Package (10 minutes)
+
  | Step | Action and Details | Images |
   | ----- | ----- | ----- |
   | Install Sunshine Base Package | - Click on this Package Installation [Link ](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002V5Wc)</br>- Sign-in to the Org with your credentials.</br>- Choose Install for Admins Only option</br>- Choose “Rename conflicting components in package” and click the Install button.</br>- Click Done when installation is complete. |![image](https://github.com/user-attachments/assets/29af9d66-482c-42e1-9210-b0f803429b5d)|
