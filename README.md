@@ -83,6 +83,7 @@ The Sunshine Trail app showcases **Data Cloud**, **Agents** and **Prompts**.
   ## 2. Salesforce Package Installation
 </summary>
 1 step process
+
 ### 1. Install Sunshine Base Package (10 minutes)
 
  | Step | Action and Details | Images |
@@ -214,13 +215,13 @@ The Data Kit is installed as a part of the Package installation. Follow the step
 [8. Share CMS with Site workspace	](#8-Share-CMS-with-Site-workspace)
 
 
-### 1. Verify Organization Wide Address
+### 1. Verify Organization Wide Address (5 minutes)
   | Step  | Action and Details  |  Images |
   | ----- | ----- | ----- |
   | Verify Organization-Wide Address Exists or not |- Go to Setup \-\> Search for Organization-Wide Address \-\> Click on Organization-Wide Addresses</br>-  Verify if there is an organization-wide address with the name ‘Default Email’ created and verified.</br>- If there is none, then please create an organization-wide address by following below steps</br>- Click on **Add** button \-\> On the Display Name Add **‘Default Email’.** On the Email Address \<Add your email address\> Select ‘Default No-Reply Address’ on Purpose field \-\> click check box **‘allow all profiles to use this from address’**   |![image](https://github.com/user-attachments/assets/8ddc4ebe-d8cd-4a12-a363-a782dd8d9541)![image](https://github.com/user-attachments/assets/3f7e7dfc-057b-41b0-8115-476028a6d9e9)|
 
 
-### 2. Install Agent and Experience Site Package
+### 2. Install Agent and Experience Site Package (1 hour 30 minutes)
   | Step  | Action and Details  |  Images |
   | ----- | ----- | ----- |
   | Install Agent & Exp Site Package |- Install VSCode [Download](https://code.visualstudio.com/download) </br>- Setup CLI a. Install the Salesforce CLI  https://developer.salesforce.com/tools/salesforcecli or check that your installed CLI version is greater than 2.56.7 by running sf \-v in a terminal.</br>- If you need to update the Salesforce CLI, either run sf update or npm install \--global @salesforce/cli depending on how you installed the CLI.</br>- Install Extension</br>- Open VSCode \> Go To\> Extensions-\>Salesforce Extension Pack\>Install</br>- Open Terminal Clone git Repository by using below command </br> ```git clone https://git.soma.salesforce.com/gdevadoss/DataCloudHospitalityDemo.git``` </br>- Open the Project </br>- Authorize an Org</br>- Type Ctrl+Shift+P Select SFDX:Authorize an Org</br>- Select Project Default</br>- Enter the Org alias</br>- Authorize the Org</br>- Open terminal type **sf project deploy start --source-dir force-app** </br>- If you have AWS S3 Connection Created and Installed AWS Related Data Stream from Doc.3, then execute below SFDX command to deploy **else do not execute**. </br>- Open terminal type **sf project deploy start --source-dir st-aws-app** </br> |![image](https://github.com/user-attachments/assets/293fd406-72fc-4be3-9008-0a9926461586)![image](https://github.com/user-attachments/assets/6d3a14ee-3c65-4f47-99a6-39066b68a9aa)![image](https://github.com/user-attachments/assets/71751813-f4b9-437f-b355-9feb770c0c2d)![image](https://github.com/user-attachments/assets/b50fb406-2ae7-475a-a8c6-939d486dd9fd)![image](https://github.com/user-attachments/assets/5b4efb69-3f1a-4a1a-8ecb-be4e17344098)![image](https://github.com/user-attachments/assets/403c5a8f-ef31-4220-8062-60ae71453008)![image](https://github.com/user-attachments/assets/9a2ff9e1-75f2-4c13-a7d1-1a1ef5c2bc51)|
@@ -231,34 +232,34 @@ $${\color{red} 4.\space Search Update}$$
 $${\color{red} 5.\space Upload CMS Images into the Store and}$$
 $${\color{red} 6.\space Add CMS Product Images}$$
 
-### 3. Create Commerce Data
+### 3. Create Commerce Data (5 minutes)
   | Step  | Action and Details  |  Images |
   | ----- | ----- | ----- |
   | Create Data  | - Click on App Launcher, search for Sunshine Trails Hospitality and click on Sunshine Trails Hospitality Setup App</br>- Click on the **“Create Commerce Data”** button (highlighted in the screenshot to the right) and wait for a confirmation message before proceeding further. |![image](https://github.com/user-attachments/assets/6827a2e8-63a3-4425-b74b-b77123a9524d)|
 
-### 4. Search Update
+### 4. Search Update (5 minutes)
   | Step  | Action and Details  |  Images |
   | ----- | ----- | ----- |
   | Search Update |**Enable Commerce App** </br>- Click Setup and search for Commerce</br>- Click Settings under Feature Settings --> Commerce</br>- Use the toggle to switch on the Enable the Refreshed Commerce App</br></br>**Enable Search Index**</br>- Click on App Launcher, search for Commerce and select Commerce application</br>- In the Store dropdown, choose Sunshine Resort Store</br>- Scroll down to Setting and expand it</br>- Click on Search</br>- Use the toggle to turn on Automatic Updates | ![image](https://github.com/user-attachments/assets/84eed31d-54c7-4326-87ce-88ff8eb73596) ![image](https://github.com/user-attachments/assets/5c7a175b-5396-4e6d-b061-36471f59cc2d)|
 
-### 5. Upload CMS Images into the Store
+### 5. Upload CMS Images into the Store (15 minutes)
   | Step  | Action and Details  |  Images |
   | ----- | ----- | ----- |
   | Upload CMS Images into Store  |- Download Images from [CMS Images](https://git.soma.salesforce.com/gdevadoss/DataCloudHospitalityDemo/tree/master/Product%20Images) </br>- Click on App Launcher\>\> Select commerce application\>\> Click on Store</br>- Open Sunshine Resort Store</br>- Scroll down to Content Manager</br>- Click on Add workspace</br>-  Enter details such as Name "Commerce Store Images" and select Enhanced CMS Workspace and click on Next</br>- Add Sunshine Resorts Channel as Public and Sunshine Resorts site and click Next</br>- Keep language as it is and click on Finish</br>-  Click on Add and select Content \>\> select images\>\>Click on Create button\>\> click on upload button\>\>Select Image\>\>Image and Title populated\>\>Enter API name (can be the same as file name)\>\> Save it\>\> Click on Publish button\>\> Keep Details as is\>\> Click on Next\>\> Select Publish Now\>\>click on publish now button </br>- Please repeat the above steps for all the images| ![image](https://github.com/user-attachments/assets/6ce860d4-347a-45f4-a5fe-d055f9354a18)![image](https://github.com/user-attachments/assets/d5e11e30-348b-4fe0-9c63-4c3164230893)![image](https://github.com/user-attachments/assets/752c7004-7e57-4de4-84a0-56beba6fb08e)![image](https://github.com/user-attachments/assets/bd2ec81e-0242-4aab-9ad7-dcdabd707220)![image](https://github.com/user-attachments/assets/4f903a92-5b6f-4350-b3c5-4a141ea789b3)![image](https://github.com/user-attachments/assets/e9e44245-9086-4f59-a506-dad70f9ea9a0)![image](https://github.com/user-attachments/assets/d18f85df-2fd6-4cc2-8684-0fe1f493b770)![image](https://github.com/user-attachments/assets/96fd88ff-4788-4b53-9ab9-3435ae62ddd2)![image](https://github.com/user-attachments/assets/ba38373a-2c09-406c-9df9-462e76435c74)![image](https://github.com/user-attachments/assets/7e009060-885c-44a9-9cad-cbb26df1d5f2)![image](https://github.com/user-attachments/assets/c3c53136-b26f-46fb-83c0-a6c3065c0c2e)![image](https://github.com/user-attachments/assets/f33a580f-9c68-455f-ada9-cbcd1773e2aa)![image](https://github.com/user-attachments/assets/2f026ccd-f1c4-4f9e-8cab-592014ebf6d0)
 
-### 6. Add CMS Product Images
+### 6. Add CMS Product Images (15 minutes)
   | Step  | Action and Details  |  Images |
   | ----- | ----- | ----- |
   | Add Image to a Product   |- Click on App Launcher\>\> Select commerce application\>\>Click on Store</br>- Open Sunshine Resort Store </br>- Expand Merchandise\>\> Product\>\> open one by one product</br>- Click on eye icon (it removes Site window) after save button</br>- Confirm that "Products" is selected under categories</br>- Scroll down \>\> click on Go to global product record</br>-  Go to Media\>\> Click on Add image for Product details Image section \>\> Select appropriate image from Commerce Store image\>\> click on Add button</br>- Click on Add image for Product list Image section \>\> Select appropriate image from Commerce Store image \>\> click on Add button</br>- Repeat previous steps for each product </br>- Go to store\>\> select Sunshine Resorts \>\>Scroll down to Website Design\>\> select product category from dropdown \>\> click on Publish button (this step maybe not be needed if you are commerce console)</br>- Go back to Sunshine Resort Store\>\>Click on Home\>\> click on preview the site and see product is getting displayed | ![image](https://github.com/user-attachments/assets/eb835d50-0326-4b3b-8b68-39fd4404ef42)![image](https://github.com/user-attachments/assets/bd0ee9f1-2a0c-4357-82b4-991305befccd)![image](https://github.com/user-attachments/assets/b6ae1bda-47a4-4bce-a69b-45e3e6bae306)![image](https://github.com/user-attachments/assets/4790ad8e-e273-4316-8179-b2eaff4d8576)![image](https://github.com/user-attachments/assets/fcbcc98b-1dcf-46b8-92a8-8ab9042e3bce)![image](https://github.com/user-attachments/assets/7f20c62e-e257-4779-85b6-3f1ba4ab5e7a)![image](https://github.com/user-attachments/assets/c3465a4b-3eb2-4c9d-9f72-875a38746b44)![image](https://github.com/user-attachments/assets/43ca9010-9be3-498a-9c41-cecf530e984e)![image](https://github.com/user-attachments/assets/7e2bfa1d-6388-41b5-9fb2-4f30064a98b4)![image](https://github.com/user-attachments/assets/5e722ac7-0875-4de8-b42a-fa720cf7e873)![image](https://github.com/user-attachments/assets/c1c78296-cc04-4133-9473-e82701290bcf)![image](https://github.com/user-attachments/assets/0cad9e4b-97ca-43a6-a3da-1febbaae04ce)|
 
-### 7. Enable Self Resgistration
+### 7. Enable Self Resgistration (5 minutes)
   | Step  | Action and Details  |  Images |
   | ----- | ----- | ----- |
   | Enable Self Registration   |- Click on App Launcher>> Select commerce application>>Click on Store</br>- Open Sunshine Resort Store</br>- Settings >> Store</br>- Click on Buyer Access Tab</br>- Scroll down to Self Registration (enable if it’s not enabled)</br>- Select Account RecordType to “Business Account” </br>- Select Default Buyers Group to “Sunshine Resorts Buyer Group"</br>- Click Save|![image](https://github.com/user-attachments/assets/7f6a0551-1b95-465e-84b9-4b11f74a121c)|
 
 
 
-### 8. Share CMS with Site workspace
+### 8. Share CMS with Site workspace (5 minutes)
   | Step  | Action and Details  |  Images |
   | ----- | ----- | ----- |
   | Share CMS with Site workspace   |- Click on App Launcher and search for CMS Workspaces</br>- Select CMS Workspaces</br>- Click on "Commerce Store Images" (the CMS created in previous step</br>-  Click the gear icon (at the top right) and select "Workspace Sharing" from the dropdown</br>- Move "Sunshine Resorts Managed Content Space" to the right (under Shared) and click Next </br>- Click Save |![image](https://github.com/user-attachments/assets/353002a4-ca61-4f5e-a71f-60597ab81e86)|
@@ -284,23 +285,23 @@ $${\color{red} 6.\space Add CMS Product Images}$$
 
 
 
-### 1. Create Sample Data $${\color{blue} Optional: \space These \space steps \space are \space optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
+### 1. Create Sample Data (5 minutes) $${\color{blue} Optional: \space These \space steps \space are \space optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
 | Step | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Create Sample Data | - Click on App Launcher, search for Sunshine Trails Hospitality and click on Sunshine Trails Hospitality Setup App</br>- Click on the **“Create Test Data”** button (highlighted in the screenshot below) and wait for a confirmation message before proceeding further. |![image](https://github.com/user-attachments/assets/5af44efa-ca6c-4d95-800a-5aec9f477928)
 
-### 2. Enable Test Account as Buyer Account  $${\color{blue} Optional: \space These \space steps \space are \space optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
+### 2. Enable Test Account as Buyer Account (5 minutes) $${\color{blue} Optional: \space These \space steps \space are \space optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
 | Step | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Enable Account as Buyer Account | - Click on Setup</br>- Go to Object Manager</br>- Click on Account</br>- Click on Page Layout</br>- Click on "**Page Layout Assignment**"</br>- Click on ‘**Edit Assignment**’</br>- Select "SDO-Account" Layout under Record type "Account" for System Administration Profile </br>- From Page Layout to Use dropdown Select "Account layout"</br>- Click on Save</br>- Verify that, for "**System Administrator profile**" for Record type **"Account"** Page layout should be ‘**Account Layout’** </br>- Go Account Tab \-\> Search for Account Name **"Sunshine Experience"** (test Account created in previous steps). Make sure to remove any filter if it exists \-\> Click on that Record</br>- On Record Page click on the **"Enable as Buyer"** Quick Action | ![image](https://github.com/user-attachments/assets/844294ed-9813-4a7b-8707-8d0755de260f)![image](https://github.com/user-attachments/assets/f1f80dca-2d9a-4d35-89dd-92b4e5d1eaa4)![image](https://github.com/user-attachments/assets/eb9fd6ae-aace-4352-b1c4-98eecabcbb95)![image](https://github.com/user-attachments/assets/a553fd10-9a2f-440c-97f8-e645131164f0)![image](https://github.com/user-attachments/assets/818f192e-4ec2-45f4-afad-5faed169830d)![image](https://github.com/user-attachments/assets/ace5bcf4-4f9a-463c-ae84-bca0c68f91bb)|
 
-### 3. Create Community User and Assign User to Buyer Group
+### 3. Create Community User and Assign User to Buyer Group (5 minutes)
 | Step | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Create Community User and Assign Buyer Account to Buyer Group |- Click on App Launcher, search for Sunshine Trails Hospitality and click on Sunshine Trails Hospitality Setup App</br>- Click on the **"Create Buyer Group Member Data"** button (highlighted in the screenshot on the right) and wait for a confirmation message before proceeding further.</br>- **Note:** If the confirmation message does not appear after 5 minutes, refresh the page and if the **"Create Buyer Group Member Data"** button is disabled, proceed. | ![image](https://github.com/user-attachments/assets/2282a058-02df-45c0-8da2-5e7eb4350d9b)
 
 
-### 4. Setup Data in Snowflake  $${\color{blue} Snowflake \space Optional: \space Please \space note \space that \space some \space functionality \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 4. Setup Data in Snowflake (15 minutes) $${\color{blue} Snowflake \space Optional: \space Please \space note \space that \space some \space functionality \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Create Table to hold POS data | - Login to the Snowflake Database/Schema that is connected to Data Cloud and run the below DDL script to create DEMO\_HOSPITALITY\_POS\_DATA table.  |  |
