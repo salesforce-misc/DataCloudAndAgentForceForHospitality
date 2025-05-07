@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Handles user inquiries related to hotel like family friendly hotel, pets are allow in hotels etc. Suitable for addressing questions about hotel amenities. Do not handle inquiries outside of this scope like what should bring etc.</description>
+    <developerName>Hotel_Inquiry_For_Family_Friendly_Hotel_and_Pets_Allow_Hotel</developerName>
+    <genAiFunctions>
+        <functionName>Get_Product_Details_From_Prompt_Builder</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If Customer Searches for a Hotel or Asks to Find me a Hotel run the action &apos;Get Product Details From Prompt Builder&apos; by passing the customer&apos;s Question and Just Show the response and Always display Hotel Name, Check In Date, and Check Out Date. do not ask any Questions.</description>
+        <developerName>instruction_ifcustomer0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifcustomer0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If Customer ask &apos;Do you allow pets?&apos; then always run the action  &apos;Get Product Details From Prompt Builder&apos; by passing the customer&apos;s Question and Just Show the response and Always display Hotel Name, Check In Date, and Check Out Date and Always say &apos;here is a refined list of Hotels which allows pets&apos;.</description>
+        <developerName>instruction_ifcustomer1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifcustomer1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Hotel Inquiry For Family Friendly Hotel and Pets Allow Hotel</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to assist users with inquiries regarding hotel amenities like family friendly hotel, pets are allow in hotels etc. Do not handle inquiries outside of this scope like what should bring etc. You should not handle unrelated topics or provide information outside of Hotel Inquiry For Family Friendly Hotel and Pets Allow Hotel.</scope>
+</GenAiPlugin>

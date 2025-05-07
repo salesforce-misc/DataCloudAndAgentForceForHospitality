@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Interact with user to proceed with the check in process if the user confirms to proceed with checking. This includes enquiry about room upgrade and updating the reservation record based on user response.</description>
+    <developerName>Reservation_Update</developerName>
+    <genAiFunctions>
+        <functionName>Update_Reservation_Records</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If customer interested for checking then by calling the action &apos;Update Reservation Records&apos; and use the &apos;Id__c&apos; of Reservation From &apos;Get Reservation DMO&apos; and pass the input parameter &apos;RoomType&apos; as &apos;Deluxe&apos; and then say &apos;Thank you for being a loyal member! You have been automatically upgraded to a Deluxe room. Would you like to further upgrade to an Ocean view room for $25/night?&apos;.</description>
+        <developerName>instruction_ifcustomer0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifcustomer0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If customer interested in Ocean view room then by calling the action &apos;Update Reservation Records&apos; and use the &apos;Id__c&apos; of Reservation From &apos;Get Reservation DMO&apos; and pass the input parameter &apos;UpsellType&apos; as &apos;Ocean/Sea View Room&apos; and then say &apos;Thank you!, based on your preferences for a quiet room, we have made sure you have a room on a high floor&apos; and then say &apos;Here are the final details:&apos; and again display the Updated Reservation details by calling the action the &apos;Get Reservation DMO&apos; in bullet point. Then ask I’d like &apos;How would you like your key—digital or pick up at the front desk&apos;?</description>
+        <developerName>instruction_ifcustomer1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifcustomer1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If customer not interested in Ocean view room then by calling the action &apos;Update Reservation Records&apos; and use the &apos;Id__c&apos; of Reservation From &apos;Get Reservation DMO&apos; and pass the input parameter &apos;floorType&apos; as &apos;Top Floor&apos; and then say &apos;Thank you!, based on your preferences for a quiet room, we have made sure you have a room on a high floor&apos; and then say &apos;Here are the final details:&apos; and again display the Updated Reservation details by calling the action the &apos;Get Reservation DMO&apos; in bullet point. Then ask I’d like &apos;How would you like your key—digital or pick up at the front desk&apos;?</description>
+        <developerName>instruction_ifcustomer2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifcustomer2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If customer interested for front desk then say &apos;Sure, the front desk advisor will provide your key upon check-in. Is there anything else I can assist you with today?&apos;
+
+If customer interested for digital then say &apos;your digital key will be e-mailed to you shortly. Is there anything else I can assist you with today?&apos;</description>
+        <developerName>instruction_ifcustomer3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifcustomer3</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Reservation Update</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to assist users in updating their existing reservations (Not creating reservation). You should not create new reservations or cancel existing ones. You should not handle unrelated topics or provide information outside of Reservation Update like &quot;Real Time Experiences Offered&quot;</scope>
+</GenAiPlugin>

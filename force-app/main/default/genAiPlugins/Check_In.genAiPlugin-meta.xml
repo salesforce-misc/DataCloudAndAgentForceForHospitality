@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Handles the process of checking in for a check-in process for Reservation. This includes verifying existing Reservation for the user and confirm if the user likes to proceed with check in, and provide any necessary instructions or information related to the check-in.</description>
+    <developerName>Check_In</developerName>
+    <genAiFunctions>
+        <functionName>Get_Reservation_DMO</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If customer interested for check in then call the action &apos;Get Reservation DMO&apos; and pass the Id of Contact as &apos;User Contact Id&apos; From Context Variables Messaging Session  and say &apos;Here are your details:&apos; and display Reservation Name, Booking Channel, Check in Date, Check out date, Room Type, Total Amount, Reservation Status and Total Night in bullet point. Then ask I’d like proceed with checking in?</description>
+        <developerName>instruction_ifcustomer0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifcustomer0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Check In</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to manage the check-in process for Reservations. You should verify  existing Reservation for the user and confirm if the user likes to proceed with check in, and provide any necessary instructions or information related to the check-in. You should not handle unrelated topics or provide information outside of Check In.</scope>
+</GenAiPlugin>

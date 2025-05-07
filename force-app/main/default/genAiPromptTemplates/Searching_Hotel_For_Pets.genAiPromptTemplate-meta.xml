@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
-    <activeVersionIdentifier>++JDCWM9le8zHBWMn9lONTyrC/fThl9RlvmbmAOLVDc=_2</activeVersionIdentifier>
+    <activeVersionIdentifier>404XA7Iqe2jK1bSZdYyN+ID2rj5UcXdbkEW0PKwaCrk=_1</activeVersionIdentifier>
     <description>Gives us the Hotel Customer searches for pets.</description>
     <developerName>Searching_Hotel_For_Pets</developerName>
     <masterLabel>Searching Hotel For Pets</masterLabel>
@@ -10,7 +10,7 @@ When a customer searches for a hotel, extract keywords from their query and retu
 Prompt Body:
 You are an intelligent assistant specializing in hotel recommendations. Your task is to recommend hotels based on customer queries that is {!$Input:Question} by matching their keywords with hotel details.
 
-
+hotel Details :{!$EinsteinSearch:Product_Retriever_1Cx_ur7b8b4756b.results}
 Customer&apos;s Question:{!$Input:Question}
 
 • Use the following Salesforce object description fields, isActive field to find the best matches:
@@ -41,6 +41,16 @@ Check Out Date: Coming from {!$Apex:NextWeekendDateCalculation.Prompt} in YYYY-M
         </inputs>
         <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
         <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Product_Retriever_1Cx_ur7b8b4756b</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Question}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Product_Retriever_1Cx_ur7b8b4756b</referenceName>
+        </templateDataProviders>
         <templateDataProviders>
             <definition>apex://NextWeekendDateCalculation</definition>
             <referenceName>Apex:NextWeekendDateCalculation</referenceName>
@@ -50,10 +60,11 @@ Check Out Date: Coming from {!$Apex:NextWeekendDateCalculation.Prompt} in YYYY-M
     <templateVersions>
         <content>Objective:
 When a customer searches for a hotel, extract keywords from their query and return matching hotel based on Description. Focus on identifying Hotels that are suitable based on Customer&apos;s Query.
+{!$Apex:DisplayProductList.Prompt}
 Prompt Body:
 You are an intelligent assistant specializing in hotel recommendations. Your task is to recommend hotels based on customer queries that is {!$Input:Question} by matching their keywords with hotel details.
 
-hotel Details : 
+hotel Details :{!$EinsteinSearch:Product_Retriever_1Cx_ur7b8b4756b.results}
 Customer&apos;s Question:{!$Input:Question}
 
 • Use the following Salesforce object description fields, isActive field to find the best matches:
@@ -85,10 +96,30 @@ Check Out Date: Coming from {!$Apex:NextWeekendDateCalculation.Prompt} in YYYY-M
         <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
         <status>Published</status>
         <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Product_Retriever_1Cx_ur7b8b4756b</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Question}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Product_Retriever_1Cx_ur7b8b4756b</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>apex://DisplayProductList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Question</parameterName>
+                <valueExpression>{!$Input:Question}</valueExpression>
+            </parameters>
+            <referenceName>Apex:DisplayProductList</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
             <definition>apex://NextWeekendDateCalculation</definition>
             <referenceName>Apex:NextWeekendDateCalculation</referenceName>
         </templateDataProviders>
-        <versionIdentifier>++JDCWM9le8zHBWMn9lONTyrC/fThl9RlvmbmAOLVDc=_2</versionIdentifier>
+        <versionIdentifier>404XA7Iqe2jK1bSZdYyN+ID2rj5UcXdbkEW0PKwaCrk=_2</versionIdentifier>
     </templateVersions>
     <type>einstein_gpt__flex</type>
     <visibility>Global</visibility>

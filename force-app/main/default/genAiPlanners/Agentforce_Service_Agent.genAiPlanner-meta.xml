@@ -5,7 +5,28 @@
         <genAiFunctionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</genAiFunctionName>
     </genAiFunctions>
     <genAiPlugins>
-        <genAiPluginName>Experience_Management0</genAiPluginName>
+        <genAiPluginName>Check_In</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Children_Activities</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Experience_Management</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Hotel_Inquiry_For_Family_Friendly_Hotel_and_Pets_Allow_Hotel</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Hotel_Offers</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Hotel_Policy</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Real_Time_Experiences_Offered</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Reservation_Update</genAiPluginName>
     </genAiPlugins>
     <genAiPlugins>
         <genAiPluginName>SvcCopilotTmpl__GeneralFAQ</genAiPluginName>

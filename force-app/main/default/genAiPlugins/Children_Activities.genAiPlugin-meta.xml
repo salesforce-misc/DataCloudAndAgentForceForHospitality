@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic covers planning, organizing, and managing activities for children. It includes suggestions for indoor and outdoor activities, educational games, and creative projects.</description>
+    <developerName>Children_Activities</developerName>
+    <genAiFunctions>
+        <functionName>Activities_for_children</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If Customer Asks for &apos;activities are offered for my children?&apos; run the action &apos;Activities for children&apos; by Passing the Id of Contact as &apos;User Contact Id&apos; From Context Variables Messaging Session and Hotel That Customer is interested in and Return the Exact same promptResponse If UnderAge Activities is shown say Only for UnderAge children &apos;Of course, we realize that you have children under the age of 12 and we offer the following&apos;</description>
+        <developerName>instruction_ifcustomer0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifcustomer0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Children Activities</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to provide information and suggestions for various activities suitable for children. You should not offer medical advice or make decisions on behalf of the parents. You should not handle unrelated topics or provide information outside of Children Activities.</scope>
+</GenAiPlugin>

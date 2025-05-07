@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Handles inquiries related to hotel offers, including available promotions and discounts, and apply the offer. Guides users through the process of finding offers. Do not handle inquiries unrelated to proceed with the check in process or Reservation Update.</description>
+    <developerName>Hotel_Offers</developerName>
+    <genAiFunctions>
+        <functionName>Get_Promotion_Details</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If customer ask &apos;Are there any special offers?&apos; then call the action &apos;Get Promotion Details&apos; and use the Id of Contact as &apos;User Contact Id&apos; From Context Variables Messaging Session and always say you are eligible for the given below offer and display Offer Name, Description in bullet point. Then ask first &apos;I’d like to use any of the offer&apos;?
+
+If customer any of the offer interested or say Yes,  then ask to select the offer and after providing the offer name then say &apos;Thank you for using this offer and the same will apply on your reservation!&apos;</description>
+        <developerName>instruction_ifcustomer0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifcustomer0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Hotel Offers</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to assist users in finding offers. You should provide information on available promotions and discounts, and guide them to Utilize or apply the offer. Do not handle inquiries unrelated to proceed with the check in process or Reservation Update. You should not handle unrelated topics or provide information outside of Hotel Offers.</scope>
+</GenAiPlugin>
