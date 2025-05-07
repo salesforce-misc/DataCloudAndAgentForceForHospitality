@@ -409,46 +409,44 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 | ----- | ----- | ----- |
 | Add Agent User into Agentforce Service Agent & Activate |- Click on setup, search for Agent</br>- Click on Agentforce Agents (under Einstein --> Einstein Generative AI --> Agentforce Studio)</br>- In the Agent list, click on 'Agentforce Service Agent'</br>- In the Details tab, click on the pencil icon against **"Agent User"**, select 'Agent User' </br>- Check the check box **'Keep a record of conversations with Enhanced Event Logs to review agent behavior.'** </br>- Click on Save then click on Open Builder </br>- Click Activate  |![image](https://github.com/user-attachments/assets/3c7d1952-1d13-4c2b-97d0-be8464fcab02)![image](https://github.com/user-attachments/assets/6d35fd77-c99f-46c4-b333-2ff00f6d7d8b)![image](https://github.com/user-attachments/assets/0e5cce82-f774-42f3-92aa-f4465c508e48)|
 
-### 7. Update Einstein Search Retriever (perform only if Amazon S3 Connection has been created ) (10 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 5. Miscellaneous Configuration
+
+#### 5a. Update Einstein Search Retriever (perform only if Amazon S3 Connection has been created ) (10 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Update Einstein Search Retriever |- Click on **Setup**, in the Quick Find Box, enter Prompt Builder, and then select **Prompt Builder**</br>- Search for the Prompt Template named **AnswerHospitality Question** and click on the hyperlink</br>- Hover the cursor on text the next to 'Use this information to answer the question: ', click on Resource, click on Einstein Search, click on 'Hotel\_FAQ\_v3' and click on 'Hotel\_FAQ\_v3' Retriever</br>- On the right side click on default Hotel\_FAQ\_v3\_Retriever, in a Search text add value as "Input:Product.Name"</br>- Hover over cursor on next text on 'Use this information to answer the question:', click on Resource,  click on Einstein Search and click on Hotel\_Safety\_FAQ\_V2</br>- On the right side click on default Hotel\_Safety\_FAQ\_v2\_Retriever in a Search text add value as "Input:Product.Name"</br>- Click on Save As New Version click **Activate** |![image](https://github.com/user-attachments/assets/ec5aa058-6cd4-4d10-8716-1e1b08eb45b0)![image](https://github.com/user-attachments/assets/83b706ad-02d1-47b5-8cf4-747723b15e28)![image](https://github.com/user-attachments/assets/a8205402-43f8-47e6-8fd9-38ac0cb1d7ea)![image](https://github.com/user-attachments/assets/90cdf932-5657-4ce3-b8f9-bf39477105d2)
 
-### 11. Share Product Object to External User (5 minutes)
+#### 5b. Share Product Object to External User (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Provide Product2 Sharing  |- Go to Setup, in the Quick Find Box, search for Sharing Setting </br> - Click on Sharing Setting (under Security) </br> - Click Edit </br> - For Product Object, under Default External Access, select "Public Read Only"</br> - Click Save  | ![image](https://github.com/user-attachments/assets/3e89dac1-a89f-4eea-9adb-8900149e86ae)|
 
-
-
-### 12. Enable Org Theme Option on Sunshine Resort App (5 minutes)
+#### 5c. Enable Org Theme Option on Sunshine Resort App (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |  Enable Org Theme Option on Sunshine Resort App  |- Go to Setup </br>- Search for App Manager</br>- Click on App Manager </br>- Click on Edit Related to "Sunshine Trails Hospitality"</br>- Check the checkbox under "Org Theme Options"</br>- Click Save|![image](https://github.com/user-attachments/assets/d4d94c5b-76f9-473c-950d-102efe235eac)![image](https://github.com/user-attachments/assets/dc84c0a3-99b5-449c-91f5-a55a725c37a8)|
 
-### 19. Assign Contact Record Page as Org Default (5 minutes)
+#### 5d. Assign Contact Record Page as Org Default (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Assign Contact Record Page as Org Default. |- Click on Setup</br>- Click on Object Manager</br>- Click on Contact</br>-  Click on Lightning Record Page</br>-  Click on Contact Record Page (API Name should be 'Contact_Record_Page')</br>- Click on Edit \-\> Click on Activation \-\> Click on 'Assign Org Default' (Desktop and phone) \-\> Click on Save  |![image](https://github.com/user-attachments/assets/57b4b1e1-7ff7-4dea-a34c-d5fc057ac248)![image](https://github.com/user-attachments/assets/09c1297f-1f72-4b90-8b12-1af7c0571733)![image](https://github.com/user-attachments/assets/949c0429-9c77-402d-afe3-6e11340a77f9)
 
-
-### 20. Create a New Version of Omni-Channel Flow (10 minutes)
+#### 5e. Create a New Version of Omni-Channel Flow (10 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Create a New Version of Omni-Channel Flow  |- Click on Setup</br>- Search for flow on Quick Button</br>- Click on Flow</br>- Click on the Flow</br>- Click on **Route To ESA** </br>- Deactivate the flow and click on the **Route To ESA** at the end</br>- Remove the Service channel and select some other option and then select “Live Message” again</br>- In Route To Select "Agentforce Service Agent"</br>- In Agentforce Service Agent Select "Agentforce Service Agent"</br>- Go to the Fallback Queue ID 🡪 Remove the Messaging Queue and add it back (same queue)</br>- Save as new version and activate the flow by clicking on the **Activate** button.  |![image](https://github.com/user-attachments/assets/4a56fa29-0fc7-42c8-9dae-c1ecf574418c)![image](https://github.com/user-attachments/assets/c380d226-9e77-4d4e-bb38-db3b68dcdf60)![image](https://github.com/user-attachments/assets/12ef770d-d575-455d-a179-390778618eca)![image](https://github.com/user-attachments/assets/e11361fd-f53b-4f7b-8713-7c222b379535)|
 
-
-### 21. Access email Deliverability to all email (5 minutes)
+#### 5f. Access email Deliverability to all email (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |  Access email Deliverability to all email | Click on Setup </br>- Search for ‘Deliverability’</br>- Change Access Email from ‘System email Only’ to ‘All email’.</br>- Click Save |![image](https://github.com/user-attachments/assets/77507363-6915-40ff-8443-ed89186f811c)
 
-### 22. Prepare User (10 minutes) $${\color{blue} Optional: \space These \space steps \space are optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
+#### 5g. Prepare User (10 minutes) $${\color{blue} Optional: \space These \space steps \space are optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Prepare Test User |**Note: These steps apply to both existing and new contacts. Below is an example using Marje** </br></br>To test Community functionality , please use : **Marje Croley** contact to login as experience user </br> - Navigate to Setup </br>- In the Quick Find box, search for Digital Experiences </br>- Click the ‘Allow users standard external profiles for self-registration, user creation and login checkbox </br>- Click Okay and click Save </br> </br> **Enable Community User** </br> </br>- Click the App Launcher</br>- Select the Sunshine Trails Hospitality app</br>- Navigate to the Contact of **Marje Croley**</br>- Click the 'Enable as Customer' button (Goto classic page, if the button is not visible)</br>- Update the User License to Customer Community Profile</br>- Update the Profile to Sunshine Resort Profile</br>- Update the Email field to your personal email  </br>- Click Save </br></br> **Optional: Update Marje’s email address in her contact record if you want to receive notifications. Otherwise, this step is not necessary.** </br></br>- Click the App Launcher </br>- Select the Sunshine Trails Hospitality app </br>- Navigate to the Contact of **Marje Croley** </br>- Click the Edit button </br>- Update the Email field to your personal email </br>- Click Save  | ![image](https://github.com/user-attachments/assets/d82a699e-631d-4136-9d7f-ede27652e2d2)![image](https://github.com/user-attachments/assets/c009a09e-ed99-4ded-aa53-469c94a05a98)![image](https://github.com/user-attachments/assets/4767196d-0181-42e0-a074-5eebe8403dc8)![image](https://github.com/user-attachments/assets/be237889-9073-4a27-ab35-0e2d8da396a6)![image](https://github.com/user-attachments/assets/bde45527-5ac1-4506-a645-07f5be2c0eae)|
 
-### 23. General Notes (30 minutes)
+### 6. General Notes (30 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | General Notes for new community User | To test Community functionality , please use : **Marje Croley contact** to login as experience user </br> **Note:** If user self register from experience site sign up page, admin needs to add below permission set to that new community user </br>- **Buyer** </br>- **Customer Community Plus Permissions**|![image (44)](https://github.com/user-attachments/assets/81cdd8a1-ce5a-469d-9004-48722f4caa02)|
