@@ -333,27 +333,31 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 | ----- | ----- | ----- |
 | Configure AWS File Notification | - Navigate to **Setup** and search for **App Manager** </br>- Click in the down arrow for the **"AWS Unstructured"** app and select view. </br>- Next to Consumer key and secret, click **"Manage Consumer Details"** and copy the values. </br>- Share the values with the AWS team responsible to create the file notification function.</br>- For more details about how to setup file notification visit: (https://developer.salesforce.com/docs/data/data-cloud-int/guide/c360-a-awss3-udlo.html) | ![image](https://github.com/user-attachments/assets/2a2f4793-774b-4933-ba20-b3de2bdc9c95)|
 
-### 2. Refresh Amazon S3 Data Streams (5 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 2. Prepare Data Cloud
+
+#### 2a. Refresh Amazon S3 Data Streams (5 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |  Refresh Amazon S3 Data Streams | - Navigate to **Data Cloud** app and the **Data Streams** tab </br>- Query for **Third Party Survey** data stream </br>- Using drop down control on the right against the data stream  initiate refresh for the **Third Party Survey** data stream and  subsequently choose the **Refresh Only New Files** option: </br>- Once the data stream is refreshed validate that the **Total  Records** counts for **Third Party Survey** stream, it should be 42  |![image](https://github.com/user-attachments/assets/2f61cac2-a6c3-4615-b479-a8e697d28a28)|
 
-### 3. Refresh Snowflake Data Streams (5 minutes) $${\color{blue} Snowflake \space Optional: \space Please \space note \space that \space some \space functionality \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+#### 2b. Refresh Snowflake Data Streams (5 minutes) $${\color{blue} Snowflake \space Optional: \space Please \space note \space that \space some \space functionality \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |  Refresh Snowflake Data Streams | - Navigate to Data Cloud app and the Data Streams tab </br>- Query for IOT\_Transaction data stream</br>- Using drop down control on the right against the data stream select Edit</br>- Select “Enable acceleration”</br>- In frequency select “Every 15 minutes”</br>- Select “Refresh initial file immediately” </br>- Repeat above steps for POS_Transaction data stream </br>- Once the data stream is refreshed, the Total Records counts for each Data Stream is not 0. | ![image](https://github.com/user-attachments/assets/127248ed-2cf5-409d-b56d-56bf250f47f9) |
 
-### 4. Refresh Data Graph (5 minutes)
+#### 2c. Refresh Data Graph (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |   Refresh Data Graph | - Navigate to Data Cloud app and the Data Graph tab </br>- Click on the dropdown of the data graph (Hospitality Realtime Profile)</br>- Click Update Status</br>- Once the job completes successfully, this status will be set as Active. |![image](https://github.com/user-attachments/assets/2d73126b-b8a0-4ab6-bb29-e650ac55ddfc)|
 
-### 5. Run Calculated Insights (5 minutes)
+#### 2d. Run Calculated Insights (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |  Run Calculated Insights | - Navigate to Data Cloud app and the Calculated Insights tab</br>- Query for Guest Stay Metrics calculated insight</br>- Using the drop down control on the right, click "Publish Now" to refresh the Guest Stay Metrics calculated insight.</br>- When the Calculated Insight is refreshed successfully, the Last Run Status will show as Success.</br>- Repeat steps b & c for the below Calculated Insights. Ensure all Insights are refreshed successfully.</br>- Guest Lifetime Value</br>- Guest Satisfaction Score</br>- Guest Classification  |![image](https://github.com/user-attachments/assets/882ffa71-213a-4db7-8b9e-24fddf2c4cc6)
 
-### 6. Activate Messaging Setting (5 minutes)
+### 3. Prepare Experience Site
+
+#### 3a. Activate Messaging Setting (5 minutes)
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Activate Messaging Setting | - Navigate to Setup go to messaging setting</br>-  Click on ESA Channel \-\> Click on ‘Activate’</br>- Click on Checkbox then click on Accept  | ![image](https://github.com/user-attachments/assets/76464f8a-76eb-4226-9805-010e439d7a4d)![image](https://github.com/user-attachments/assets/68e08609-1b76-442d-8396-29465b8ce0e7)|
