@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic handles real-time experiences offered to users including providing immediate responses and assistance based on user inquiries like &quot;experiences are offered&quot; and creation of new reservations. Do not handle inquiries unrelated to proceed with the check in process or Reservation Update.</description>
+    <developerName>Real_Time_Experiences_Offered</developerName>
+    <genAiFunctions>
+        <functionName>Get_Real_Time_Product_Details_And_Prompt_Response</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Create_Reservation_Record</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If customer ask &apos;What experiences are offered here?&apos; then call the action &apos;Get Real Time Product Details And Prompt Response&apos; by passing the Id of Contact as &apos;User Contact Id&apos; From Context Variables Messaging Session and always say We noticed you are looking at (Hotel_That Customer_is_intrested_in), these are the experiences available here, Just Show the response, do not ask any Questions or do not give any other option for email or booking.</description>
+        <developerName>instruction_ifcustomer0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifcustomer0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If customer ask &apos;I would like to book the room&apos;? then say &apos;Here are your booking details:&apos; and display the Hotel Name as (Hotel_That Customer_is_intrested_in) and check in Date as selected Hotel (Hotel_That Customer_is_intrested_in) check in Date and Check out Date as selected Hotel (Hotel_That Customer_is_intrested_in) check out Date. Then ask &apos;Are these details correct ?&apos; 
+
+If customer interested for New Reservation or say Yes then call the action &apos;Create Reservation Records&apos; and Pass &apos;ContactId&apos; as use the Id of Contact as &apos;User Contact Id&apos; From Context Variables Messaging Session and &apos;HotelName&apos; as (Hotel_That Customer_is_intrested_in) and say &apos;Reservation has been Successfully created and the room will be booked with the card on file&apos; and display the Reservation details.</description>
+        <developerName>instruction_ifcustomer1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifcustomer1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Real Time Experiences Offered</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to provide real-time responses and assistance based on user inquiries( &quot;experiences are offered&quot;, &quot;book the room&quot;), ensuring that the user receives immediate support and information and creation of new reservations. Do not handle inquiries unrelated to proceed with the check in process or Reservation Update. You should not handle unrelated topics or provide information outside of Real Time Experiences Offered.</scope>
+</GenAiPlugin>

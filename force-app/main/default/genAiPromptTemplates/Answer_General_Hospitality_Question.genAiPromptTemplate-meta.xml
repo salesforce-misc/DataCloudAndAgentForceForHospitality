@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenAiPromptTemplate
-	xmlns="http://soap.sforce.com/2006/04/metadata">
-	<activeVersion>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_9</activeVersion>
-	<createdInVersion>62.0</createdInVersion>
-	<developerName>Answer_General_Hospitality_Question</developerName>
-	<masterLabel>Answer General Hospitality Question</masterLabel>
-	<templateVersions>
-		<content>Please answer this question: {!$Input:Question}
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>Answer_General_Hospitality_Question</developerName>
+    <masterLabel>Answer General Hospitality Question</masterLabel>
+    <templateVersions>
+        <content>Please answer this question: {!$Input:Question}
 Use this information to answer the question:
 Use this information to answer the question:
 Examples of Question and Answer:
@@ -14,17 +11,17 @@ Examples of Question and Answer:
 Answer: Return the answer with Cancellation and Pet Policy in full details in the bullet point.
 When asked for Cancellation policy always return cancellation policy with pet policy together
 </content>
-		<inputs>
-			<apiName>Question</apiName>
-			<definition>primitive://String</definition>
-			<masterLabel>Question</masterLabel>
-			<referenceName>Input:Question</referenceName>
-			<required>true</required>
-		</inputs>
-		<primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
-		<status>Published</status>
-		<versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_9</versionIdentifier>
-	</templateVersions>
-	<type>einstein_gpt__flex</type>
-	<visibility>Global</visibility>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_9</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
 </GenAiPromptTemplate>
