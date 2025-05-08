@@ -330,7 +330,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
   ## 6. Finish Configuration
 </summary>
 
-
+6 step process
 
 
 ### 1. Configure AWS File Notification (30 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
@@ -473,7 +473,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 
   4 step process
 
-  **IMP NOTE:** You may skip the MuleSoft section if it is not applicable to your use case. However, if you plan to use MuleSoft, please ensure you register with [Amadeus](https://developers.amadeus.com/self-service/category/hotels) to obtain your Client ID and Client Secret.</br>
+  **IMP NOTE:** You may skip the MuleSoft section ,however, if you plan to use MuleSoft, please ensure you register with [Amadeus](https://developers.amadeus.com/self-service/category/hotels) to obtain your Client ID and Client Secret.</br>
 
 
 
