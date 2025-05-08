@@ -525,3 +525,12 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
    |  | **Streaming - Insert Objects step** </br>- Setup the Salesforce Streaming Insert Object connector (to connect Mule to Salesforce), by providing appropriate Username, Password, Client Id and Client Secret </br>- Configure the connector by providing Source API Name: Mulesoft_Ingestion_API and Object: Order | ![image](https://github.com/user-attachments/assets/9f945715-439f-4e50-b04d-3cb2fa71d390)![image](https://github.com/user-attachments/assets/d1cd2fa1-4c5a-40f3-b8d5-20149a66b67d)|
 
 </details>
+
+**Behind the Scenes**
+
+Using the Agent to search for a hotel and create a reservation
+
+   | Sl. No. | Utterance | Behind the scenes | Topic | Components |
+   | ----- | ----- | ----- | ----- | ----- |
+   | 1. | Find a beach front family friendly hotel for next weekend? | Uses LLM to find dates for next weekend, reads unstructurd data via a custom retriever as the hotel description is from in-line unstructured data (i.e. column in a table), prompt builder, APEX class to orchestrate a call via Mulesoft to a travel consolidator to compare prices and looks at structured Reservation Data, Platform event to show the flyout experience | Hotel Inquiry For Family Friendly Hotel and Pets Allow Hotel | Prompt Action (Searching Hotel).
+ Flow(Get Product Details From Prompt Builder) </br> Apex (a.DisplayProductList - to publish the platform event to display the Flyout and b.NextWeekendDateCalculation - display the nextweekend check in/check out date for each hotel) </br> LWC - productListComponent, displayFriendlyHotel, childModal, defaultPrechatValuesComponent </br> Platform Event - Enable_Pet_Friendly_Comp__e, Enable_Hotel_Search_Comp__e </br> Ingestion API - Mulesoft_Ingestion_API |
