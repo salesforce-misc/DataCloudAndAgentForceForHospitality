@@ -533,9 +533,9 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 
 <details><summary>
   
-  ## Behind the Scenes
+  ## Behind the Scenes - how is the agent powered?
 </summary>
-Curious to see the all the possible utterances  and how they are powered by the Agent. Here is a list of all the possible coversations, the corresponding topics and the components that power them. </br>
+Curious to see the all the possible utterances  and how they are powered by the Agent. Here is a list of all the possible coversations, the corresponding topics and the components that power them. </br></br>
 
 $${\color{blue} Using \space the \space Agent \space to \space search \space for \space a \space hotel \space and \space create \space a \space reservation }$$
 
