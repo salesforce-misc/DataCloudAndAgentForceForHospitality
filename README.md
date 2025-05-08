@@ -50,7 +50,7 @@ The Sunshine Trail app showcases how with **Data Cloud** we have a true Customer
   | Install package | - Click on this Package Installation [Link ](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4W000002V5WS)</br>- Sign-in to the Org with your credentials.</br>- Choose Install for Admins Only option</br>- Choose “Rename conflicting components in package” and click the Install button.</br>- Wait until installation is completed, you will receive a confirmation on logged in user’s email |![image](https://github.com/user-attachments/assets/316f4e48-b9b2-4169-b362-fc3ecd9cd1b3) ![image](https://github.com/user-attachments/assets/0da1a771-abcc-4caa-b248-1b768905de60)|
   | Verify Package installation | - Click Setup</br>- Search for package</br>- Click on 'Installed PAckage' </br>- Search for 'Sunshine Trails Pre-Deployment Package' is installed  |![image](https://github.com/user-attachments/assets/8b76cd89-abec-4586-91cc-6b4b430dc68c)|
 
-### 3. Enable Features on the Org (40 minutes)
+### 3. Enable Features on the Org (20 minutes)
 
   | Step | Action and Details | Images |
   | ----- | ----- | ----- |
@@ -69,7 +69,7 @@ The Sunshine Trail app showcases how with **Data Cloud** we have a true Customer
   | Create a Record on Custom Metadata | - Go to Setup \-\> Search for Metadata type \-\> Click on ‘Install Package Settings Enabled’ \-\>   Click on **Manage Install Package Settings Enabled** \-\>Click on ‘New’ \-\> Give Label as  **Package Settings Enabled** and **Check Checkbox of Installation Settings Enabled Field.** Click Save|![image](https://github.com/user-attachments/assets/bc667a84-daf9-4e35-b003-45c8de4be360) ![image](https://github.com/user-attachments/assets/7edbecd9-ceb2-4566-bd14-54664ebfd084)|
 
 
-### 4. Setup the Salesforce Org (30 minutes)
+### 4. Setup the Salesforce Org (20 minutes)
 
   | Step | Action and Details | Images |
   | ----- | ----- | ----- |
