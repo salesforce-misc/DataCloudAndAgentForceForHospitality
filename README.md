@@ -527,7 +527,6 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 </details>
 
 ## Behind the Scenes
-=======================
 
 $${\color{blue} Using \space the \space Agent \space to \space search \space for \space a \space hotel \space and \space create \space a \space reservation }$$
 
@@ -540,3 +539,9 @@ $${\color{blue} Using \space the \space Agent \space to \space search \space for
    | 5. | What activities are offered for my children? | Get all the product (wehre Product Family - Sunshine Resorts Family)from Flow and provide details to Prompt along with Contact and interested Hotel Name | Children Activities | a. Prompt Action </br>- Activities for children </br></br> b. Flow </br>- Get Products for Prompt Builder |
    | 6. | What is your cancellation policy? | Reads unstructured data from PDFs that has been ingested into Data Cloud where it is chunked, vectorized and indexed for easy retrieval | Hotel Policy | a. Prompt Action </br>- AnswerHospitality Question |
    | 7. | I would like to book the room | Creates a record in the reservation DMO, based on the hotel and the dates | Real Time Experiences Offered | a. Flow </br>- Create Reservation Record |
+
+$${\color{blue} Using \space the \space Agent \space to \space check \space in }$$
+
+   | Sl. No. | Utterance | Behind the scenes | Topic | Components |
+   | ----- | ----- | ----- | ----- | ----- |
+   | 1. | I'd like to Check-in |  | Determines the guest checking in, and finds the upcoming reservation from the ReservationDMO, if there are no upcoming reservations the agent doesn't continue with the checkin process | Check In | a. Apex </br>- GetReservationDetails |
