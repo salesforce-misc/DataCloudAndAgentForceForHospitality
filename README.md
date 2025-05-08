@@ -545,3 +545,11 @@ $${\color{blue} Using \space the \space Agent \space to \space check \space in }
    | Sl. No. | Utterance |  Agent Response | Behind the Scene | Topic | Components |
    | ----- | ----- | ----- | ----- | ----- | ----- |
    | 1. | I'd like to Check-in |  | Determines the guest checking in, and finds the upcoming reservation from the ReservationDMO, if there are no upcoming reservations the agent doesn't continue with the checkin process | Check In | a. Apex </br>- GetReservationDetails |
+   |  |  | Would you like to proceed with checking in? |  | Reservation Update | a. Flow </br>- Update Reservation Record |
+   |  |  | Would you like to further upgrade to an Ocean view room for $25/night? |  | Reservation Update | a. Flow </br>- Update Reservation Record |
+   |  |  | How would you like your key—digital or pick up at the front desk? |  | Reservation Update | a. Flow </br>- Update Reservation Record |
+   | 2. | What type of activities available in the area? |  | Looks at the Booking and Experiences DMO based on the interests of the guest and recommends activities for the period that the customer is staying at the hotel | Experience Management | a. Prompt Action </br>- Generate Personalized Schedule |
+   | 3. | Would you like me to email these recommended experiences to you? |  | Sends an email with all the recommendations to the guest | Experience Management | a. Flow </br>- Send Confirmation Email For Experiences |
+   | 4. | Would you like to book any of these experiences? |  | Lists all available sessions based on the experience selected by the guest | Experience Management | a. Apex </br>- GetSessionDetails |
+   | 5. | Which Session would you prefer and how many people are in your party? |  | Creates a booking record based on the session selected | Experience Management | a. Flow </br>- Create Booking |
+   | 6. | What should I bring? |  | Based on the experience selected, provides a list of items to bring along with weather details for the day of the experience | Experience Management | a. Apex </br>- CheckWeather |
