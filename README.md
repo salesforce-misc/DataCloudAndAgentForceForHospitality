@@ -4,7 +4,7 @@ Welcome to Sunshine Trail Resorts, a sample hospitality application. Sunshine Tr
 
 Did you watch the demo? The following are a set of instructions to setup the end to end demo in your own environment. While the end to end demo supports multiple clouds, you have full flexibility to use only the portions relevant to what you want to try out in your own org, additionally once the packages are installed you have the ability to fully customize it based on your needs. 
 
-The Sunshine Trail app showcases how with **Data Cloud** we have a true Customer 360 that then drives the best experience with Agentforce **Agents**.
+The Sunshine Trail app showcases how with **Data Cloud** we have a true Customer 360 that then drives the right and best experience with Agentforce **Agents**.
 
 <details><summary>
 
