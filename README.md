@@ -530,7 +530,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 
 $${\color{blue} Using \space the \space Agent \space to \space search \space for \space a \space hotel \space and \space create \space a \space reservation }$$
 
-   | Sl. No. | Utterance | Behind the scenes | Topic | Components |
+   | Sl. No. | Utterance | Behind the Scene | Topic | Components |
    | ----- | ----- | ----- | ----- | ----- |
    | 1. | Find a beach front family friendly hotel for next weekend? | Uses LLM to find dates for next weekend, reads unstructurd data via a custom retriever as the hotel description is from in-line unstructured data (i.e. column in a table), prompt builder, APEX class to orchestrate a call via Mulesoft to a travel consolidator to compare prices and looks at structured Reservation Data, Platform event to show the flyout experience | Hotel Inquiry For Family Friendly Hotel and Pets Allow Hotel | a. Prompt Action </br>- Searching Hotel. </br></br> b. Flow </br>- Get Product Details From Prompt Builder </br></br> c. Apex </br>- DisplayProductList - to publish the platform event to display the Flyout </br>- NextWeekendDateCalculation - display the nextweekend check in/check out date for each hotel </br></br> d. LWC </br>- productListComponent </br>- displayFriendlyHotel </br>- childModal </br>- defaultPrechatValuesComponent </br></br> e. Platform Event </br>- Enable_Pet_Friendly_Comp__e </br>- Enable_Hotel_Search_Comp__e </br></br> f. Ingestion API </br>- Mulesoft_Ingestion_API |
    | 2. | Do you allow pets? | Keeps the original context and uses the custom retriever as the hotel description is from in-line unstructured data (i.e. column in a table), prompt builder, APEX class to orchestrate a call via Mulesoft to a travel consolidator to compare prices and looks at structured Reservation Data, Platform event to show the flyout experience | Hotel Inquiry For Family Friendly Hotel and Pets Allow Hotel | a. Prompt Action </br>- Searching Hotel For Pets. </br></br> b. Flow </br>- Get Product Details From Prompt Builder </br></br> c. Apex </br>- DisplayProductList - to publish the platform event to display the Flyout </br>- NextWeekendDateCalculation - display the nextweekend check in/check out date for each hotel </br></br> d. LWC </br>- productListComponent </br>- displayFriendlyHotel </br>- childModal </br>- defaultPrechatValuesComponent </br></br> e. Platform Event </br>- Enable_Pet_Friendly_Comp__e </br>- Enable_Hotel_Search_Comp__e </br></br> f. Ingestion API </br>- Mulesoft_Ingestion_API |
@@ -542,6 +542,6 @@ $${\color{blue} Using \space the \space Agent \space to \space search \space for
 
 $${\color{blue} Using \space the \space Agent \space to \space check \space in }$$
 
-   | Sl. No. | Utterance | Behind the scenes | Topic | Components |
-   | ----- | ----- | ----- | ----- | ----- |
+   | Sl. No. | Utterance |  Agent Response | Behind the Scene | Topic | Components |
+   | ----- | ----- | ----- | ----- | ----- | ----- |
    | 1. | I'd like to Check-in |  | Determines the guest checking in, and finds the upcoming reservation from the ReservationDMO, if there are no upcoming reservations the agent doesn't continue with the checkin process | Check In | a. Apex </br>- GetReservationDetails |
