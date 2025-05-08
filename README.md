@@ -333,7 +333,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 6 step process
 
 
-### 1. Configure AWS File Notification (30 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 1. Configure AWS File Notification for files with unstructured data (30 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Configure AWS File Notification | - Navigate to **Setup** and search for **App Manager** </br>- Click in the down arrow for the **"AWS Unstructured"** app and select view. </br>- Next to Consumer key and secret, click **"Manage Consumer Details"** and copy the values. </br>- Share the values with the AWS team responsible to create the file notification function.</br>- For more details about how to setup file notification visit: (https://developer.salesforce.com/docs/data/data-cloud-int/guide/c360-a-awss3-udlo.html) | ![image](https://github.com/user-attachments/assets/2a2f4793-774b-4933-ba20-b3de2bdc9c95)|
