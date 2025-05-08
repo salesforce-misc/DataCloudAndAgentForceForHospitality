@@ -531,6 +531,10 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 
 </details>
 
+<details><summary>
+  
+  ## Behind the Scenes
+</summary>
 ## Behind the Scenes
 
 $${\color{blue} Using \space the \space Agent \space to \space search \space for \space a \space hotel \space and \space create \space a \space reservation }$$
@@ -558,3 +562,5 @@ $${\color{blue} Using \space the \space Agent \space to \space check \space in }
    | 4. | Would you like to book any of these experiences? |  | Lists all available sessions based on the experience selected by the guest | Experience Management | a. Apex </br>- GetSessionDetails |
    | 5. | Which Session would you prefer and how many people are in your party? |  | Creates a booking record based on the session selected | Experience Management | a. Flow </br>- Create Booking |
    | 6. | What should I bring? |  | Based on the experience selected, provides a list of items to bring along with weather details for the day of the experience | Experience Management | a. Apex </br>- CheckWeather |
+
+   </details>
