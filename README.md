@@ -527,8 +527,9 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 </details>
 
 **Behind the Scenes**
+=======================
 
-Using the Agent to search for a hotel and create a reservation
+$${\color{blue} Using \space the \space Agent \space to \space search \space for \space a \space hotel \space and \space create \space a \space reservation }$$
 
    | Sl. No. | Utterance | Behind the scenes | Topic | Components |
    | ----- | ----- | ----- | ----- | ----- |
