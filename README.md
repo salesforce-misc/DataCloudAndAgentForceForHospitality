@@ -535,7 +535,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
   ## Behind the Scenes - how is the agent powered?
 </summary>
 Curious to see the all the possible utterances  and how they are powered by the Agent. Here is a list of all the possible coversations, the corresponding topics and the components that power them. </br></br>
-There are twi contacts populated with relevant information to drive these conversations - Marje Croley and John Smith. You can login to experience cloud as either of these contacts to have these full agent conversations.
+There are two contacts populated with all the relevant information to drive these conversations - Marje Croley and John Smith. You can login to experience cloud as either of these contacts to have these full agent conversations.
 
 $${\color{blue} Using \space the \space Agent \space to \space search \space for \space a \space hotel \space and \space create \space a \space reservation }$$
 
