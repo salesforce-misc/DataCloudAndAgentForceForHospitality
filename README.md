@@ -550,6 +550,7 @@ $${\color{blue} Using \space the \space Agent \space to \space search \space for
    | 7. | I would like to book the room | Creates a record in the reservation DMO, based on the hotel and the dates | Real Time Experiences Offered | a. Flow </br>- Create Reservation Record |
 
 $${\color{blue} Using \space the \space Agent \space to \space check \space in }$$
+You need to have a valid reservation record where the start date is within 24 hours to use the agent to check in.
 
    | Sl. No. | Utterance |  Agent Response | Behind the Scene | Topic | Components |
    | ----- | ----- | ----- | ----- | ----- | ----- |
