@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
-    <contactEmail>nilanjana.sengupta@infosys.com</contactEmail>
-    <contactPhone>8777499048</contactPhone>
+    <contactEmail>xxxxx@example.com</contactEmail>
+    <contactPhone>xxx-xxx-xxxx</contactPhone>
     <label>Mulesoft</label>
     <oauthConfig>
         <callbackUrl>https://login.salesforce.com/services/oauth2/callback</callbackUrl>
