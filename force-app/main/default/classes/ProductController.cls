@@ -358,7 +358,7 @@ public with sharing class ProductController {
     } 
     
     public static Map<String,Integer> getAmadeusAPIResponse(){
-        String url = 'https://amadeuspriceapi-vn36iz.5sc6y6-4.usa-e2.cloudhub.io/Amadeus_Price_API';
+        String url = System.Label.AmadeusPriceAPIURL;
         Map<String,Integer> amadeusAPIPrice = new Map<String,Integer>(); 
         // Create a new HttpRequest object
         HttpRequest req = new HttpRequest();
