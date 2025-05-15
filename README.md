@@ -76,7 +76,6 @@ The Sunshine Trail app showcases how with **Data Cloud** we have a true Customer
   | Assign Data Cloud Permissions to Standard Object  | - Click on App Launcher, search for Sunshine Trails Hospitality and click on **Sunshine Trails Hospitality Setup** App</br>- Click on the “**Assign Permissions for Standard Objects**” button (highlighted in the screenshot below) and wait for a confirmation message before proceeding further.  |![image](https://github.com/user-attachments/assets/34234749-7ebb-4659-9c26-9adf3932a75e)|
   | Assign Data Cloud Permissions to Custom Objects & Custom Fields | - Click on App Launcher, search for Sunshine Trails Hospitality and click on **Sunshine Trails Hospitality Setup** App</br>- Click on **“Assign Permissions for Custom Object”** button (highlighted in the screenshot below) and wait for a confirmation message before proceeding further |![image](https://github.com/user-attachments/assets/fdab8405-42cc-4cb7-a724-cb6a790d2acb)|
   | Modify the Data Cloud Admin Permission Set | - Open the Setup Menu and click Setup</br>- In the Quick Find, search for ‘Permission Sets’ and click ‘Permission Sets’</br>- Click the ‘Data Cloud Admin’ permission set</br>- In the Apps section, click ‘Data Cloud Data Space Management’</br>- In the Data Spaces panel, click Edit.</br>- Check the ‘Enabled’ checkbox for the default data space and click Save</br>- Click OK in the confirmation dialog |![image](https://github.com/user-attachments/assets/f8650c78-d64a-4a30-9636-9633a13baed8)|
-  | Create a connection for Mulesoft Ingestion API. This is to orchestrate a call to the Hotel Pricing consolidator for pricing comparison. $${\color{blue} Mulesoft \space Optional}$$ | - Go to **Setup** \-\> In the **Quick Find** box, type ***static***, then select ***Static Resources***</br>- In the index across the top, click the letter ***M***</br>- Click on **‘Mulesoft\_Ingestion\_API\_Scheme’**</br>- Click on **‘View File’** hyperlink. The **‘Mulesoft\_Ingestion\_API\_Scheme.txt’** is downloaded to your computer.</br>- Change the file extension from ***.txt*** to ***.yaml***</br>- Go to Data Cloud Setup, click on Ingestion API → Click New</br>- Provide the Connector Name as ’Mulesoft Ingestion API’</br>- Upload **Mule\_ingestion\_api.yaml**  file which you have downloaded from above steps and Upload file to scheme and click on Save. | ![image](https://github.com/user-attachments/assets/fca75a1c-b64b-4dcd-8583-0893718bf1da) ![image](https://github.com/user-attachments/assets/87ae1f7f-c733-433b-98e0-ef4faeef0ecb)![image](https://github.com/user-attachments/assets/c0ff8a15-3b3c-4b89-b8b9-32342d0100ae)|
 | Install Standard Data Bundles | Click on Data Cloud Setup </br>- Click on ‘Salesforce CRM’</br>- Under ‘Standard CRM Data Bundles’</br>- Click on ‘Arrow’ icon and click on ‘install’ of ‘Sales Cloud’</br>- it will open on new page -> click on Install |![image](https://github.com/user-attachments/assets/8aea58e3-15c5-48f2-a24f-2fbe25d2a0ac)![image](https://github.com/user-attachments/assets/6f4a17f5-211b-4eef-a0d2-b5b993cad3a2)|
 | Turn On Einstein Setup | - Navigate to Setup</br>- Search and Select ‘Einstein Setup’</br>- Turn on Einstein Setup |  |
 | Turn On Agentforce | - Navigate to Setup</br>- Search and Select ‘Agent’</br>- Turn on Agentforce |  |
@@ -463,71 +462,38 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 |**Finalize and Activate the Prompt in Prompt Builder:**|-Click on the Retriever you just added </br>-On the right-hand panel, the Product Retriever settings will appear </br>-In the Search Parameter text box, enter the following value:input:Question</br>Click Save As to save your changes</br>Finally, click Activate to activate the prompt in Prompt Builder.
 </details>
 
-
-
 <details><summary>
-  
-  ## 7. Mulesoft Configuration for Amadeus Prices
+
+  ## 7. Mulesoft Configuration for Amadeus Prices (Optional)
   </summary>
 
-  4 step process
+  **IMP NOTE:** You may skip the MuleSoft section if it is not applicable to your use case or you do not have Mulesoft licenses. However, if you plan to use MuleSoft, please ensure you register with [Amadeus](https://developers.amadeus.com/self-service/category/hotels) to obtain your Client ID and Client Secret.</br>
 
-  **IMP NOTE:** You may skip the MuleSoft section ,however, if you plan to use MuleSoft, please ensure you register with [Amadeus](https://developers.amadeus.com/self-service/category/hotels) to obtain your Client ID and Client Secret.</br>
+  ### Table of Contents**
+    
+  [1.	Mulesoft Configuration](#1-Mulesoft-Configuration)
+  
+  [2.	Mulesoft Configuration Steps](#2-Mulesoft-Configuration-Steps)
 
+**Note: Skip Step 2, if you are using the provided configuration XML file (from Step 1) to create a Mule Project** </br>
 
+### 1. Mulesoft Configuration (20 mins) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 
-**Please check if the Ingestion API setup, Data Stream configuration and Data Mappings are already present in the org. If present, start with 3. Mulesoft Configuration**
+</br>XML File: https://git.soma.salesforce.com/gdevadoss/DataCloudHospitalityDemo/tree/master/Mulesoft%20configuration </br>
 
-### 1. Data Cloud Configuration Steps (20 minutes) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 2. Mulesoft Configuration Steps (20 mins) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 
-   ##### 1.1.	Create an Ingestion API in Data Cloud (Skip if already performed)
    | Step  | Action and Details  |  Images |
    | ----- | ----- | ----- |
-   | Configure an Ingestion API in Data Cloud |- Click on Setup</br>- Click Data Cloud Setup</br>- Under "External Integration", click Ingestion API</br>- Click New</br>- Provide the Connector Name as "Mulesoft Ingestion API"  | ![image](https://github.com/user-attachments/assets/fcf0f0fe-2d1c-4cc3-b244-0a2f7606ec4b)|
-
-
-   ##### 1.2.	Upload the .yaml file to define the Schema (Skip if already performed)
-   | Step  | Action and Details  |  Images |
-   | ----- | ----- | ----- |
-   | Download .yaml file |- Click on on the link below to download the .yaml file</br> https://git.soma.salesforce.com/gdevadoss/DataCloudHospitalityDemo/tree/master/Mulesoft%20Yaml%20File| |
-   | Define the Order Schema |- Click on Upload Files</br>- Choose the downloaded schema .yaml file and upload</br>- Make sure the Connection matches the image  |![image](https://github.com/user-attachments/assets/0cc0ddcb-c242-4512-9f25-a08ca6bd15cc)
-
-
-   ##### 1.3.	Create a Ingestion API Data Stream using the Schema object (Skip if already performed)
-   | Step  | Action and Details  |  Images |
-   | ----- | ----- | ----- |
-   | Configure the Data Stream |- Go to App Launcher → Data Cloud → Data Stream.</br>- Click New</br>- Under Connected Sources, clik "Ingestion API"</br>- Click Next</br>- Choose "Mulesoft Ingestion API"</br>- In the Objects list choose "Order"</br>- Click Next</br>- Choose Category as "Engagement", Primary Key as "hotel_name" and Event Time Field as "created_date"</br>- Click Next</br>- Choose Data Space as "default"</br>- Click Deploy| ![image](https://github.com/user-attachments/assets/9e24ce88-c90f-4d74-a9ac-9041f1baced8)![image](https://github.com/user-attachments/assets/aac912fb-e3cf-485a-9cbc-a351e14d43cf)|
-   | Verify Data Stream |- Make sure the Data Stream configuration matches the image | ![image](https://github.com/user-attachments/assets/b424eec5-b004-46aa-a948-e5b59efe0b26)![image](https://github.com/user-attachments/assets/6b825407-9985-4d8f-a7ef-84893ddf68d9)|
-
-   ##### 1.4.	Configure Mapping to DMO (Skip if already performed)
-   | Step  | Action and Details |  Images |
-   | ----- | ----- | ----- |
-   | Data Mapping |- Configure Source to Target mapping such that the mapping matches the image |![image](https://github.com/user-attachments/assets/1cab5175-4b1d-4f93-9c23-e1e30e60e093)
-
-
-### 2. Mulesoft configuration (20 minutes) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
-**Note: Skip if you are using the provided configuration XML file directly.**</br>
-</br>XML File: https://git.soma.salesforce.com/gdevadoss/DataCloudHospitalityDemo/tree/master/Mulesoft%20configuration </br></br>- Open the **Streaming Insert Object** connector and click on **"Test Connection."** </br>- Enter the required credentials: **Client ID, Client Secret, Username,** and **Password**.
- These can be obtained from the **Connected App in Salesforce**. </br>- Ensure that the Connected App is created beforehand to retrieve these credentials. </br>- Store the credentials in the **Salesforce Connector App**.</br>
-
-
-### 3. Salesforce Configuration Steps (10 minutes) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
-   | Step  | Action and Details  |  Images |
-   | ----- | ----- | ----- |
-   | Create a Connected App | Create a New Connected App in Salesforce for securely integrating MuleSoft with Salesforce Data Cloud via APIs using OAuth2.0</br> Follow the steps below to create the Connected App.</br>&emsp;- Go to Setup, Search for App Manager and select App Manager</br>&emsp;- Configure the Connected App as shown in the image</br>&emsp;- Ensure you grant Profile level access to newly created Connected App to System Administrator profile |![image](https://github.com/user-attachments/assets/bfe17d05-b392-4a7a-814a-e6d72c31cafe)
-   |  | </br>- After creating the Connected App, click on Manage</br>- Configure the App to match the configuration shown in the image |![image](https://github.com/user-attachments/assets/457538af-90d6-4bdb-84ad-ecd8df306d87)|
-   |  | </br>- Go to Setup and search for OAuth and OpenID Connect Settings and enable the Allow OAuth Username-Password Flows | ![image](https://github.com/user-attachments/assets/eff46289-456b-4441-b16f-08c0f4184798)|
-
-### 4. Mulesoft Configuration Steps (20 minutes) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
-   | Step  | Action and Details  |  Images |
-   | ----- | ----- | ----- |
-   |Update the Mule flow that inserts data from Mule to Salesforce Data Cloud via Ingestion API| |![image](https://github.com/user-attachments/assets/dd21d524-ff9a-4ea4-9fca-2a45d2f72f60)|
-   |  |**HTTP Request Connector step** </br>- API URL: https://test.api.amadeus.com/v1/security/oauth2/token</br>- Method: POST</br>- Body</br>&emsp;\%dw 2.0</br>&emsp;output application/x-www-form-urlencoded</br>&emsp;\---</br>&emsp;\{</br>&emsp;&emsp;grant_type: "client_credentials",</br>&emsp;&emsp;client_id: "xxxxxxxxxxxxxxxxx",</br>&emsp;&emsp;client_secret: "xxxxxxxxxxxxxxxxx"</br>\} | ![image](https://github.com/user-attachments/assets/532252ea-d43a-4a3a-91af-82307507be72)|
-   |  | **Store Access Token step** </br>- Configure as shown in the image | ![image](https://github.com/user-attachments/assets/cf476480-bad3-4779-950b-6b7da3a56601)|
-   |  | **Request To Get The Hotel Price step** </br>- API URL: https://test.api.amadeus.com/v3/shopping/hotel-offers</br>- Method: GET</br>- Pass the Header and Query Parameters (get the Hotel Id from Amadeus API and store in the query parameters to get prices for these Hotels)</br>Hotel Id list: MCLONGHM,RTPAR001,BRLAXRRB,ALLON591,ICTYOICB,HLDXB100,ARMADALC,ARMADCAR |![image](https://github.com/user-attachments/assets/a26ab791-357c-4161-9d0f-2fa844411af4)![image](https://github.com/user-attachments/assets/d028675c-fa79-411e-a493-a66c0e11b372)![image](https://github.com/user-attachments/assets/96119f20-60a2-454b-a047-752563ee0c5c)|
-   |  |  **Transform Message step** </br>- Prepare the JSON (format given below) that is going the used in Salesforce Connector to ingest data via ingestion API</br>&emsp;\%dw 2.0</br>&emsp;output application/json</br>&emsp;var hotelName = ["Palm Oasis Resort","Coral Bay Retreat","Lagoon Paradise Resort","Emerald Bay Resort","Azure Cove Villas","Golden Palms Retreat","Sea Breeze Villas","Paradise Sands Resort"]</br>&emsp;\---</br>&emsp;\{</br>&emsp;&emsp;data: payload.data map(item, index) -> \{</br>&emsp;&emsp;&emsp;hotel_name: hotelName[index],</br>&emsp;&emsp;&emsp;cost: floor(item.offers[0].price.total as Number),</br>&emsp;&emsp;&emsp;created_date: now() as DateTime</br>&emsp;&emsp;\}</br>&emsp;\} | |
-   |  | **Streaming - Insert Objects step** </br>- Setup the Salesforce Streaming Insert Object connector (to connect Mule to Salesforce), by providing appropriate Username, Password, Client Id and Client Secret </br>- Configure the connector by providing Source API Name: Mulesoft_Ingestion_API and Object: Order | ![image](https://github.com/user-attachments/assets/9f945715-439f-4e50-b04d-3cb2fa71d390)![image](https://github.com/user-attachments/assets/d1cd2fa1-4c5a-40f3-b8d5-20149a66b67d)|
-
+   | Create a new project in Anypoint Studio |  |  |
+   | Add and Configure the Listener | Click on plus button icon to Configure the HTTP listener and then click on Test Connection button for listener connections and add the Path as "/Amadeus_Price_API" |  |
+   | Configure Request Connector |**HTTP Request Connector step** </br>- API URL: https://test.api.amadeus.com/v1/security/oauth2/token</br>- Method: POST</br>- Body</br>&emsp;\%dw 2.0</br>&emsp;output application/x-www-form-urlencoded</br>&emsp;\---</br>&emsp;\{</br>&emsp;&emsp;grant_type: "client_credentials",</br>&emsp;&emsp;client_id: "xxxxxxxxxxxxxxxxx",</br>&emsp;&emsp;client_secret: "xxxxxxxxxxxxxxxxx"</br>\} </br>- Header</br>&emsp;\%dw 2.0</br>&emsp;output application/java</br>&emsp;\---</br>&emsp;\{</br>&emsp;&emsp;"Content-Type": "application/x-www-form-urlencoded"</br>\}|  |
+   | Add Set Variable in the Flow to Store the Access Token | **Store Access Token step** </br>- Configure as shown in the image |  |
+   | Call the Amadeus API to get Hotel prices | **Request To Get The Hotel Price step** </br>- API URL: https://test.api.amadeus.com/v3/shopping/hotel-offers</br>- Method: GET</br>- Pass the Header and Query Parameters (get the Hotel Id from Amadeus API and store in the query parameters to get prices for these Hotels)</br>Hotel Id list: MCLONGHM,RTPAR001,BRLAXRRB,ALLON591,ICTYOICB,HLDXB100,ARMADALC,ARMADCAR |  |
+   | Add the Transform message in Mule to prepare the JSON this will comes up as Mule API response |  **Transform Message step** </br>- Prepare the JSON (format given below) that is going the used in Salesforce Connector to ingest data via ingestion API</br>&emsp;\%dw 2.0</br>&emsp;output application/json</br>&emsp;var hotelName = [["Palm Oasis Resort","Coral Bay Retreat","Emerald Bay Resort","Paradise Sands Resort","Azure Cove Villas","Golden Palms Retreat","Sea Breeze Villas","Lagoon Paradise Resort"]</br>&emsp;\---</br>&emsp;\{</br>&emsp;&emsp;data: payload.data map(item, index) -> \{</br>&emsp;&emsp;&emsp;hotel_name: hotelName[index],</br>&emsp;&emsp;&emsp;cost: floor(item.offers[0].price.total as Number),</br>&emsp;&emsp;&emsp;created_date: now() as DateTime</br>&emsp;&emsp;\}</br>&emsp;\} | |
+   | Now deploy the project on cloud hub | **Follow the steps below** </br>- Right click on the Project –-> Anypoint Platform –-> Deploy to Cloud Hub | |
+   | Get the Mule Public API End Point | **Follow the steps below** </br>- Go to Cloud Hub  Runtime Manager  Click on the deployed application  Click on Setting button left side  Click on Ingress tab in middle  Copy the Public Endpoint (always use the URL like – Endpoint/ Listener Path). | |
+   
 </details>
 
 <details><summary>
