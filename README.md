@@ -467,7 +467,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
   ## 7. Mulesoft Configuration for Amadeus Prices
   </summary>
 
-  **IMP NOTE:** You may skip the MuleSoft section if it is not applicable to your use case or you do not have Mulesoft licenses. However, if you plan to use MuleSoft, please ensure you register with [Amadeus](https://developers.amadeus.com/self-service/category/hotels) to obtain your Client ID and Client Secret.</br>
+  **IMP NOTE:** You may skip the MuleSoft section if it is not applicable to your use case or if you do not have Mulesoft licenses. However, if you plan to use MuleSoft, please ensure you register with [Amadeus](https://developers.amadeus.com/self-service/category/hotels) to obtain your Client ID and Client Secret.</br>
 
 **Note: Skip Step 2, if you are using the provided configuration XML file (from Step 1) to create a Mule Project** </br>
 
