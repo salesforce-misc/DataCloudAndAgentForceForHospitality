@@ -469,17 +469,11 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 
   **IMP NOTE:** You may skip the MuleSoft section if it is not applicable to your use case or you do not have Mulesoft licenses. However, if you plan to use MuleSoft, please ensure you register with [Amadeus](https://developers.amadeus.com/self-service/category/hotels) to obtain your Client ID and Client Secret.</br>
 
-  ### Table of Contents**
-    
-  [1.	Mulesoft Configuration](#1-Mulesoft-Configuration)
-  
-  [2.	Mulesoft Configuration Steps](#2-Mulesoft-Configuration-Steps)
-
 **Note: Skip Step 2, if you are using the provided configuration XML file (from Step 1) to create a Mule Project** </br>
 
 ### 1. Mulesoft Configuration (20 mins) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 
-</br>XML File: https://git.soma.salesforce.com/gdevadoss/DataCloudHospitalityDemo/tree/master/Mulesoft%20configuration </br>
+</br>XML File: [AmadeusMuleConfigurationXML.txt](https://github.com/salesforce-misc/DataCloudAndAgentForceForHospitality/blob/main/Mulesoft%20configuration/AmadeusMuleConfigurationXML.txt) </br>
 
 ### 2. Mulesoft Configuration Steps (20 mins) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 
