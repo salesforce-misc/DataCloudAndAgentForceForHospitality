@@ -1,37 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:sdc="http://www.mulesoft.org/schema/mule/sdc" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
-	xmlns:http="http://www.mulesoft.org/schema/mule/http"
-	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
-http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
-http://www.mulesoft.org/schema/mule/sdc http://www.mulesoft.org/schema/mule/sdc/current/mule-sdc.xsd">
-	<sdc:sdc-config name="Salesforce_Data_Cloud_config" doc:name="Salesforce Data Cloud config" doc:id="7d37f44c-f86a-4584-a249-6f04dff1e1b1" >
-		<sdc:oauth-user-pass-connection clientId="*********************" clientSecret="*************************" username="********************" password="*********************" audienceUrl="https://login.salesforce.com" />
-	</sdc:sdc-config>
-	<flow name="ameduspricedatacloudFlow" doc:id="bee1236f-f043-4a48-bc83-8642069b397d" >
-		<scheduler doc:name="Scheduler" doc:id="23126bef-4aa8-4171-8ae4-9240929b9dfd" >
-			<scheduling-strategy >
-				<fixed-frequency timeUnit="MINUTES"/>
-			</scheduling-strategy>
-		</scheduler>
-		<http:request method="POST" doc:name="Request To Get the Access Token" doc:id="7072fd11-9b16-4198-bdbc-d1a14f112e89" url="https://test.api.amadeus.com/v1/security/oauth2/token">
-            <http:body ><![CDATA[#[%dw 2.0
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="a5572f5f-2126-4267-835f-779008daf44b" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="amadeuspriceapiFlow" doc:id="075f496f-2801-40cc-ad66-fd5737bec16f" >
+		<http:listener doc:name="Listener" doc:id="a44c00e6-080b-4a8c-aac5-00cabfe85edc" config-ref="HTTP_Listener_config" path="/Amadeus_Price_API"/>
+		<http:request method="POST" doc:name="Request" doc:id="02f24062-c030-4b34-8de3-239164e652ea" url="https://test.api.amadeus.com/v1/security/oauth2/token">
+			<http:body ><![CDATA[#[%dw 2.0
 output application/x-www-form-urlencoded
 ---
 {
     grant_type: "client_credentials",
-    client_id: "xxxxxxxxxxxxxxxxx",
-    client_secret: "xxxxxxxxxxxxxxxxx"
+    client_id: "******",
+    client_secret: "******"
 }]]]></http:body>
-            <http:headers ><![CDATA[#[output application/java
+			<http:headers ><![CDATA[#[output application/java
 ---
 {
     "Content-Type" : "application/x-www-form-urlencoded"
 }]]]></http:headers>
-        </http:request>
-		<set-variable value="#[payload.access_token]" doc:name="Store Access Token" doc:id="0c1566e7-faf8-403d-b3ed-cc77bc19e485" variableName="accessToken"/>
-		<http:request method="GET" doc:name="Request" doc:id="5db9ffbe-0026-416a-ad95-0f6bc3a40d76" url="https://test.api.amadeus.com/v3/shopping/hotel-offers">
+		</http:request>
+		<set-variable value="#[payload.access_token]" doc:name="Set Variable" doc:id="05a64160-acb8-42ff-9fc1-93e0e8088f08" variableName="accessToken"/>
+		<http:request method="GET" doc:name="Request" doc:id="1122cd44-fc76-4101-b42f-6d3c5e7ba4ea" url="https://test.api.amadeus.com/v3/shopping/hotel-offers">
 			<http:headers ><![CDATA[#[output application/java
 ---
 {
@@ -40,14 +35,15 @@ output application/x-www-form-urlencoded
 			<http:query-params ><![CDATA[#[output application/java
 ---
 {
-	"hotelIds" : "MCLONGHM,RTPAR001,BRLAXRRB,ALLON591,ICTYOICB,HLDXB100,ARMADALC,ARMADCAR"
+	"hotelIds" : "MCLONGHM,RTPAR001,BRLAXRRB,ALLON59a1,ICTYOICB,HLDXB100,ARMADALC,ARMADCAR"
 }]]]></http:query-params>
 		</http:request>
-		<ee:transform doc:name="Transform Message" doc:id="aab98cf8-5f4b-45b8-ab30-b78e6d6d11b4" >
+		<logger level="INFO" doc:name="Logger" doc:id="cd3d8c85-c7db-4da2-a5d2-eafc405a3009" message="#[payload]"/>
+		<ee:transform doc:name="Transform Message" doc:id="5e3dffe4-2557-435d-8f11-d47fed1ab239" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
 output application/json
-var hotelName = ["Palm Oasis Resort","Coral Bay Retreat","Lagoon Paradise Resort","Emerald Bay Resort","Azure Cove Villas","Golden Palms Retreat","Sea Breeze Villas","Paradise Sands Resort"]
+var hotelName = ["Palm Oasis Resort","Coral Bay Retreat","Emerald Bay Resort","Paradise Sands Resort","Azure Cove Villas","Golden Palms Retreat","Sea Breeze Villas","Lagoon Paradise Resort"]
 ---
 {
 	data: payload.data map(item, index) -> {
@@ -59,8 +55,6 @@ var hotelName = ["Palm Oasis Resort","Coral Bay Retreat","Lagoon Paradise Resort
 ]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="9186842e-560a-45ae-8d2a-c47ae33df211" message="#[payload]"/>
-		<sdc:insert-objects doc:name="Streaming - Insert Objects" doc:id="332fb5f2-849b-4829-b505-8115be33c827" config-ref="Salesforce_Data_Cloud_config" sourceNameUriParam="Mulesoft_Ingestion_API" objectNameUriParam="Order"/>
-		<logger level="INFO" doc:name="Logger" doc:id="38a38b6b-66a5-4b9e-8f51-793d7da5155c" message="#[payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="092ce788-0441-4d97-8eb0-6b0bf2aae9a5" message="#[payload]"/>
 	</flow>
 </mule>
