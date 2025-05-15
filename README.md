@@ -471,7 +471,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 
 **Note: Skip Step 2, if you are using the provided configuration XML file (from Step 1) to create a Mule Project** </br>
 
-### 1. Mulesoft Configuration (20 mins) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 1. Mulesoft Configuration (10 mins) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 
 </br>XML File: [AmadeusMuleConfigurationXML.txt](https://github.com/salesforce-misc/DataCloudAndAgentForceForHospitality/blob/main/Mulesoft%20configuration/AmadeusMuleConfigurationXML.txt) </br>
 
