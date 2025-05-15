@@ -5,6 +5,21 @@
 private class ProductControllerTest {
     
     @isTest
+    static void testGetAmadeusPrices() {
+        Test.setMock(HttpCalloutMock.class, new AmadeusPriceAPIsMock());       
+
+        Test.startTest();
+        Map<String,Integer> result = ProductController.getAmadeusAPIResponse();
+        Test.stopTest();
+
+        // Assertions
+        System.assertNotEquals(null, result);
+        System.assertEquals(0, result.size());
+        //System.assertEquals('1HGCM82633A123456', result[0].vin);
+        //System.assertEquals('Engine issue reported', result[0].summary);
+    }
+    
+    @isTest
     static void testGetProductListWrapper() {
         
         // Creating a stub for ssot__Product__dlm object
@@ -60,6 +75,7 @@ private class ProductControllerTest {
         Set<String> hotelNames = new Set<String>();
         hotelNames.add('Azure Cove Villas');
         Test.startTest();
+        Integer amadeusPrice = ProductController.getExpediaPrice('Paradise Sands Resort');
         String response = 'Based on the customer\'s query, here are the top three hotel recommendations:\n\n1. Hotel Name: Azure Cove Villas.\n   Check In Date: 2025-05-03\n   Check Out Date: 2025-05-04\n\n2. Hotel Name: Emerald Bay Resort\n   Check In Date: 2025-05-03\n   Check Out Date: 2025-05-04\n\n3. Hotel Name: Paradise Sands Resort\n   Check In Date: 2025-05-03\n   Check Out Date: 2025-05-04';
         List<ProductController.ProductListWrapper> productList = new List<ProductController.ProductListWrapper>();
         List<ProductController.ProductListWrapper> productListDetails = ProductController.getPetFriendlyProductList(response);

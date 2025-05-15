@@ -91,6 +91,11 @@ public with sharing class ProductController {
         //prodlist = getProductListFromPrompt('Find a beach front family friendly hotel for next weekend?');
         prodlist = getProductListFromPrompt(promptResponse);
         System.debug('All Product List: ' + prodlist);
+        Map<String,Integer> amadeusAPIPrice = new Map<String,Integer>();
+        if(!Test.isRunningTest()){
+            amadeusAPIPrice = getAmadeusAPIResponse();
+        }
+        System.debug('## amadeusAPIPrice for family = '+amadeusAPIPrice);
         //Integer hotelPrice=550;
         if(!prodlist.isEmpty() || prodlist!=null){
             for(ssot__Product__dlm prod : prodList){
@@ -101,7 +106,12 @@ public with sharing class ProductController {
                 prodWrapper.isVisibleProd = true;
                 prodWrapper.isPetFrndProd = false;
                 prodWrapper.isProdURL='/SunshineResorts/product/'+prod.ssot__Id__c;
-                prodWrapper.expediaPrice=getExpediaPrice(prod.ssot__Name__c);
+                //prodWrapper.expediaPrice=getExpediaPrice(prod.ssot__Name__c);
+                if(prod.ssot__Name__c != NULL && amadeusAPIPrice != NULL){
+                    prodWrapper.expediaPrice=amadeusAPIPrice.get(prod.ssot__Name__c);
+                }else{
+                    prodWrapper.expediaPrice=0;
+                }                
                 prodWrapper.productPrice=getProductPrice(prod.ssot__Name__c);
                 prodWrapperList.add(prodWrapper);
                 //hotelPrice=hotelPrice+80;
@@ -134,6 +144,11 @@ public with sharing class ProductController {
         //prodlist = getProductListFromPrompt('Do you allow pets?');
         prodlist = getProductListFromPrompt(promptResponse);
         System.debug('dynamic query pet--> ' + prodlist);
+        Map<String,Integer> amadeusAPIPrice = new Map<String,Integer>();
+        if(!Test.isRunningTest()){
+            amadeusAPIPrice = getAmadeusAPIResponse();
+        }
+        System.debug('## amadeusAPIPrice for Pets = '+amadeusAPIPrice);
         // Integer hotelPrice=550;
         if(!prodlist.isEmpty() || prodlist!=null){
             for(ssot__Product__dlm prod : prodList){
@@ -144,7 +159,12 @@ public with sharing class ProductController {
                 prodWrapper.isVisibleProd = false;
                 prodWrapper.isPetFrndProd = true;
                 prodWrapper.isProdURL='/SunshineResorts/product/'+prod.ssot__Id__c;
-                prodWrapper.expediaPrice=getExpediaPrice(prod.ssot__Name__c);
+                if(prod.ssot__Name__c != NULL && amadeusAPIPrice != NULL){
+                    prodWrapper.expediaPrice=amadeusAPIPrice.get(prod.ssot__Name__c);
+                }else{
+                    prodWrapper.expediaPrice=0;
+                }
+                //prodWrapper.expediaPrice=getExpediaPrice(prod.ssot__Name__c);
                 prodWrapper.productPrice=getProductPrice(prod.ssot__Name__c);
                 prodWrapperList.add(prodWrapper);
                 // hotelPrice=hotelPrice+80;
@@ -169,7 +189,7 @@ public with sharing class ProductController {
     
     public static Integer getExpediaPrice(String hotelName){
         System.debug('\n hotel name -->'+hotelName);
-        Integer expprodPrice;
+        Integer expprodPrice;        
         List<Mulesoft_Ingestion_API_Order_60F7B25__dlm> expediaHotelList= [SELECT hotel_name__c,cost__c FROM Mulesoft_Ingestion_API_Order_60F7B25__dlm WHERE hotel_name__c=:hotelName LIMIT 1];
         System.debug('expedia  price entry --> '+expediaHotelList);
         if(!expediaHotelList.isEmpty()){
@@ -211,7 +231,11 @@ public with sharing class ProductController {
             
             prodlist = Database.query(query);
             System.debug('All Product List: ' + prodlist);
-            
+            Map<String,Integer> amadeusAPIPrice = new Map<String,Integer>();
+            if(!Test.isRunningTest()){
+                amadeusAPIPrice = getAmadeusAPIResponse();
+            }
+            System.debug('## amadeusAPIPrice for getProductList2 = '+amadeusAPIPrice);
             //Integer hotelPrice=550;
             if(!prodlist.isEmpty() || prodlist!=null){
                 for(ssot__Product__dlm prod : prodList){
@@ -222,7 +246,12 @@ public with sharing class ProductController {
                     prodWrapper.isVisibleProd = showBeachfrontHotel;
                     prodWrapper.isPetFrndProd = showPetFriendlyHotel;
                     prodWrapper.isProdURL='/SunshineResorts/product/'+prod.ssot__Id__c;
-                    prodWrapper.expediaPrice=getExpediaPrice(prod.ssot__Name__c);
+                    //prodWrapper.expediaPrice=getExpediaPrice(prod.ssot__Name__c);
+                    if(prod.ssot__Name__c != NULL && amadeusAPIPrice != NULL){
+                        prodWrapper.expediaPrice=amadeusAPIPrice.get(prod.ssot__Name__c);
+                    }else{
+                        prodWrapper.expediaPrice=0;
+                    }
                     prodWrapper.productPrice=getProductPrice(prod.ssot__Name__c);
                     prodWrapperList.add(prodWrapper);
                     //hotelPrice=hotelPrice+80;
@@ -326,7 +355,44 @@ public with sharing class ProductController {
             delete phtl;
             //delete customSettingRecord;
         }
-    }   
+    } 
+    
+    public static Map<String,Integer> getAmadeusAPIResponse(){
+        String url = 'https://amadeuspriceapi-vn36iz.5sc6y6-4.usa-e2.cloudhub.io/Amadeus_Price_API';
+        Map<String,Integer> amadeusAPIPrice = new Map<String,Integer>(); 
+        // Create a new HttpRequest object
+        HttpRequest req = new HttpRequest();
+        req.setEndpoint(url);  // Set the endpoint URL
+        req.setMethod('GET');  // Specify that it's a GET request
+        req.setHeader('Content-Type', 'application/json');  // Set the content type to JSON
+
+        // Send the request and capture the response
+        Http http = new Http();
+        HttpResponse res = http.send(req);
+        System.debug('## Status Code = '+res.getStatusCode());
+        System.debug('## Body = '+res.getBody());
+        if(res.getStatusCode() == 200){
+           Map<String, Object> parsed = (Map<String, Object>) JSON.deserializeUntyped(res.getBody()); 
+           List<Object> dataList = (List<Object>) parsed.get('data');
+            if(dataList != NULL){
+               for (Object obj : dataList) {
+                Map<String, Object> hotel = (Map<String, Object>) obj;
+                String name = (String) hotel.get('hotel_name');
+                System.debug('## name = '+name);
+                Integer amedusPrice = (hotel.get('cost') != null) ? Integer.valueOf(String.valueOf(hotel.get('cost'))) : 0;
+                System.debug('## amedusPrice = '+amedusPrice);
+                amadeusAPIPrice.put(name,amedusPrice);
+                System.debug('## getAmadeusAPIResponse amadeusAPIPrice = '+amadeusAPIPrice);
+            } 
+            }
+            
+        }else {
+            // Handle the error case if the status code is not 200
+            System.debug('Error: ' + res.getStatusCode() + ' - ' + res.getStatus());
+        }
+        
+        return amadeusAPIPrice;
+    }
        
     
     public class ProductListWrapper{
