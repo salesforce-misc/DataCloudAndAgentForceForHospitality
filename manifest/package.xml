@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-	
-
-	 <types>
+    <types>
         <members>ActivityFeedController</members>
         <members>ActivityFeedController_Test</members>
+        <members>AmadeusPriceAPIsMock</members>
         <members>CheckWeather</members>
         <members>ClsRelatedListController</members>
         <members>CommunitiesLandingController</members>
@@ -53,9 +52,6 @@
         <members>SurveyController_Test</members>
         <members>WeatherService</members>
         <members>WeatherService_Test</members>
-	<members>AmadeusPriceAPIsMock</members>
-	<members>ProductController</members>
-	<members>ProductControllerTest</members>
         <members>clsLoyaltyController</members>
         <name>ApexClass</name>
     </types>
@@ -219,7 +215,7 @@
         <name>CustomField</name>
     </types>
     <types>
-        <members>EM_Chat_ChatBody_ChatbotTypingIndicatorAssistiveText_04I4W0000000nTR_3534352</members>
+        <members>AmadeusPriceAPIURL</members>
         <name>CustomLabel</name>
     </types>
     <types>
@@ -466,7 +462,7 @@
         <members>Guest_Review__c.All</members>
         <members>Reservation__c.All</members>
         <members>Session__c.All</members>
-        <members>Survey_Response__c.All</members> 
+        <members>Survey_Response__c.All</members>
         <name>ListView</name>
     </types>
     <types>
@@ -509,6 +505,10 @@
         <name>QueueRoutingConfig</name>
     </types>
     <types>
+        <members>AmadeusPriceAPI</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <types>
         <members>Product2Family</members>
         <name>StandardValueSet</name>
     </types>
@@ -522,7 +522,5 @@
         <members>SNA_TwLvk_sf_default_cdn_ESW_ESA_Web_Deployment_17331274957821</members>
         <name>StaticResource</name>
     </types>
-
-	
-	<version>63.0</version>
+    <version>63.0</version>
 </Package>
