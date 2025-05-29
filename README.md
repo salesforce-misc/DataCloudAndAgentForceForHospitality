@@ -343,10 +343,11 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 | ----- | ----- | ----- |
 |  Refresh Amazon S3 Data Streams | - Navigate to **Data Cloud** app and the **Data Streams** tab </br>- Query for **Third Party Survey** data stream </br>- Using drop down control on the right against the data stream  initiate refresh for the **Third Party Survey** data stream and  subsequently choose the **Refresh Only New Files** option: </br>- Once the data stream is refreshed validate that the **Total  Records** counts for **Third Party Survey** stream, it should be 42  |![image](https://github.com/user-attachments/assets/2f61cac2-a6c3-4615-b479-a8e697d28a28)|
 
-#### 2b. Refresh Snowflake Data Streams (5 minutes) $${\color{blue} Snowflake \space Optional: \space Please \space note \space that \space some \space functionality \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 3. Refresh Snowflake Data Streams (5 mins) $${\color{blue} Snowflake \space Optional: \space Please \space note \space that \space some \space functionality \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
-|  Refresh Snowflake Data Streams | - Navigate to Data Cloud app and the Data Streams tab </br>- Query for IOT\_Transaction data stream</br>- Using drop down control on the right against the data stream select Edit</br>- Select “Enable acceleration”</br>- In frequency select “Every 15 minutes”</br>- Select “Refresh initial file immediately” </br>- Repeat above steps for POS_Transaction data stream </br>- Once the data stream is refreshed, the Total Records counts for each Data Stream is not 0. | ![image](https://github.com/user-attachments/assets/127248ed-2cf5-409d-b56d-56bf250f47f9) |
+|  Refresh Snowflake Data Streams | - Navigate to the Data Cloud app and open the Data Streams tab.</br>- Locate the IOT_Transaction data stream.</br>- Click the dropdown menu on the right side of the data stream and select "Update Status".</br>- Repeat the same steps for the POS_Transaction data stream.</br>- Once both data streams are refreshed, verify that the Total Records count for each stream is no longer 0.| ![IOT Data](https://github.com/user-attachments/assets/5edd4336-6b72-40aa-8c70-c3db2c9c1ad3) ![POS Data](https://github.com/user-attachments/assets/9e08c1ec-5562-40e1-aeca-652f0ce589be)
 
 #### 2c. Refresh Data Graph (5 minutes)
 | Step  | Action and Details  |  Images |
