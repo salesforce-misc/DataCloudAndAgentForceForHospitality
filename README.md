@@ -347,7 +347,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
-|  Refresh Snowflake Data Streams | - Navigate to the Data Cloud app and open the Data Streams tab.</br>- Locate the IOT_Transaction data stream.</br>- Click the dropdown menu on the right side of the data stream and select "Update Status".</br>- Repeat the same steps for the POS_Transaction data stream.</br>- Once both data streams are refreshed, verify that the Total Records count for each stream is no longer 0.| ![IOT Data](https://github.com/user-attachments/assets/5edd4336-6b72-40aa-8c70-c3db2c9c1ad3) ![POS Data](https://github.com/user-attachments/assets/9e08c1ec-5562-40e1-aeca-652f0ce589be)
+|  Refresh Snowflake Data Streams | - Navigate to the Data Cloud app and open the Data Streams tab.</br>- Locate the IOT_Transaction data stream.</br>- Click the dropdown menu on the right side of the data stream and select "Update Status".</br>- Repeat the same steps for the POS_Transaction data stream.</br>- Once both data streams are refreshed, verify that the Total Records count for each stream is no longer 0.| ![IOT Data](https://github.com/user-attachments/assets/5edd4336-6b72-40aa-8c70-c3db2c9c1ad3) &nbsp;&nbsp; ![POS Data](https://github.com/user-attachments/assets/9e08c1ec-5562-40e1-aeca-652f0ce589be)
 
 #### 2c. Refresh Data Graph (5 minutes)
 | Step  | Action and Details  |  Images |
