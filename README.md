@@ -144,7 +144,7 @@ The Data Kit is installed as a part of the Package installation. Follow the step
   Proceed with this step only if you have setup a connection to snowflake
   | Step | Action and Details | Images |
   | ----- | ----- | ----- |
-  | Create IOT & POS Data Transform $${\color{blue} Snowflake \space Optional}$$ | -Click on Data Transforms Tab </br>- Click on New</br>- Click on Create from Data Kits, Click on Next</br>- Select Extract Party Identifiers from IOT</br>- Click on Next . Click on Save, Copy the Name , Remove the Name then Paste the same Name Again</br>- Click on Save</br>- Click on Data Transform Tab </br>- Click on New. Click on ‘Create from a Data Kits’ Option </br>- Select  Extract Party Identifiers from POS </br>- Click on Next . Click on Save, Copy the Name , Remove the Name then Paste the same Name Again </br>- Click on Save|![image](https://github.com/user-attachments/assets/79d6f605-c8e5-4c3d-ac6a-f34f39cc29e2)![image](https://github.com/user-attachments/assets/1c84c981-9a03-4b05-9a3a-cf2137d45425)![image](https://github.com/user-attachments/assets/e1e24730-f55a-42de-9a4f-5ab5af27b04b)![image](https://github.com/user-attachments/assets/c3231d58-e1fd-4653-9981-02f152451f61)
+  | Create IOT & POS Data Transform $${ Snowflake \space Optional}$$ | -Click on Data Transforms Tab </br>- Click on New</br>- Click on Create from Data Kits, Click on Next</br>- Select Extract Party Identifiers from IOT</br>- Click on Next . Click on Save, Copy the Name , Remove the Name then Paste the same Name Again</br>- Click on Save</br>- Click on Data Transform Tab </br>- Click on New. Click on ‘Create from a Data Kits’ Option </br>- Select  Extract Party Identifiers from POS </br>- Click on Next . Click on Save, Copy the Name , Remove the Name then Paste the same Name Again </br>- Click on Save|![image](https://github.com/user-attachments/assets/79d6f605-c8e5-4c3d-ac6a-f34f39cc29e2)![image](https://github.com/user-attachments/assets/1c84c981-9a03-4b05-9a3a-cf2137d45425)![image](https://github.com/user-attachments/assets/e1e24730-f55a-42de-9a4f-5ab5af27b04b)![image](https://github.com/user-attachments/assets/c3231d58-e1fd-4653-9981-02f152451f61)
  
   ### 3. Cross Verify CRM Data (5 minutes)
   Proceed with this step only if you have the Real-Time SKU enabled in your org
@@ -172,7 +172,7 @@ The Data Kit is installed as a part of the Package installation. Follow the step
   | ----- | ----- | ----- |
   | Create Booking Related List |- Click on Setup</br>- Object Manager</br>- Search for Contact</br>- Click on Contact</br>- Click on Data Cloud Related List Enrichment.</br>- Click on New</br>- Select default data space</br>- Select Data Cloud object as ‘Booking__dlm’</br>- Click Next </br>- Give Child Relationship Name as ‘IndividualBookings’</br>- Give Related List Label as ‘Individual Bookings’ Click Save. |![image](https://github.com/user-attachments/assets/f50d3875-c2b8-451b-bcef-85141aea954d)![image](https://github.com/user-attachments/assets/f8fa4e97-bc19-4e87-a2b3-44a539b597c1)|
   | Create Reservation Related List |- Click on Setup</br>- Object Manager</br>- Search for Contact</br>- Click on Contact</br>- Click on Data Cloud Related List Enrichment.</br>- Click on New</br>- Select default data space & Select Data Cloud object as ‘Reservation__dlm’ </br>- Click Next </br> - Give Child Relationship Name as‘IndividualReservations’</br>- Give Related List Label as ‘Individual Reservations’ Click Save. |![image](https://github.com/user-attachments/assets/366fa15e-2317-44ab-af5c-8025453c554f)![image](https://github.com/user-attachments/assets/f64fad04-3391-4a3c-9534-04caf5e92955)|
-  | Create Data Cloud Related List Enrichment for Third Party Survey</br> $${\color{blue} S3 \space Optional}$$|- Click on Setup </br>- Click on Object Manager </br>- Search for Contact </br>- Click on Contact </br>- Click on Data Cloud Related List Enrichment.</br>- Click on New </br>- Select default data space -> Select Data Cloud object as ‘Third Party Survey’  </br>- Click Next </br>- Give Child Relationship Name as 'Third_Party_Survey’ </br>- Give Related List Label as ‘Third Party Survey’ Click Save |![image](https://github.com/user-attachments/assets/fb6d0aeb-2a00-4b75-93cc-703d158d5303)|
+  | Create Data Cloud Related List Enrichment for Third Party Survey</br> $${ S3 \space Optional}$$|- Click on Setup </br>- Click on Object Manager </br>- Search for Contact </br>- Click on Contact </br>- Click on Data Cloud Related List Enrichment.</br>- Click on New </br>- Select default data space -> Select Data Cloud object as ‘Third Party Survey’  </br>- Click Next </br>- Give Child Relationship Name as 'Third_Party_Survey’ </br>- Give Related List Label as ‘Third Party Survey’ Click Save |![image](https://github.com/user-attachments/assets/fb6d0aeb-2a00-4b75-93cc-703d158d5303)|
 
 ### 8. Create Data Cloud Copy Field Enrichment (15 minutes)
 | Step | Action and Details | Images |
@@ -261,12 +261,12 @@ $${\color{red} 6.\space Add CMS Product Images}$$
 
 4 step process
 
-### 1. Create Sample Data (5 minutes) $${\color{blue} Optional: \space These \space steps \space are \space optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
+### 1. Create Sample Data (5 minutes) $${ Optional: \space These \space steps \space are \space optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
 | Step | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Create Sample Data | - Click on App Launcher, search for Sunshine Trails Hospitality and click on Sunshine Trails Hospitality Setup App</br>- Click on the **“Create Test Data”** button (highlighted in the screenshot below) and wait for a confirmation message before proceeding further. |![image](https://github.com/user-attachments/assets/5af44efa-ca6c-4d95-800a-5aec9f477928)
 
-### 2. Enable Test Account as Buyer Account (5 minutes) $${\color{blue} Optional: \space These \space steps \space are \space optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
+### 2. Enable Test Account as Buyer Account (5 minutes) $${ Optional: \space These \space steps \space are \space optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
 | Step | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Enable Account as Buyer Account | - Click on Setup</br>- Go to Object Manager</br>- Click on Account</br>- Click on Page Layout</br>- Click on "**Page Layout Assignment**"</br>- Click on ‘**Edit Assignment**’</br>- Select "SDO-Account" Layout under Record type "Account" for System Administration Profile </br>- From Page Layout to Use dropdown Select "Account layout"</br>- Click on Save</br>- Verify that, for "**System Administrator profile**" for Record type **"Account"** Page layout should be ‘**Account Layout’** </br>- Go Account Tab \-\> Search for Account Name **"Sunshine Experience"** (test Account created in previous steps). Make sure to remove any filter if it exists \-\> Click on that Record</br>- On Record Page click on the **"Enable as Buyer"** Quick Action | ![image](https://github.com/user-attachments/assets/844294ed-9813-4a7b-8707-8d0755de260f)![image](https://github.com/user-attachments/assets/f1f80dca-2d9a-4d35-89dd-92b4e5d1eaa4)![image](https://github.com/user-attachments/assets/eb9fd6ae-aace-4352-b1c4-98eecabcbb95)![image](https://github.com/user-attachments/assets/a553fd10-9a2f-440c-97f8-e645131164f0)![image](https://github.com/user-attachments/assets/818f192e-4ec2-45f4-afad-5faed169830d)![image](https://github.com/user-attachments/assets/ace5bcf4-4f9a-463c-ae84-bca0c68f91bb)|
@@ -277,7 +277,7 @@ $${\color{red} 6.\space Add CMS Product Images}$$
 | Create Community User and Assign Buyer Account to Buyer Group |- Click on App Launcher, search for Sunshine Trails Hospitality and click on Sunshine Trails Hospitality Setup App</br>- Click on the **"Create Buyer Group Member Data"** button (highlighted in the screenshot on the right) and wait for a confirmation message before proceeding further.</br>- **Note:** If the confirmation message does not appear after 5 minutes, refresh the page and if the **"Create Buyer Group Member Data"** button is disabled, proceed. | ![image](https://github.com/user-attachments/assets/2282a058-02df-45c0-8da2-5e7eb4350d9b)
 
 
-### 4. Setup Data in Snowflake (15 minutes) $${\color{blue} Snowflake \space Optional: \space Please \space note \space that \space some \space functionality \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 4. Setup Data in Snowflake (15 minutes) $${ Snowflake \space Optional: \space Please \space note \space that \space some \space functionality \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Create Table to hold POS data | - Login to the Snowflake Database/Schema that is connected to Data Cloud and run the below DDL script to create DEMO\_HOSPITALITY\_POS\_DATA table.  |  |
@@ -331,19 +331,19 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 6 step process
 
 
-### 1. Configure AWS File Notification for files with unstructured data (30 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 1. Configure AWS File Notification for files with unstructured data (30 minutes) $${ S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Configure AWS File Notification | - Navigate to **Setup** and search for **App Manager** </br>- Click in the down arrow for the **"AWS Unstructured"** app and select view. </br>- Next to Consumer key and secret, click **"Manage Consumer Details"** and copy the values. </br>- Share the values with the AWS team responsible to create the file notification function.</br>- For more details about how to setup file notification visit: (https://developer.salesforce.com/docs/data/data-cloud-int/guide/c360-a-awss3-udlo.html) | ![image](https://github.com/user-attachments/assets/2a2f4793-774b-4933-ba20-b3de2bdc9c95)|
 
 ### 2. Prepare Data Cloud
 
-#### 2a. Refresh Amazon S3 Data Streams (5 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+#### 2a. Refresh Amazon S3 Data Streams (5 minutes) $${ S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 |  Refresh Amazon S3 Data Streams | - Navigate to **Data Cloud** app and the **Data Streams** tab </br>- Query for **Third Party Survey** data stream </br>- Using drop down control on the right against the data stream  initiate refresh for the **Third Party Survey** data stream and  subsequently choose the **Refresh Only New Files** option: </br>- Once the data stream is refreshed validate that the **Total  Records** counts for **Third Party Survey** stream, it should be 42  |![image](https://github.com/user-attachments/assets/2f61cac2-a6c3-4615-b479-a8e697d28a28)|
 
-### 3. Refresh Snowflake Data Streams (5 mins) $${\color{blue} Snowflake \space Optional: \space Please \space note \space that \space some \space functionality \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 3. Refresh Snowflake Data Streams (5 mins) $${ Snowflake \space Optional: \space Please \space note \space that \space some \space functionality \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
@@ -415,7 +415,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 
 ### 5. Miscellaneous Configuration
 
-#### 5a. Update Einstein Search Retriever (perform only if Amazon S3 Connection has been created ) (10 minutes) $${\color{blue} S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+#### 5a. Update Einstein Search Retriever (perform only if Amazon S3 Connection has been created ) (10 minutes) $${ S3 \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space and \space in \space the \space C360 \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Update Einstein Search Retriever |- Click on **Setup**, in the Quick Find Box, enter Prompt Builder, and then select **Prompt Builder**</br>- Search for the Prompt Template named **AnswerHospitality Question** and click on the hyperlink</br>- Hover the cursor on text the next to 'Use this information to answer the question: ', click on Resource, click on Einstein Search, click on 'Hotel\_FAQ\_v3' and click on 'Hotel\_FAQ\_v3' Retriever</br>- On the right side click on default Hotel\_FAQ\_v3\_Retriever, in a Search text add value as "Input:Product.Name"</br>- Hover over cursor on next text on 'Use this information to answer the question:', click on Resource,  click on Einstein Search and click on Hotel\_Safety\_FAQ\_V2</br>- On the right side click on default Hotel\_Safety\_FAQ\_v2\_Retriever in a Search text add value as "Input:Product.Name"</br>- Click on Save As New Version click **Activate** |![image](https://github.com/user-attachments/assets/ec5aa058-6cd4-4d10-8716-1e1b08eb45b0)![image](https://github.com/user-attachments/assets/83b706ad-02d1-47b5-8cf4-747723b15e28)![image](https://github.com/user-attachments/assets/a8205402-43f8-47e6-8fd9-38ac0cb1d7ea)![image](https://github.com/user-attachments/assets/90cdf932-5657-4ce3-b8f9-bf39477105d2)
@@ -445,7 +445,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 | ----- | ----- | ----- |
 |  Access email Deliverability to all email | Click on Setup </br>- Search for ‘Deliverability’</br>- Change Access Email from ‘System email Only’ to ‘All email’.</br>- Click Save |![image](https://github.com/user-attachments/assets/77507363-6915-40ff-8443-ed89186f811c)
 
-#### 5g. Prepare User (10 minutes) $${\color{blue} Optional: \space These \space steps \space are optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
+#### 5g. Prepare User (10 minutes) $${ Optional: \space These \space steps \space are optional \space if \space you \space choose \space to \space use \space your \space own \space data. }$$
 | Step  | Action and Details  |  Images |
 | ----- | ----- | ----- |
 | Prepare Test User |**Note: These steps apply to both existing and new contacts. Below is an example using Marje** </br></br>To test Community functionality , please use : **Marje Croley** contact to login as experience user </br> - Navigate to Setup </br>- In the Quick Find box, search for Digital Experiences </br>- Click the ‘Allow users standard external profiles for self-registration, user creation and login checkbox </br>- Click Okay and click Save </br> </br> **Enable Community User** </br> </br>- Click the App Launcher</br>- Select the Sunshine Trails Hospitality app</br>- Navigate to the Contact of **Marje Croley**</br>- Click the 'Enable as Customer' button (Goto classic page, if the button is not visible)</br>- Update the User License to Customer Community Profile</br>- Update the Profile to Sunshine Resort Profile</br>- Update the Email field to your personal email  </br>- Click Save </br></br> **Optional: Update Marje’s email address in her contact record if you want to receive notifications. Otherwise, this step is not necessary.** </br></br>- Click the App Launcher </br>- Select the Sunshine Trails Hospitality app </br>- Navigate to the Contact of **Marje Croley** </br>- Click the Edit button </br>- Update the Email field to your personal email </br>- Click Save  | ![image](https://github.com/user-attachments/assets/d82a699e-631d-4136-9d7f-ede27652e2d2)![image](https://github.com/user-attachments/assets/c009a09e-ed99-4ded-aa53-469c94a05a98)![image](https://github.com/user-attachments/assets/4767196d-0181-42e0-a074-5eebe8403dc8)![image](https://github.com/user-attachments/assets/be237889-9073-4a27-ab35-0e2d8da396a6)![image](https://github.com/user-attachments/assets/bde45527-5ac1-4506-a645-07f5be2c0eae)|
@@ -472,11 +472,11 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 
 **Note: Skip Step 2, if you are using the provided configuration XML file (from Step 1) to create a Mule Project** </br>
 
-### 1. Mulesoft Configuration (10 mins) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 1. Mulesoft Configuration (10 mins) $${ Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 
 </br>XML File: [AmadeusMuleConfigurationXML.txt](https://github.com/salesforce-misc/DataCloudAndAgentForceForHospitality/blob/main/Mulesoft%20configuration/AmadeusMuleConfigurationXML.txt) </br>
 
-### 2. Mulesoft Configuration Steps (20 mins) $${\color{blue} Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
+### 2. Mulesoft Configuration Steps (20 mins) $${ Mulesoft \space Optional: \space Please \space note \space that \space some \space functionality \space in \space Experience \space Cloud \space will \space no\space longer \space function\space as \space expected \space if \space not \space installed. }$$
 
    | Step  | Action and Details  |  Images |
    | ----- | ----- | ----- |
@@ -498,7 +498,7 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 Curious to see the all the possible utterances  and how they are powered by the Agent. Here is a list of all the possible coversations, the corresponding topics and the components that power them. </br></br>
 There are two contacts populated with all the relevant information to drive these conversations - Marje Croley and John Smith. You can login to experience cloud as either of these contacts to have these full agent conversations.
 
-$${\color{blue} Using \space the \space Agent \space to \space search \space for \space a \space hotel \space and \space create \space a \space reservation }$$
+$${ Using \space the \space Agent \space to \space search \space for \space a \space hotel \space and \space create \space a \space reservation }$$
 
    | Sl. No. | Utterance | Behind the Scene | Topic | Components |
    | ----- | ----- | ----- | ----- | ----- |
@@ -510,7 +510,7 @@ $${\color{blue} Using \space the \space Agent \space to \space search \space for
    | 6. | What is your cancellation policy? | Reads unstructured data from PDFs that has been ingested into Data Cloud where it is chunked, vectorized and indexed for easy retrieval | Hotel Policy | a. Prompt Action </br>- AnswerHospitality Question |
    | 7. | I would like to book the room | Creates a record in the reservation DMO, based on the hotel and the dates | Real Time Experiences Offered | a. Flow </br>- Create Reservation Record |
 
-$${\color{blue} Using \space the \space Agent \space to \space check \space in }$$
+$${ Using \space the \space Agent \space to \space check \space in }$$
 You need to have a valid reservation record where the start date is within 24 hours to use the agent to check in.
 
    | Sl. No. | Utterance |  Agent Response | Behind the Scene | Topic | Components |
