@@ -7,7 +7,15 @@ public with sharing  class ContactProfileCardDetails {
     public static List<String> getExperienceType(Id contactId){
         Set<String> bookingExpSet = new Set<String>();
         List<String> bookingTypeSetToList = new List<String>();
-        List<Booking__dlm> bookingTypeList = [Select Id__c,Type__c,Contact_c__c from Booking__dlm where Contact_c__c =:contactId];
+        
+        // Fix: Use a for-loop to avoid "too many rows" exception
+    	for (Booking__dlm b : [SELECT Id__c, Type__c, Contact_c__c FROM Booking__dlm WHERE Contact_c__c = :contactId]) {
+        	if (b.Type__c != null && b.Type__c != '') {
+            	bookingExpSet.add(b.Type__c);
+        	}
+    	}
+        system.debug('booking filtered set'+bookingExpSet);
+        /*List<Booking__dlm> bookingTypeList = [Select Id__c,Type__c,Contact_c__c from Booking__dlm where Contact_c__c =:contactId];
         system.debug('booking type list:'+bookingTypeList);
         if(bookingTypeList !=null){
             for(Booking__dlm b:bookingTypeList){
@@ -16,7 +24,8 @@ public with sharing  class ContactProfileCardDetails {
                 }
             }
             system.debug('booking filtered set'+bookingExpSet);
-        }
+        } */
+        
         List<Contact> contactIntrestList = [Select id,Interest1__c,Interest2__c,Interest3__c from Contact where id =:contactId];
         system.debug('contactIntrestList:'+contactIntrestList);
         if(contactIntrestList != null)
