@@ -172,19 +172,29 @@ insert permSetAssign;
         PermissionSet permissionSetId = [Select Id from PermissionSet Where Label =: permissionSetName Limit 1];
         System.debug('## permissionSetId = '+permissionSetId);
         List<FieldPermissions> listOfFieldPermissions = new List<FieldPermissions>();
-        for (String field : fieldNames) {
-            FieldPermissions fieldPermission = new FieldPermissions();
-            fieldPermission.Field = objectName + '.' + field;
-            fieldPermission.SobjectType = objectName;
-            fieldPermission.ParentId = permissionSetId.Id;
-            fieldPermission.PermissionsEdit = false;
-            fieldPermission.PermissionsRead = true;
-            listOfFieldPermissions.add(fieldPermission);//
-        }
-        if(!listOfFieldPermissions.isEmpty()){
-            upsert listOfFieldPermissions;
-            System.debug('## listOfFieldPermissions = '+listOfFieldPermissions);
-        }
+        List<FieldPermissions> fps= [SELECT Id,Field,ParentId,SobjectType,PermissionsEdit,PermissionsRead  FROM FieldPermissions Where ParentId =: permissionSetId.Id and SobjectType =:objectName and PermissionsRead = true];
+        Map<String,Boolean> mapss = new Map<String,Boolean>();
+		if(!fps.isEmpty()){            
+            for(FieldPermissions fp : fps){
+                mapss.put(fp.Field,fp.PermissionsRead);
+            }
+		}
+		for (String field : fieldNames) {
+			String obName = objectName + '.' + field;
+			if((mapss.get(obName) != true && !mapss.isEmpty()) || mapss.isEmpty()){
+				FieldPermissions fieldPermission = new FieldPermissions();
+				fieldPermission.Field = objectName + '.' + field;
+				fieldPermission.SobjectType = objectName;
+				fieldPermission.ParentId = permissionSetId.Id;
+				fieldPermission.PermissionsEdit = false;
+				fieldPermission.PermissionsRead = true;
+				listOfFieldPermissions.add(fieldPermission);
+			}           
+		}
+		if(!listOfFieldPermissions.isEmpty()){
+			upsert listOfFieldPermissions;
+			System.debug('## listOfFieldPermissions = '+listOfFieldPermissions);
+		}
     }
     //Automation For Loyalty Tier , Assign read Access to loyalty object to Data Cloud Salesforce Connector
     @AuraEnabled
