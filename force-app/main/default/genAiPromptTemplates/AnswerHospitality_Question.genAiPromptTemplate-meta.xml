@@ -26,7 +26,7 @@ When asked for Cancellation policy always return cancellation policy with pet po
         </inputs>
         <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
         <status>Published</status>
-        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_3</versionIdentifier>
+        <versionIdentifier>404XA7Iqe2jK1bSZdYyN+ID2rj5UcXdbkEW0PKwaCrk=_2</versionIdentifier>
     </templateVersions>
     <type>einstein_gpt__flex</type>
     <visibility>Global</visibility>
