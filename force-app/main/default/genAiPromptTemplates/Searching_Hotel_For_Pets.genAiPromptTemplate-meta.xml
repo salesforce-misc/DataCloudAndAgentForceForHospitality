@@ -45,7 +45,7 @@ Check Out Date: Coming from {!$Apex:NextWeekendDateCalculation.Prompt} in YYYY-M
             <definition>apex://NextWeekendDateCalculation</definition>
             <referenceName>Apex:NextWeekendDateCalculation</referenceName>
         </templateDataProviders>
-        <versionIdentifier>/uPUUbUoY106V7sRcYvofF4iKpVrn5ftx55p206xQt4=_2</versionIdentifier>
+        <versionIdentifier>404XA7Iqe2jK1bSZdYyN+ID2rj5UcXdbkEW0PKwaCrk=_1</versionIdentifier>
     </templateVersions>
     <type>einstein_gpt__flex</type>
     <visibility>Global</visibility>
