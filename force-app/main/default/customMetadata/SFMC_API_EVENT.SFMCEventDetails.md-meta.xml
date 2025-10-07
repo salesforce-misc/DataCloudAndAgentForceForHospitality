@@ -8,11 +8,11 @@
     </values>
     <values>
         <field>ClientId__c</field>
-        <value xsi:type="xsd:string">c8eydt54pqobmxtvet5iwwpj</value>
+        <value xsi:type="xsd:string"></value>
     </values>
     <values>
         <field>ClientSecret__c</field>
-        <value xsi:type="xsd:string">UFdxe4yA8lnWHSzI8jtwTOzr</value>
+        <value xsi:type="xsd:string"></value>
     </values>
     <values>
         <field>accountID__c</field>
@@ -20,7 +20,7 @@
     </values>
     <values>
         <field>eventKey__c</field>
-        <value xsi:type="xsd:string">APIEvent-2d64e220-604c-8e3a-e3ef-6eea07dfcc30</value>
+        <value xsi:type="xsd:string"></value>
     </values>
     <values>
         <field>restBaseURL__c</field>
