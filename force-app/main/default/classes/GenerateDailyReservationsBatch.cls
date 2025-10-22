@@ -3,7 +3,7 @@ global class GenerateDailyReservationsBatch implements Database.Batchable<SObjec
     global Database.QueryLocator start(Database.BatchableContext BC) {
         // Fetch only contacts where email contains '.dataclouddemo.com'
         return Database.getQueryLocator([
-            Select Id,Name,Email from Contact Where Name like '%Marje Croley%' Limit 1
+            Select Id,Name,Email from Contact Where Name like '%Marje Croley%'  or Ext_Id__c  = '10005760' Limit 1
         ]);
     }
 
