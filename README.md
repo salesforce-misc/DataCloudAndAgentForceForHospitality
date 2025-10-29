@@ -492,6 +492,49 @@ grant select on tables in <<database_name>>.<<schema>> to role sysadmin
 </details>
 
 <details><summary>
+
+## 8. Configure Marketing Cloud Setup
+</summary>
+
+**Important Note:** If you already have a Marketing Cloud org, perform the steps below. If not, create one first and then proceed with the steps.
+### 1. Log In To Marketing Cloud
+| Step  | Action and Details  |  Images |
+| ----- | ----- | ----- |
+| Login to Org | - Open the browser and enter the url as https://mc.exacttarget.com/ and enter the username and password and verify the org.<br/> -Land on Home page| |
+
+
+### 2. Create Data Extension In Marketing Cloud
+| Step  | Action and Details  |  Images |
+| ----- | ----- | ----- |
+| Create Data Extension | -Click on Audience Builder>>Click on Contact Builder>> Click on Data Extension<br/> - Click on Create button<br/> - Enter name as "Journey API DE" ,External Key as unique (eg:14A4BFAF-CB88),Check the checkbox of Is Sendable? and Is Testable and click on Next <br/> - Turn of Data Retention Setting and click on Next<br/>- Create Attribute as 1.Enter name as SubscriberKey, Length as 254, type as Text , Select Require checkbox <br/>2.Enter name as EmailAddress, Length as 254, type as Email Address , Select Require checkbox<br/> 3. Enter Name as FullName , type as Text, length as 50 <br/> 4. Enter Name as FirstName , type as Text, length as 50<br/> 5.  Enter Name as LastName , type as Text, length as 50 <br/>5.  Enter Name as LastName , type as Text, length as 50 <br/>6.Enter Name as Survey-URL , type as Text, length as 2500<br/> 7.Enter Name as Check-In-Date , type as Date<br/> 8.Enter Name as Check-Out-Date , type as Date <br/>8.Enter Name as Room-Type , type as Text, length as 255 <br/>9.Select primary checkbox , enter Name as PhoneNumber , type as Phone, length as 50, Select Required checkbox<br/> 10.Enter Name as LOCALE , type as locale, length as 5, Select Required checkbox and also make sure Send Relationship selected as Email and relates to selected as SubscriberKey and click on complete button, PFA screenshot ||
+
+### 3. Create Email Template In Marketing Cloud
+| Step  | Action and Details  |  Images |
+| ----- | ----- | ----- |
+| Create a Email template| - Click on Content Builder>>Click on Content builder<br/>-Click on Create button, click on Email Template,Under this select from existing template and select blank page template<br/> Create below email template by referring screenshot 1. Welcome Sunshine Trails Hospitality Email (store under content location) ||
+
+### 4. Create SMS Message In Marketing Cloud
+| Step  | Action and Details  |  Images |
+| ----- | ----- | ----- |
+| Create a SMS Message| - Click on Content Builder>>Click on Content builder<br/>-Click on Create button, click on SMS/MMS<br/>- Edit name as Sunshine Resort Welcome SMS To Guest<br/>- Turn on Add Media,Enter Message by referring screenshot<br/>-Click on save , PFA screenshot ||
+
+### 5. Create a Journey Builder Using Journey Builder In Marketing Cloud
+| Step  | Action and Details  |  Images |
+| ----- | ----- | ----- |
+| Create Journey Builder| -Click on Journey Builder >> Under this also click on Journey Builder<br/> -Click on Create Journey and select Multi Step Journey and click on create button and select email<br/> -Edit the name as  Sunshine Guest Welcome Journey-11.12.24 and drag and drop API Event under start as entry source , and click on it <br/> -Once it get opened click on create event and activity name as Sunshine Guest Welcome Journey-11.12.24 and select data extension as Journey API DE,click on summary and click on Done button<br/>-Select SMS from Message and place next to API Event and click on it and Select Message and under this select Sunshine Resort Welcome SMS To Guest and click on Summary and click on edit for Message Configuration and select US code 64586 and click on Done <br/>-Select Email from Message and place next to SMS  and click on it and Select Message and under this select Welcome Sunshine Trails Hospitality Email and click on Summary and refer screenshot for email configuration and at last click on Done<br/>-Select Wait by duration from flow control and place it after email, and click on it and select 1 minute and click on Done<br/> -PFA screenshot ||
+
+### 6. Create Install Package In Marketing Cloud
+| Step  | Action and Details  |  Images |
+| ----- | ----- | ----- |
+| Install Package | -Go to Setup>>Apps>> Install Packages>>Click on New button<br/> -Enter name and click on save <br/>-Once it gets open then click on Add Component and select API Integeration and click on Next<br/>-Select Server to Server and click on Next<br/>- Refer screenshot for providing access of read/write to component and click on save <br/>-Note down client secret key somewhere.| |
+
+### 7. Update Custom Metadata Record Values In The Retail Org.
+| Step  | Action and Details  |  Images |
+| ----- | ----- | ----- |
+|Update value in metarecord|-Login with retail org<br/> -click on setup>>enter custom metadata and search and click on Custom Metadata Types<br/>-Click on SFMC API Events and open it<br/>-click on Manage SFMC API Events>> click on SFMCEventDetails record and click on edit button<br/>-Enter below value <br/>-1.AccountId as MID of marketing cloud <br/>2. AuthenticationBaseURI as Authentication Base URI , Clientid as client id , Clientsecret as client secret key you have copied to somewhere, restbaseUrl as REST base URI,  from newly created install package in marketing cloud<br/> -eventKey as event defination key from journey builder recently you have created<br/>-Save the record| |
+</details>
+
+<details><summary>
   
   ## Behind the Scenes - how is the agent powered?
 </summary>
