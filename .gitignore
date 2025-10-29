@@ -44,4 +44,3 @@ $RECYCLE.BIN/
 **/.venv/
 **/venv/
 
-force-app/main/default/customMetadata/SFMC_API_EVENT.SFMCEventDetails.md-meta.xml

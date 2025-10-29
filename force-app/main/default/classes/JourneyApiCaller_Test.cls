@@ -17,7 +17,7 @@ public class JourneyApiCaller_Test {
         // Create a request object to pass to the Invocable Method
         JourneyApiCaller.FlowInputs flowinp = new JourneyApiCaller.FlowInputs();
         flowinp.phoneNumber = '17652679045';
-        
+        flowinp.EmailAddress = 'abc@example.com';
         // Add the request to a list
         List<JourneyApiCaller.FlowInputs> requestList = new List<JourneyApiCaller.FlowInputs>{ flowinp };
         // Call the method to test
